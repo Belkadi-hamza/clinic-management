@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SQL Editor</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css" id="app-style">
+	<style>
+		#editor { height: 240px; border: 1px solid #e5e7eb; border-radius: 6px; }
+		#results { max-height: 420px; overflow:auto; }
+		.table thead th { position: sticky; top: 0; background: #fff; }
+	</style>
+</head>
+<body>
+	<div class="page-wrapper">
+		<div class="content container-fluid">
+			<div class="page-header">
+				<div class="page-title">
+					<h4>SQL Editor</h4>
+					<p class="mb-0">Run queries against PostgreSQL</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div id="editor">select version();</div>
+					<div class="d-flex gap-2 mt-3">
+						<button id="runBtn" class="btn btn-primary">Run (Ctrl+Enter)</button>
+						<button id="clearBtn" class="btn btn-outline-secondary">Clear</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card mt-3">
+				<div class="card-body">
+					<h6 class="mb-3">Results</h6>
+					<div id="errorBox" class="alert alert-danger d-none"></div>
+					<div id="results"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.9/ace.js" integrity="sha512-P2m7D5bBct3bLkH2U40m4V8u9G0jH6TWfI+Z8p6RkKqKpJES3QxZt7Xgq3jzv0w5jE0bQRaMLQ1cVZ5qCPO2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		const apiBase = location.origin + '/api/sql';
+		const editor = ace.edit('editor');
+		editor.setTheme('ace/theme/github');
+		editor.session.setMode('ace/mode/sql');
+		editor.setOptions({ fontSize: '14px', wrap: true, showPrintMargin: false });
+
+		async function runQuery() {
+			const query = editor.getValue();
+			$('#errorBox').addClass('d-none').text('');
+			$('#results').html('<div class="text-muted">Running...</div>');
+			try {
+				const res = await fetch(apiBase + '/execute', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ query })
+				});
+				const data = await res.json();
+				if (!res.ok) throw new Error(data.detail || 'Error');
+				renderRows(data.rows || []);
+			} catch (e) {
+				$('#results').empty();
+				$('#errorBox').removeClass('d-none').text(e.message);
+			}
+		}
+
+		function renderRows(rows) {
+			if (!rows.length) { $('#results').html('<div class="text-muted">No rows</div>'); return; }
+			const cols = Object.keys(rows[0]);
+			let thead = '<thead><tr>' + cols.map(c=>`<th>${c}</th>`).join('') + '</tr></thead>';
+			let tbody = '<tbody>' + rows.map(r=>'<tr>' + cols.map(c=>`<td>${escapeHtml(r[c])}</td>`).join('') + '</tr>').join('') + '</tbody>';
+			$('#results').html(`<div class="table-responsive"><table class="table table-sm table-striped">${thead}${tbody}</table></div>`);
+		}
+
+		function escapeHtml(v){ if(v===null||v===undefined) return ''; return String(v).replace(/[&<>"']/g, s=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s])); }
+
+		$('#runBtn').on('click', runQuery);
+		$('#clearBtn').on('click', ()=> editor.setValue('', -1));
+		editor.commands.addCommand({ name: 'run', bindKey: {win: 'Ctrl-Enter', mac: 'Command-Enter'}, exec: runQuery });
+	</script>
+</body>
+</html>

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ionic Icon | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords" content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">    
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Ionic CSS -->
+    <link rel="stylesheet" href="assets/plugins/icons/ionic/ionicons.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+                <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-dark.svg" alt="dark logo"></span>
+                        </span>
+
+                        <!-- Logo Sm -->
+                        <span class="logo-small">
+                            <span class="logo-lg"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-bar-to-right"></i>
+                    </button> 
+
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-flex me-2">
+                        <button class="topbar-link btn topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex" alt=patient">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42" height="42" alt="patient">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
+                                    <span class="d-block fs-13">Administrator</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="general-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>          
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-dark.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-bar-to-left"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul role="menu" aria-label="Main navigation menu">
+                        <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
+
+                        <li>
+                            <a href="index.html">
+                                <i class="ti ti-layout-board"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-apps"></i><span>Applications</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="voice-call.html">Voice Call</a></li>
+                                        <li><a href="video-call.html">Video Call</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="calendar.html">Calendar</a></li>	
+                                <li><a href="email.html">Email</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="invoice.html">Invoices</a></li>
+                                        <li><a href="invoice-details.html">Invoice Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="todo.html">To Do</a></li>
+                                <li><a href="notes.html">Notes</a></li>
+                                <li><a href="kanban-view.html">Kanban Board</a></li>
+                                <li><a href="file-manager.html">File Manager</a></li>
+                                <li><a href="social-feed.html">Social Feed</a></li>
+                                <li><a href="search-result.html">Search Result</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="layout-mini.html">Mini</a></li>
+                                <li><a href="layout-hoverview.html">Hover View</a></li>
+                                <li><a href="layout-hidden.html">Hidden</a></li>
+                                <li><a href="layout-fullwidth.html">Full Width</a></li>
+                                <li><a href="layout-rtl.html">RTL</a></li>
+                                <li><a href="layout-dark.html">Dark</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
+
+                        <li>
+                            <a href="patients.html">
+                                <i class="ti ti-users"></i><span>Patients</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doctors.html">
+                                <i class="ti ti-stethoscope"></i><span>Doctors</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appointments.html">
+                                <i class="ti ti-calendar-time"></i><span>Appointments</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="visits.html">
+                                <i class="ti ti-e-passport"></i><span>Visits</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-test-pipe"></i><span>Laboratory</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="lab-results.html">Lab Results</a>
+                                </li>
+                                <li>
+                                    <a href="medical-results.html">Medical Rsults</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="pharmacy.html">
+                                <i class="ti ti-prescription"></i><span>Pharmacy</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
+
+                        <li>
+                            <a href="staffs.html">
+                                <i class="ti ti-users-group"></i><span>Staffs</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notifications.html">
+                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="general-settings.html">
+                                <i class="ti ti-settings"></i><span>Settings</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="forgot-password.html">Forgot Password</a></li>
+                                <li><a href="change-password.html">Change Password</a></li>
+                                <li><a href="lock-screen.html">Lock Screen</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="error-404.html">Error 404</a></li>
+                                <li><a href="error-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-files"></i><span>Other Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="starter-page.html">Starter Page</a></li>
+                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>   
+
+                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-accordion.html">Accordion</a></li>
+                                <li><a href="ui-alerts.html">Alerts</a></li>
+                                <li><a href="ui-avatar.html">Avatar</a></li>
+                                <li><a href="ui-badges.html">Badges</a></li>
+                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-buttons-group.html">Button Group</a></li>
+                                <li><a href="ui-cards.html">Card</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-collapse.html">Collapse</a></li>
+                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                <li><a href="ui-ratio.html">Ratio</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                                <li><a href="ui-images.html">Images</a></li>
+                                <li><a href="ui-links.html">Links</a></li>
+                                <li><a href="ui-list-group.html">List Group</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
+                                <li><a href="ui-pagination.html">Pagination</a></li>
+                                <li><a href="ui-placeholders.html">Placeholders</a></li>
+                                <li><a href="ui-popovers.html">Popovers</a></li>
+                                <li><a href="ui-progress.html">Progress</a></li>
+                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                <li><a href="ui-spinner.html">Spinner</a></li>
+                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
+                                <li><a href="ui-toasts.html">Toasts</a></li>
+                                <li><a href="ui-tooltips.html">Tooltips</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-utilities.html">Utilities</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-dragula.html">Dragula</a></li>
+                                <li><a href="ui-clipboard.html">Clipboard</a></li>
+                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
+                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+                                <li><a href="ui-lightbox.html">Lightbox</a></li>
+                                <li><a href="ui-rating.html">Rating</a></li>
+                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
+                                        <li><a href="form-input-groups.html">Input Groups</a></li>
+                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
+                                        <li><a href="form-mask.html">Input Masks</a></li>
+                                        <li><a href="form-fileupload.html">File Uploads</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
+                                        <li><a href="form-vertical.html">Vertical Form</a></li>
+                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                                <li><a href="form-select.html">Form Select</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                                <li><a href="form-pickers.html">Form Picker</a></li>
+                                <li><a href="form-editors.html">Form Editors</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="tables-basic.html">Basic Tables </a></li>
+                                <li><a href="data-tables.html">Data Table </a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chart-apex.html">Apex Charts</a></li>
+                                <li><a href="chart-c3.html">Chart C3</a></li>
+                                <li><a href="chart-js.html">Chart Js</a></li>
+                                <li><a href="chart-morris.html">Morris Charts</a></li>
+                                <li><a href="chart-flot.html">Flot Charts</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);" class="active subdrop">
+                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
+                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
+                                <li><a href="icon-remix.html">Remix Icons</a></li>
+                                <li><a href="icon-feather.html">Feather Icons</a></li>
+                                <li><a href="icon-ionic.html" class="active">Ionic Icons</a></li>
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li> 
+
+                        <li>
+                            <a href="widgets.html">
+                                <i class="ti ti-components"></i><span>Widgets</span>
+                            </a>
+                        </li> 
+
+                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-file-type-doc"></i><span>Documentation</span></a>
+                        </li> 
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
+                                <span>Changelog</span>  
+                            </a>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
+                                        <li class="submenu submenu-two submenu-three">
+                                            <a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                            <ul>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>                   
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+         
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content pb-0">
+
+                <!-- Page Header -->
+                <div class="breadcrumb-arrow mb-4">
+                    <h4 class="mb-1">Ionic Icon</h4>
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>                            
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Base UI</a></li>                            
+                            <li class="breadcrumb-item active">Ionic Icon</li>
+                        </ol>
+                    </div>
+				</div>
+				<!-- End Page Header -->
+
+                <!-- start row -->
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Ionic Icon</div>
+                            </div> 
+                            <div class="card-body">
+                               
+                                <div class="icons-list">
+                                    <div class="icons-list-item">
+                                        <i class="ion-ionic" data-bs-toggle="tooltip" title="ion-ionic"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-up-a" data-bs-toggle="tooltip" title="ion-arrow-up-a"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-right-a" data-bs-toggle="tooltip" title="ion-arrow-right-a"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-down-a" data-bs-toggle="tooltip" title="ion-arrow-down-a"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-left-a" data-bs-toggle="tooltip" title="ion-arrow-left-a"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-up-b" data-bs-toggle="tooltip" title="ion-arrow-up-b"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-right-b" data-bs-toggle="tooltip" title="ion-arrow-right-b"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-down-b" data-bs-toggle="tooltip" title="ion-arrow-down-b"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-left-b" data-bs-toggle="tooltip" title="ion-arrow-left-b"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-up-c" data-bs-toggle="tooltip" title="ion-arrow-up-c"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-right-c" data-bs-toggle="tooltip" title="ion-arrow-right-c"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-down-c" data-bs-toggle="tooltip" title="ion-arrow-down-c"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-left-c" data-bs-toggle="tooltip" title="ion-arrow-left-c"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-return-right" data-bs-toggle="tooltip" title="ion-arrow-return-right"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-return-left" data-bs-toggle="tooltip" title="ion-arrow-return-left"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-swap" data-bs-toggle="tooltip" title="ion-arrow-swap"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-shrink" data-bs-toggle="tooltip" title="ion-arrow-shrink"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-expand" data-bs-toggle="tooltip" title="ion-arrow-expand"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-move" data-bs-toggle="tooltip" title="ion-arrow-move"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-resize" data-bs-toggle="tooltip" title="ion-arrow-resize"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chevron-up" data-bs-toggle="tooltip" title="ion-chevron-up"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chevron-right" data-bs-toggle="tooltip" title="ion-chevron-right"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chevron-down" data-bs-toggle="tooltip" title="ion-chevron-down"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chevron-left" data-bs-toggle="tooltip" title="ion-chevron-left"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-navicon-round" data-bs-toggle="tooltip" title="ion-navicon-round"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-navicon" data-bs-toggle="tooltip" title="ion-navicon"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-drag" data-bs-toggle="tooltip" title="ion-drag"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-log-in" data-bs-toggle="tooltip" title="ion-log-in"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-log-out" data-bs-toggle="tooltip" title="ion-log-out"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-checkmark-round" data-bs-toggle="tooltip" title="ion-checkmark-round"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-checkmark" data-bs-toggle="tooltip" title="ion-checkmark"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-checkmark-circled" data-bs-toggle="tooltip" title="ion-checkmark-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-close-round" data-bs-toggle="tooltip" title="ion-close-round"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-close" data-bs-toggle="tooltip" title="ion-close"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-close-circled" data-bs-toggle="tooltip" title="ion-close-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-plus-round" data-bs-toggle="tooltip" title="ion-plus-round"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-plus" data-bs-toggle="tooltip" title="ion-plus"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-plus-circled" data-bs-toggle="tooltip" title="ion-plus-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-minus-round" data-bs-toggle="tooltip" title="ion-minus-round"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-minus" data-bs-toggle="tooltip" title="ion-minus"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-minus-circled" data-bs-toggle="tooltip" title="ion-minus-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-information" data-bs-toggle="tooltip" title="ion-information"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-information-circled" data-bs-toggle="tooltip" title="ion-information-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-help" data-bs-toggle="tooltip" title="ion-help"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-help-circled" data-bs-toggle="tooltip" title="ion-help-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-help-buoy" data-bs-toggle="tooltip" title="ion-help-buoy"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-asterisk" data-bs-toggle="tooltip" title="ion-asterisk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-alert" data-bs-toggle="tooltip" title="ion-alert"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-alert-circled" data-bs-toggle="tooltip" title="ion-alert-circled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-refresh" data-bs-toggle="tooltip" title="ion-refresh"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-loop" data-bs-toggle="tooltip" title="ion-loop"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-shuffle" data-bs-toggle="tooltip" title="ion-shuffle"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-home" data-bs-toggle="tooltip" title="ion-home"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-search" data-bs-toggle="tooltip" title="ion-search"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-flag" data-bs-toggle="tooltip" title="ion-flag"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-star" data-bs-toggle="tooltip" title="ion-star"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-heart" data-bs-toggle="tooltip" title="ion-heart"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-heart-broken" data-bs-toggle="tooltip" title="ion-heart-broken"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-gear-a" data-bs-toggle="tooltip" title="ion-gear-a"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-gear-b" data-bs-toggle="tooltip" title="ion-gear-b"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-toggle-filled" data-bs-toggle="tooltip" title="ion-toggle-filled"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-toggle" data-bs-toggle="tooltip" title="ion-toggle"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-settings" data-bs-toggle="tooltip" title="ion-settings"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-wrench" data-bs-toggle="tooltip" title="ion-wrench"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-folder" data-bs-toggle="tooltip" title="ion-folder"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-hammer" data-bs-toggle="tooltip" title="ion-hammer"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-edit" data-bs-toggle="tooltip" title="ion-edit"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-trash-a" data-bs-toggle="tooltip" title="ion-trash-a"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-trash-b" data-bs-toggle="tooltip" title="ion-trash-b"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-document" data-bs-toggle="tooltip" title="ion-document"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-document-text" data-bs-toggle="tooltip" title="ion-document-text"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-clipboard" data-bs-toggle="tooltip" title="ion-clipboard"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-scissors" data-bs-toggle="tooltip" title="ion-scissors"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-funnel" data-bs-toggle="tooltip" title="ion-funnel"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-bookmark" data-bs-toggle="tooltip" title="ion-bookmark"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-email" data-bs-toggle="tooltip" title="ion-email"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-folder" data-bs-toggle="tooltip" title="ion-folder"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-filing" data-bs-toggle="tooltip" title="ion-filing"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-archive" data-bs-toggle="tooltip" title="ion-archive"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-reply" data-bs-toggle="tooltip" title="ion-reply"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-reply-all" data-bs-toggle="tooltip" title="ion-reply-all"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-forward" data-bs-toggle="tooltip" title="ion-forward"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-share" data-bs-toggle="tooltip" title="ion-share"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-paper-airplane" data-bs-toggle="tooltip" title="ion-paper-airplane"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-link" data-bs-toggle="tooltip" title="ion-link"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-paperclip" data-bs-toggle="tooltip" title="ion-paperclip"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-compose" data-bs-toggle="tooltip" title="ion-compose"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-briefcase" data-bs-toggle="tooltip" title="ion-briefcase"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-medkit" data-bs-toggle="tooltip" title="ion-medkit"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-at" data-bs-toggle="tooltip" title="ion-at"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-pound" data-bs-toggle="tooltip" title="ion-pound"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-quote" data-bs-toggle="tooltip" title="ion-quote"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-cloud" data-bs-toggle="tooltip" title="ion-cloud"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-upload" data-bs-toggle="tooltip" title="ion-upload"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-more" data-bs-toggle="tooltip" title="ion-more"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-grid" data-bs-toggle="tooltip" title="ion-grid"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-calendar" data-bs-toggle="tooltip" title="ion-calendar"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-clock" data-bs-toggle="tooltip" title="ion-clock"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-compass" data-bs-toggle="tooltip" title="ion-compass"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-pinpoint" data-bs-toggle="tooltip" title="ion-pinpoint"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-pin" data-bs-toggle="tooltip" title="ion-pin"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-navigate" data-bs-toggle="tooltip" title="ion-navigate"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-location" data-bs-toggle="tooltip" title="ion-location"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-map" data-bs-toggle="tooltip" title="ion-map"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-model-s" data-bs-toggle="tooltip" title="ion-model-s"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-locked" data-bs-toggle="tooltip" title="ion-locked"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-unlocked" data-bs-toggle="tooltip" title="ion-unlocked"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-key" data-bs-toggle="tooltip" title="ion-key"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-graph-up-right" data-bs-toggle="tooltip" title="ion-arrow-graph-up-right"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-graph-down-right" data-bs-toggle="tooltip" title="ion-arrow-graph-down-right"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-arrow-graph-down-left" data-bs-toggle="tooltip" title="ion-arrow-graph-down-left"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-stats-bars" data-bs-toggle="tooltip" title="ion-stats-bars"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-connection-bars" data-bs-toggle="tooltip" title="ion-connection-bars"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-pie-graph" data-bs-toggle="tooltip" title="ion-pie-graph"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chatbubble" data-bs-toggle="tooltip" title="ion-chatbubble"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chatbubble-working" data-bs-toggle="tooltip" title="ion-chatbubble-working"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chatbubbles" data-bs-toggle="tooltip" title="ion-chatbubbles"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chatbox" data-bs-toggle="tooltip" title="ion-chatbox"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chatbox-working" data-bs-toggle="tooltip" title="ion-chatbox-working"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-chatboxes" data-bs-toggle="tooltip" title="ion-chatboxes"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-person" data-bs-toggle="tooltip" title="ion-person"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-person-add" data-bs-toggle="tooltip" title="ion-person-add"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-person-stalker" data-bs-toggle="tooltip" title="ion-person-stalker"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-woman" data-bs-toggle="tooltip" title="ion-woman"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-man" data-bs-toggle="tooltip" title="ion-man"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-female" data-bs-toggle="tooltip" title="ion-female"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-male" data-bs-toggle="tooltip" title="ion-male"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-fork" data-bs-toggle="tooltip" title="ion-fork"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-knife" data-bs-toggle="tooltip" title="ion-knife"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-spoon" data-bs-toggle="tooltip" title="ion-spoon"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-beer" data-bs-toggle="tooltip" title="ion-beer"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-wineglass" data-bs-toggle="tooltip" title="ion-wineglass"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-coffee" data-bs-toggle="tooltip" title="ion-coffee"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-icecream" data-bs-toggle="tooltip" title="ion-icecream"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-pizza" data-bs-toggle="tooltip" title="ion-pizza"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-power" data-bs-toggle="tooltip" title="ion-power"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-mouse" data-bs-toggle="tooltip" title="ion-mouse"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-battery-full" data-bs-toggle="tooltip" title="ion-battery-full"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="ion-battery-half" data-bs-toggle="tooltip" title="ion-battery-half"></i>
+                                    </div>                                       
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                </div>
+				<!-- end row -->
+                                
+            </div>
+            <!-- End Content -->            
+
+            <!-- Start Footer -->
+            <footer class="footer text-center">
+               <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a> - All Rights Reserved.</p>
+            </footer>
+            <!-- End Footer -->
+
+        </div>
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

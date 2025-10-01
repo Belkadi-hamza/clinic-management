@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff API Test</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Staff API Test</h1>
+    <button onclick="testAPI()">Test Staff API</button>
+    <div id="results"></div>
+
+    <script>
+        function testAPI() {
+            $.ajax({
+                url: '/api/staff/test',
+                method: 'GET',
+                success: function(response) {
+                    console.log('API Response:', response);
+                    $('#results').html('<pre>' + JSON.stringify(response, null, 2) + '</pre>');
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', error);
+                    $('#results').html('<p style="color: red;">Error: ' + error + '</p>');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

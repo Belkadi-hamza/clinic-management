@@ -1,0 +1,13 @@
+/* Hide event dots */
+.fc-daygrid-event-dot { display: none !important; }
+
+/* Hide event titles/names in month view */
+.fc-daygrid-event .fc-event-title, .fc-daygrid-event .fc-event-time, .fc-daygrid-event { display: none !important; }
+
+/* Keep calendar background white */
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard .fc-scrollgrid-section,
+.fc-theme-standard .fc-daygrid-day,
+.fc-theme-standard .fc-daygrid-day-frame {
+  background: #fff !important;
+}

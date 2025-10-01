@@ -1,0 +1,14 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+SQLAlchemy==2.0.35
+psycopg[binary]==3.2.3
+python-dotenv==1.0.1
+pydantic==2.9.2
+pywebview==4.4
+qtpy==2.4.2
+PyQt5==5.15.11
+starlette==0.38.5
+jinja2==3.1.4
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.6

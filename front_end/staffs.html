@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Staffs | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords" content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">    
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="assets/plugins/flatpickr/flatpickr.min.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+                <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-dark.svg" alt="dark logo"></span>
+                        </span>
+
+                        <!-- Logo Sm -->
+                        <span class="logo-small">
+                            <span class="logo-lg"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-bar-to-right"></i>
+                    </button> 
+
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-flex me-2">
+                        <button class="topbar-link btn topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex" alt=patient">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42" height="42" alt="patient">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
+                                    <span class="d-block fs-13">Administrator</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="general-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>          
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-dark.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-bar-to-left"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul role="menu" aria-label="Main navigation menu">
+                        <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
+
+                        <li>
+                            <a href="index.html">
+                                <i class="ti ti-layout-board"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-apps"></i><span>Applications</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="voice-call.html">Voice Call</a></li>
+                                        <li><a href="video-call.html">Video Call</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="calendar.html">Calendar</a></li>	
+                                <li><a href="email.html">Email</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="invoice.html">Invoices</a></li>
+                                        <li><a href="invoice-details.html">Invoice Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="todo.html">To Do</a></li>
+                                <li><a href="notes.html">Notes</a></li>
+                                <li><a href="kanban-view.html">Kanban Board</a></li>
+                                <li><a href="file-manager.html">File Manager</a></li>
+                                <li><a href="social-feed.html">Social Feed</a></li>
+                                <li><a href="search-result.html">Search Result</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="layout-mini.html">Mini</a></li>
+                                <li><a href="layout-hoverview.html">Hover View</a></li>
+                                <li><a href="layout-hidden.html">Hidden</a></li>
+                                <li><a href="layout-fullwidth.html">Full Width</a></li>
+                                <li><a href="layout-rtl.html">RTL</a></li>
+                                <li><a href="layout-dark.html">Dark</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
+
+                        <li>
+                            <a href="patients.html">
+                                <i class="ti ti-users"></i><span>Patients</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doctors.html">
+                                <i class="ti ti-stethoscope"></i><span>Doctors</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appointments.html">
+                                <i class="ti ti-calendar-time"></i><span>Appointments</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="visits.html">
+                                <i class="ti ti-e-passport"></i><span>Visits</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-test-pipe"></i><span>Laboratory</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="lab-results.html">Lab Results</a>
+                                </li>
+                                <li>
+                                    <a href="medical-results.html">Medical Rsults</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="pharmacy.html">
+                                <i class="ti ti-prescription"></i><span>Pharmacy</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
+
+                        <li>
+                            <a href="staffs.html" class="active">
+                                <i class="ti ti-users-group"></i><span>Staffs</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notifications.html">
+                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="general-settings.html">
+                                <i class="ti ti-settings"></i><span>Settings</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="forgot-password.html">Forgot Password</a></li>
+                                <li><a href="change-password.html">Change Password</a></li>
+                                <li><a href="lock-screen.html">Lock Screen</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="error-404.html">Error 404</a></li>
+                                <li><a href="error-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-files"></i><span>Other Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="starter-page.html">Starter Page</a></li>
+                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>   
+
+                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-accordion.html">Accordion</a></li>
+                                <li><a href="ui-alerts.html">Alerts</a></li>
+                                <li><a href="ui-avatar.html">Avatar</a></li>
+                                <li><a href="ui-badges.html">Badges</a></li>
+                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-buttons-group.html">Button Group</a></li>
+                                <li><a href="ui-cards.html">Card</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-collapse.html">Collapse</a></li>
+                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                <li><a href="ui-ratio.html">Ratio</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                                <li><a href="ui-images.html">Images</a></li>
+                                <li><a href="ui-links.html">Links</a></li>
+                                <li><a href="ui-list-group.html">List Group</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
+                                <li><a href="ui-pagination.html">Pagination</a></li>
+                                <li><a href="ui-placeholders.html">Placeholders</a></li>
+                                <li><a href="ui-popovers.html">Popovers</a></li>
+                                <li><a href="ui-progress.html">Progress</a></li>
+                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                <li><a href="ui-spinner.html">Spinner</a></li>
+                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
+                                <li><a href="ui-toasts.html">Toasts</a></li>
+                                <li><a href="ui-tooltips.html">Tooltips</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-utilities.html">Utilities</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-dragula.html">Dragula</a></li>
+                                <li><a href="ui-clipboard.html">Clipboard</a></li>
+                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
+                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+                                <li><a href="ui-lightbox.html">Lightbox</a></li>
+                                <li><a href="ui-rating.html">Rating</a></li>
+                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
+                                        <li><a href="form-input-groups.html">Input Groups</a></li>
+                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
+                                        <li><a href="form-mask.html">Input Masks</a></li>
+                                        <li><a href="form-fileupload.html">File Uploads</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
+                                        <li><a href="form-vertical.html">Vertical Form</a></li>
+                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                                <li><a href="form-select.html">Form Select</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                                <li><a href="form-pickers.html">Form Picker</a></li>
+                                <li><a href="form-editors.html">Form Editors</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="tables-basic.html">Basic Tables </a></li>
+                                <li><a href="data-tables.html">Data Table </a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chart-apex.html">Apex Charts</a></li>
+                                <li><a href="chart-c3.html">Chart C3</a></li>
+                                <li><a href="chart-js.html">Chart Js</a></li>
+                                <li><a href="chart-morris.html">Morris Charts</a></li>
+                                <li><a href="chart-flot.html">Flot Charts</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
+                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
+                                <li><a href="icon-remix.html">Remix Icons</a></li>
+                                <li><a href="icon-feather.html">Feather Icons</a></li>
+                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li> 
+
+                        <li>
+                            <a href="widgets.html">
+                                <i class="ti ti-components"></i><span>Widgets</span>
+                            </a>
+                        </li> 
+
+                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-file-type-doc"></i><span>Documentation</span></a>
+                        </li> 
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
+                                <span>Changelog</span>  
+                            </a>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
+                                        <li class="submenu submenu-two submenu-three">
+                                            <a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                            <ul>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>                   
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+         
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content">
+
+                <!-- Page Header -->
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+                    <div class="breadcrumb-arrow">
+                        <h4 class="mb-1">Staffs</h4>
+                        <div class="text-end">
+                            <ol class="breadcrumb m-0 py-0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>                            
+                                <li class="breadcrumb-item active">Staffs</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="gap-2 d-flex align-items-center flex-wrap">
+                        <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"><i class="ti ti-refresh"></i></a>
+                        <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Print" data-bs-original-title="Print"><i class="ti ti-printer"></i></a>
+                        <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Download" data-bs-original-title="Download"><i class="ti ti-cloud-download"></i></a>
+                        <a href="javascript:void(0);" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#add_staff"><i class="ti ti-square-rounded-plus me-1"></i>New Staff</a>
+                    </div>
+                </div>
+				<!-- End Page Header -->
+
+                <!-- card start -->
+                <div class="card mb-0">
+                    <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
+                        <h5 class="d-inline-flex align-items-center mb-0">Total Staffs<span class="badge bg-danger ms-2" id="staff-count">0</span></h5>
+                        <div class="d-flex align-items-center">
+                            <!-- sort by -->
+                            <div class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center" data-bs-toggle="dropdown">
+                                <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span>  Newest
+                                </a>
+                                <ul class="dropdown-menu  dropdown-menu-end p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item rounded-1">Newest</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                       <div class="table-responsive table-nowrap">
+                            <table class="table border mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Staff ID</th>
+                                        <th>Staff Name</th>
+                                        <th class="no-sort">Gender</th>
+                                        <th class="no-sort">Position</th>
+                                        <th class="no-sort">Department</th>
+                                        <th class="no-sort">Phone Number</th>
+                                        <th>Email</th>
+                                        <th class="no-sort">Status</th>
+                                        <th class="no-sort"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="staff-table-body">
+                                    <!-- Dynamic content will be loaded here -->
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0024</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-29.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Charlotte Hayes</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Female</td>
+                                        <td>Nurse</td>
+                                        <td>+1 48912 78015</td>
+                                        <td>charlotte@example.com</td>
+                                        <td>10 Jun 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0023</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-30.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Anthony Foster</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Male</td>
+                                        <td>Purchase Officer</td>
+                                        <td>+1 61397 47103</td>
+                                        <td>anthony@example.com</td>
+                                        <td>22 May 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0022</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-33.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Isabella Morgan</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Female</td>
+                                        <td>Supervisor</td>
+                                        <td>+1 84910 67381</td>
+                                        <td>isabella@example.com</td>
+                                        <td>15 May 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0021</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-34.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">William Turner</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Male</td>
+                                        <td>Nurse</td>
+                                        <td>+1 19047 80936</td>
+                                        <td>william@example.com</td>
+                                        <td>30 Apr 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0020</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-43.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Amanda Richardson</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Female</td>
+                                        <td>Receptionist</td>
+                                        <td>+1 71289 45017</td>
+                                        <td>amanda@example.com</td>
+                                        <td>25 Apr 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0019</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-36.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Nathaniel Lewis</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Male</td>
+                                        <td>Lab Assistant</td>
+                                        <td>+1 57109 25913</td>
+                                        <td>nathaniel@example.com</td>
+                                        <td>13 Mar 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0018</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-48.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Katherine Stewart</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Female</td>
+                                        <td>Pharmacist</td>
+                                        <td>+1 56193 61902</td>
+                                        <td>katherine@example.com</td>
+                                        <td>16 Feb 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0017</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-38.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Eric Patterson</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Male</td>
+                                        <td>Nurse</td>
+                                        <td>+1 89105 78103</td>
+                                        <td>eric@example.com</td>
+                                        <td>20 Jan 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);">#SF0016</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-52.jpg" alt="staff" class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="patient-details.html">Lauren Simmons</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Female</td>
+                                        <td>Lab Technician</td>
+                                        <td>+1 78103 78591</td>
+                                        <td>lauren@example.com</td>
+                                        <td>15 Jan 2025</td>
+                                        <td class="text-end">
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu p-2">
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_staff"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_staff"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                </li>                                        
+                                                <li>
+                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+            </div>
+            <!-- End Content -->            
+
+            <!-- Start Footer -->
+            <footer class="footer text-center">
+               <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a> - All Rights Reserved.</p>
+            </footer>
+            <!-- End Footer -->
+        </div>
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- Add New Staff -->
+    <div class="modal fade" id="add_staff">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-dark modal-title fw-bold text-truncate">Add  New Staff</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <form id="add-staff-form">
+                    <div class="modal-body">
+
+                        <ul class="nav nav-tabs nav-item-primary nav-solid-primary mb-3 pb-3 border-bottom border-0 gap-3">
+                            <li class="nav-item"><a class="nav-link rounded btn btn-md active" href="#basic-staff" data-bs-toggle="tab">Basic Info</a></li>
+                            <li class="nav-item"><a class="nav-link rounded btn btn-md" href="#salery-staff" data-bs-toggle="tab">Salary Info</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Item 1 -->
+                            <div class="tab-pane show active" id="basic-staff">
+                                <!-- start row -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Profile Image<span class="text-danger ms-1">*</span>  </label>
+                                            <div class="d-flex align-items-center flex-wrap gap-3">
+                                                <div class="flex-shrink-0">
+                                                    <div class="position-relative d-flex align-items-center border rounded">
+                                                        <img src="assets/img/avatars/avatar-39.jpg" class="avatar avatar-xxl" alt="staff">
+                                                    </div>
+                                                </div>
+                                                <div class="d-inline-flex flex-column align-items-start">
+                                                    <div class="d-inline-flex align-items-start gap-2">
+                                                        <div class="drag-upload-btn btn btn-dark position-relative mb-2">
+                                                            <i class="ti ti-arrows-exchange-2 me-1"></i>Change Image
+                                                            <input type="file" class="form-control image-sign" multiple="">
+                                                        </div>
+                                                        <div>
+                                                            <a href="javascript:void(0);" class="btn btn-danger d-flex align-items-center gap-1"> <i class="ti ti-trash"></i>  Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    <span class="fs-13 text-body">Use JPEG, PNG, or GIF. Best size: 200x200 pixels. Keep it under 5MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">ID</label>
+                                            <input type="text" class="form-control" value="#SF0002" disabled>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="add-first-name" required>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="add-last-name" required>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Gender</label>
+                                            <select class="select" id="add-gender">
+                                                <option value="">Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">DOB</label>
+                                            <div class="input-group w-auto input-group-flat">
+                                                <input type="date" class="form-control" id="add-date-of-birth">
+                                                <span class="input-group-text">
+                                                    <i class="ti ti-calendar"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mobile Number</label>
+                                            <input type="text" class="form-control" id="add-phone">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="add-email" required>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3"> 
+                                            <label class="form-label">Position</label>
+                                            <input type="text" class="form-control" id="add-position" required>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Department</label>
+                                            <input type="text" class="form-control" id="add-department" required>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Joining Date</label>
+                                            <div class="input-group w-auto input-group-flat">
+                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y">
+                                                <span class="input-group-text">
+                                                    <i class="ti ti-calendar"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Staff Type</label>
+                                            <select class="select">
+                                                <option>Select</option>
+                                                <option>Permanent</option>
+                                                <option>Temporary</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Job Type</label>
+                                            <select class="select">
+                                                <option>Select</option>
+                                                <option>Full Time</option>
+                                                <option>Half Time</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Address Line 1</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Address Line 2</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">City</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option>New York City</option>
+                                                <option>Los Angeles</option>
+                                                <option>Chicago</option>
+                                                <option>Houston</option>
+                                                <option>Phoenix</option>                                                           
+                                                <option>Philadelphia</option>
+                                                <option>San Antonio</option>
+                                                <option>San Diego</option>
+                                                <option>Dallas</option>
+                                                <option>San Jose</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">State</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option>California</option>
+                                                <option>Texas</option>
+                                                <option>Florida</option>
+                                                <option>New York</option>
+                                                <option>Illinois</option>                                                           
+                                                <option>Pennsylvania</option>
+                                                <option>Ohio</option>
+                                                <option>Georgia</option>
+                                                <option>North Carolina</option>
+                                                <option>Michigan</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Country</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option>United States</option>
+                                                <option>Canada</option>
+                                                <option>United Kingdom</option>
+                                                <option>Australia</option>
+                                                <option>Germany</option>                                                           
+                                                <option>France</option>
+                                                <option>India</option>
+                                                <option>Japan</option>
+                                                <option>Brazil</option>
+                                                <option>South Africa</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Pin Code</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-12">
+                                        <div class="form-check form-switch d-flex align-items-center justify-content-between gap-2 ps-0 mb-0">
+                                            <label class="form-label mb-0" for="status">Status</label>
+                                            <input class="form-check-input" type="checkbox" role="switch" id="status">
+                                        </div>
+                                    </div><!-- end col -->
+                                </div>
+                                <!-- end row -->
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="tab-pane" id="salery-staff">
+                                <div>
+                                    <!-- start row -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <div>
+                                                <label class="form-label">Net Salary</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                    <h6 class="mb-3">Earnings</h6>
+                                    <!-- start row -->
+                                    <div class="row mb-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Basic</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">DA</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">HRA</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Conveyance</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Allowance</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Medical Allowance</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div>
+                                                <label class="form-label">Others</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                    <h6 class="mb-3">Deductions</h6>
+                                    <!-- start row -->
+                                    <div class="row row-gap-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div>
+                                                <label class="form-label">TDS</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div>
+                                                <label class="form-label">PF</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div>
+                                                <label class="form-label">Leave</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div>
+                                                <label class="form-label">Prof . Tax</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div>
+                                                <label class="form-label">Labour Welfare</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-0">
+                                                <label class="form-label">Others</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Add Todo end -->
+
+    <!-- Edit Staff -->
+    <div class="modal fade" id="edit_staff">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-dark modal-title fw-bold text-truncate">Edit Staff</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <form id="edit-staff-form">
+                    <input type="hidden" id="edit-staff-id" value="">
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs nav-item-primary nav-solid-primary mb-3 pb-3 border-bottom border-0 gap-3">
+                            <li class="nav-item"><a class="nav-link rounded btn btn-md active" href="#basic-editstaff" data-bs-toggle="tab">Basic Info</a></li>
+                            <li class="nav-item"><a class="nav-link rounded btn btn-md" href="#salery-editstaff" data-bs-toggle="tab">Salary Info</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Item 1 -->
+                            <div class="tab-pane show active" id="basic-editstaff">
+                                <!-- start row -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Profile Image<span class="text-danger ms-1">*</span>  </label>
+                                            <div class="d-flex align-items-center flex-wrap gap-3">
+                                                <div class="flex-shrink-0">
+                                                    <div class="position-relative d-flex align-items-center border rounded">
+                                                        <img src="assets/img/avatars/avatar-39.jpg" class="avatar avatar-xxl" alt="staff">
+                                                    </div>
+                                                </div>
+                                                <div class="d-inline-flex flex-column align-items-start">
+                                                    <div class="d-inline-flex align-items-start gap-2">
+                                                        <div class="drag-upload-btn btn btn-dark position-relative mb-2">
+                                                            <i class="ti ti-arrows-exchange-2 me-1"></i>Change Image
+                                                            <input type="file" class="form-control image-sign" multiple="">
+                                                        </div>
+                                                        <div>
+                                                            <a href="javascript:void(0);" class="btn btn-danger d-flex align-items-center gap-1"> <i class="ti ti-trash"></i>  Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    <span class="fs-13 text-body">Use JPEG, PNG, or GIF. Best size: 200x200 pixels. Keep it under 5MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">ID</label>
+                                            <input type="text" class="form-control" value="#SF0025" disabled>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Name</label>
+                                            <input type="text" class="form-control" value="Benjamin Clark">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Gender</label>
+                                            <select class="select">
+                                                <option selected>Male</option>
+                                                <option>Female</option>
+                                                <option>Others</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">DOB</label>
+                                            <div class="input-group w-auto input-group-flat">
+                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" value="01/01/1995">
+                                                <span class="input-group-text">
+                                                    <i class="ti ti-calendar"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mobile Number</label>
+                                            <input type="text" class="form-control" name="phone" value="(819) 277-3810">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" value="benjamin@example.com">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Designation</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option selected>Client for Pharmacy</option>
+                                                <option>Cleaner</option>
+                                                <option>Assitant</option>
+                                                <option>Roadways</option>
+                                                <option>Turner</option>                                                           
+                                                <option>Pharmacist</option>
+                                                <option>Assitant</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Joining Date</label>
+                                            <div class="input-group w-auto input-group-flat">
+                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" value="17/06/2024">
+                                                <span class="input-group-text">
+                                                    <i class="ti ti-calendar"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Staff Type</label>
+                                            <select class="select">
+                                                <option>Select</option>
+                                                <option selected>Permanent</option>
+                                                <option>Temporary</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Job Type</label>
+                                            <select class="select">
+                                                <option>Select</option>
+                                                <option selected>Full Time</option>
+                                                <option>Half Time</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Address Line 1</label>
+                                            <input type="text" class="form-control" value="10 Elizabeth town Plaza">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Address Line 2</label>
+                                            <input type="text" class="form-control" value="Downer’s Grove">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">City</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option>New York City</option>
+                                                <option selected>Los Angeles</option>
+                                                <option>Chicago</option>
+                                                <option>Houston</option>
+                                                <option>Phoenix</option>                                                           
+                                                <option>Philadelphia</option>
+                                                <option>San Antonio</option>
+                                                <option>San Diego</option>
+                                                <option>Dallas</option>
+                                                <option>San Jose</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">State</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option>California</option>
+                                                <option selected>Texas</option>
+                                                <option>Florida</option>
+                                                <option>New York</option>
+                                                <option>Illinois</option>                                                           
+                                                <option>Pennsylvania</option>
+                                                <option>Ohio</option>
+                                                <option>Georgia</option>
+                                                <option>North Carolina</option>
+                                                <option>Michigan</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Country</label>
+                                            <select class="select2" data-toggle="select2">
+                                                <option>Select</option>
+                                                <option>United States</option>
+                                                <option selected>Canada</option>
+                                                <option>United Kingdom</option>
+                                                <option>Australia</option>
+                                                <option>Germany</option>                                                           
+                                                <option>France</option>
+                                                <option>India</option>
+                                                <option>Japan</option>
+                                                <option>Brazil</option>
+                                                <option>South Africa</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Pin Code</label>
+                                            <input type="text" class="form-control" value="07202">
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-md-12">
+                                        <div class="form-check form-switch d-flex align-items-center justify-content-between gap-2 ps-0">
+                                            <label class="form-label mb-0" for="statusone">Status</label>
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusone" checked>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div>
+                                <!-- end row -->
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="tab-pane" id="salery-editstaff">
+                                <div>
+                                    <!-- start row -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <div>
+                                                <label class="form-label">Net Salary</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                    <h6 class="mb-3">Earnings</h6>
+                                    <!-- start row -->
+                                    <div class="row mb-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Basic</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">DA</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">HRA</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Conveyance</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Allowance</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Medical Allowance</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Others</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                    <h6 class="mb-3">Deductions</h6>
+                                    <!-- start row -->
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">TDS</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">PF</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Leave</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Prof . Tax</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-md-0 mb-3">
+                                                <label class="form-label">Labour Welfare</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-0">
+                                                <label class="form-label">Others</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Edit end -->
+
+    <!-- Staff Deatils -->
+    <div class="modal fade" id="view_staff">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-dark modal-title fw-bold text-truncate">Staff Details</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <form action="staffs.html">
+                    <div class="modal-body">
+
+                        <div class="d-flex align-items-center mb-4">
+                            <a href="javascript:void(0);" class="avatar avatar-xxl flex-shrink-0">
+                                <img src="assets/img/avatars/avatar-28.jpg" class="rounded" alt="staff">
+                            </a>
+                            <div class="ms-3">
+                                <div>
+                                    <span class="badge badge-sm badge-soft-pink mb-2">#SF0025</span>
+                                    <h6 class="fw-semibold text-truncate mb-1"><a href="javascript:void(0);">Benjamin Clark</a></h6>
+                                    <p class="fs-13 mb-0">Date Joined : 17 Jun 2024</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs nav-item-primary nav-solid-primary mb-3 gap-3">
+                            <li class="nav-item"><a class="nav-link rounded btn btn-md active" href="#basic-viewstaff" data-bs-toggle="tab">Basic Info</a></li>
+                            <li class="nav-item"><a class="nav-link rounded btn btn-md" href="#salery-viewstaff" data-bs-toggle="tab">Salary Info</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Item 1 -->
+                            <div class="tab-pane show active" id="basic-viewstaff">
+                                <h6 class="mb-3">Basic Information</h6>
+                                <div class="row row-gap-2">
+                                    <div class="col-6 col-md-4">
+                                        <h6 class="fs-14 fw-semibold mb-1 text-truncate">Job Type</h6>
+                                        <p class="fs-13 mb-0 text-truncate">Full Time</p>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6 class="fs-14 fw-semibold mb-1 text-truncate">Mobile</h6>
+                                        <p class="fs-13 mb-0 text-truncate">+1 48902 78194</p>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6 class="fs-14 fw-semibold mb-1 text-truncate">Email</h6>
+                                        <p class="fs-13 mb-0 text-truncate">benjamiin@example.com</p>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6 class="fs-14 fw-semibold mb-1 text-truncate">Gender</h6>
+                                        <p class="fs-13 mb-0 text-truncate">Male</p>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6 class="fs-14 fw-semibold mb-1 text-truncate">DOB</h6>
+                                        <p class="fs-13 mb-0 text-truncate">01 Jan 1995</p>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <h6 class="fs-14 fw-semibold mb-1 text-truncate">Staff Type</h6>
+                                        <p class="fs-13 mb-0 text-truncate">Permanent</p>
+                                    </div>
+                                    <div class="col-12 col-md-12">
+                                        <h6 class="fw-semibold fs-14 mb-2">Address</h6>
+                                        <p class="mb-0 fs13">10 Elizabethtown Plaza, Downers Grove, Elizabeth UK07202 </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="tab-pane" id="salery-viewstaff">
+                                <!-- table start -->
+                                <div class="table-responsive table-nowrap">
+                                    <table class="table mb-0 border">
+                                        <thead>
+                                            <tr>
+                                                <th class="no-sort">Transaction ID</th>
+                                                <th class="no-sort">Amount</th>
+                                                <th class="no-sort">Credit On</th>
+                                                <th class="no-sort">Salary For</th>
+                                                <th class="no-sort"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578193</a></td>
+                                                <td>$18600</td>
+                                                <td>16 Feb 2025</td>
+                                                <td>Jan 2025</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578192</a></td>
+                                                <td>$18600</td>
+                                                <td>18 Jan 2025</td>
+                                                <td>Dec 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578190</a></td>
+                                                <td>$18600</td>
+                                                <td>15 Dec 2024</td>
+                                                <td>Nov 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578189</a></td>
+                                                <td>$18600</td>
+                                                <td>17 Nov 2024</td>
+                                                <td> Oct 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578188</a></td>
+                                                <td>$18600</td>
+                                                <td>15 Oct 2024</td>
+                                                <td>Sep 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578187</a></td>
+                                                <td>$18600</td>
+                                                <td>18 Sep 2024</td>
+                                                <td>Aug 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578186</a></td>
+                                                <td>$18600</td>
+                                                <td>15 Aug 2024</td>
+                                                <td>Jul 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">#TN578185</a></td>
+                                                <td>$18600</td>
+                                                <td>16 Jul 2024</td>
+                                                <td>Jun 2024</td>
+                                                <td class="text-end">
+                                                    <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                                    <ul class="dropdown-menu p-2">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                                        </li>                                      
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- table start -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Edit end -->
+
+    <!-- Start Delete Modal  -->
+    <div class="modal fade" id="delete_modal">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="mb-2">
+                        <span class="avatar avatar-md rounded-circle bg-danger"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
+                    <h6 class="fs-16 mb-1">Confirm Deletion</h6>
+                    <p class="mb-3">Are you sure you want to delete this?</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="javascript:void(0);" class="btn btn-white w-100" data-bs-dismiss="modal">Cancel</a>
+                        <a href="javascript:void(0);" class="btn btn-danger w-100" id="confirm-delete-staff">Yes, Delete</a>
+                    </div>
+                    <input type="hidden" id="delete-staff-id" value="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Delete Modal  -->
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Select2 Js -->	
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Flatpickr JS -->
+	<script src="assets/plugins/flatpickr/flatpickr.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Staff CRUD JavaScript -->
+    <script>
+        // Global variables
+        let staff = [];
+        let currentStaffId = null;
+
+        // API Base URL
+        const API_BASE = '/api/staff';
+
+        // Initialize the page
+        $(document).ready(function() {
+            loadStaff();
+            setupEventListeners();
+        });
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Add staff form
+            $('#add-staff-form').on('submit', function(e) {
+                e.preventDefault();
+                addStaff();
+            });
+
+            // Edit staff form
+            $('#edit-staff-form').on('submit', function(e) {
+                e.preventDefault();
+                updateStaff();
+            });
+
+            // Delete staff confirmation
+            $('#confirm-delete-staff').on('click', function() {
+                deleteStaff();
+            });
+        }
+
+        // Load staff from database
+        function loadStaff() {
+            $.ajax({
+                url: API_BASE + '/test',  // Using test endpoint temporarily
+                method: 'GET',
+                success: function(response) {
+                    staff = response || [];
+                    renderStaffTable();
+                    updateStaffCount();
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error loading staff:', error);
+                    showAlert('Error loading staff: ' + error, 'danger');
+                }
+            });
+        }
+
+        // Render staff table
+        function renderStaffTable() {
+            const tbody = $('#staff-table-body');
+            tbody.empty();
+
+            if (staff.length === 0) {
+                tbody.append(`
+                    <tr>
+                        <td colspan="9" class="text-center py-4">
+                            <div class="text-muted">No staff found</div>
+                        </td>
+                    </tr>
+                `);
+                return;
+            }
+
+            staff.forEach(staffMember => {
+                const statusBadge = staffMember.status === 'Active'
+                    ? '<span class="badge badge-soft-success">Active</span>'
+                    : '<span class="badge badge-soft-danger">Inactive</span>';
+
+                const createdDate = new Date(staffMember.created_at).toLocaleDateString();
+                const fullName = `${staffMember.first_name} ${staffMember.last_name}`;
+
+                tbody.append(`
+                    <tr>
+                        <td><a href="javascript:void(0);">#SF${staffMember.id.toString().padStart(4, '0')}</a></td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <a href="javascript:void(0);" class="avatar avatar-xs me-2">
+                                    <img src="assets/img/avatars/avatar-31.jpg" alt="staff" class="rounded">
+                                </a>
+                                <div>
+                                    <h6 class="fs-14 mb-0 fw-medium"><a href="javascript:void(0);">${escapeHtml(fullName)}</a></h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>${escapeHtml(staffMember.gender || '')}</td>
+                        <td>${escapeHtml(staffMember.position || '')}</td>
+                        <td>${escapeHtml(staffMember.department || '')}</td>
+                        <td>${escapeHtml(staffMember.mobile_phone || '')}</td>
+                        <td>${escapeHtml(staffMember.email || '')}</td>
+                        <td>${statusBadge}</td>
+                        <td class="text-end">
+                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                            <ul class="dropdown-menu p-2">
+                                <li>
+                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" onclick="viewStaff(${staffMember.id})">
+                                        <i class="ti ti-eye me-1"></i>View Details
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" onclick="editStaff(${staffMember.id})">
+                                        <i class="ti ti-edit me-1"></i>Edit
+                                    </a>
+                                </li>                                        
+                                <li>
+                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" onclick="deleteStaff(${staffMember.id})">
+                                        <i class="ti ti-trash me-1"></i>Delete
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                `);
+            });
+        }
+
+        // Update staff count
+        function updateStaffCount() {
+            $('#staff-count').text(staff.length);
+        }
+
+        // Add new staff
+        function addStaff() {
+            const formData = {
+                first_name: $('#add-first-name').val().trim(),
+                last_name: $('#add-last-name').val().trim(),
+                email: $('#add-email').val().trim(),
+                position: $('#add-position').val().trim(),
+                department: $('#add-department').val().trim(),
+                phone: $('#add-phone').val().trim(),
+                address: $('#add-address').val().trim(),
+                city: $('#add-city').val().trim(),
+                state: $('#add-state').val().trim(),
+                postal_code: $('#add-postal-code').val().trim(),
+                country: $('#add-country').val().trim(),
+                date_of_birth: $('#add-date-of-birth').val(),
+                gender: $('#add-gender').val(),
+                emergency_contact: $('#add-emergency-contact').val().trim(),
+                emergency_phone: $('#add-emergency-phone').val().trim()
+            };
+
+            if (!formData.first_name || !formData.last_name || !formData.email || !formData.position || !formData.department) {
+                showAlert('Please fill in all required fields', 'warning');
+                return;
+            }
+
+            $.ajax({
+                url: API_BASE + '/',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + getAuthToken()
+                },
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    showAlert('Staff member added successfully', 'success');
+                    $('#add_staff').modal('hide');
+                    $('#add-staff-form')[0].reset();
+                    loadStaff();
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error adding staff:', error);
+                    const errorMessage = xhr.responseJSON?.detail || error;
+                    showAlert('Error adding staff: ' + errorMessage, 'danger');
+                }
+            });
+        }
+
+        // Edit staff
+        function editStaff(staffId) {
+            const staffMember = staff.find(s => s.id == staffId);
+            if (!staffMember) return;
+
+            currentStaffId = staffId;
+            $('#edit-staff-id').val(staffId);
+            $('#edit-first-name').val(staffMember.first_name);
+            $('#edit-last-name').val(staffMember.last_name);
+            $('#edit-email').val(staffMember.email);
+            $('#edit-position').val(staffMember.position);
+            $('#edit-department').val(staffMember.department);
+            $('#edit-phone').val(staffMember.phone || '');
+            $('#edit-address').val(staffMember.address || '');
+            $('#edit-city').val(staffMember.city || '');
+            $('#edit-state').val(staffMember.state || '');
+            $('#edit-postal-code').val(staffMember.postal_code || '');
+            $('#edit-country').val(staffMember.country || '');
+            $('#edit-date-of-birth').val(staffMember.date_of_birth || '');
+            $('#edit-gender').val(staffMember.gender || '');
+            $('#edit-emergency-contact').val(staffMember.emergency_contact || '');
+            $('#edit-emergency-phone').val(staffMember.emergency_phone || '');
+
+            $('#edit_staff').modal('show');
+        }
+
+        // Update staff
+        function updateStaff() {
+            const formData = {
+                first_name: $('#edit-first-name').val().trim(),
+                last_name: $('#edit-last-name').val().trim(),
+                email: $('#edit-email').val().trim(),
+                position: $('#edit-position').val().trim(),
+                department: $('#edit-department').val().trim(),
+                phone: $('#edit-phone').val().trim(),
+                address: $('#edit-address').val().trim(),
+                city: $('#edit-city').val().trim(),
+                state: $('#edit-state').val().trim(),
+                postal_code: $('#edit-postal-code').val().trim(),
+                country: $('#edit-country').val().trim(),
+                date_of_birth: $('#edit-date-of-birth').val(),
+                gender: $('#edit-gender').val(),
+                emergency_contact: $('#edit-emergency-contact').val().trim(),
+                emergency_phone: $('#edit-emergency-phone').val().trim()
+            };
+
+            if (!formData.first_name || !formData.last_name || !formData.email || !formData.position || !formData.department) {
+                showAlert('Please fill in all required fields', 'warning');
+                return;
+            }
+
+            const staffId = $('#edit-staff-id').val();
+
+            $.ajax({
+                url: API_BASE + '/' + staffId,
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + getAuthToken()
+                },
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    showAlert('Staff member updated successfully', 'success');
+                    $('#edit_staff').modal('hide');
+                    loadStaff();
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error updating staff:', error);
+                    const errorMessage = xhr.responseJSON?.detail || error;
+                    showAlert('Error updating staff: ' + errorMessage, 'danger');
+                }
+            });
+        }
+
+        // View staff details
+        function viewStaff(staffId) {
+            const staffMember = staff.find(s => s.id == staffId);
+            if (!staffMember) return;
+
+            // Populate view modal with staff details
+            $('#view-first-name').text(staffMember.first_name);
+            $('#view-last-name').text(staffMember.last_name);
+            $('#view-email').text(staffMember.email);
+            $('#view-position').text(staffMember.position);
+            $('#view-department').text(staffMember.department);
+            $('#view-phone').text(staffMember.phone || 'N/A');
+            $('#view-address').text(staffMember.address || 'N/A');
+            $('#view-city').text(staffMember.city || 'N/A');
+            $('#view-state').text(staffMember.state || 'N/A');
+            $('#view-postal-code').text(staffMember.postal_code || 'N/A');
+            $('#view-country').text(staffMember.country || 'N/A');
+            $('#view-date-of-birth').text(staffMember.date_of_birth || 'N/A');
+            $('#view-gender').text(staffMember.gender || 'N/A');
+            $('#view-emergency-contact').text(staffMember.emergency_contact || 'N/A');
+            $('#view-emergency-phone').text(staffMember.emergency_phone || 'N/A');
+
+            $('#view_staff').modal('show');
+        }
+
+        // Delete staff
+        function deleteStaff(staffId) {
+            if (staffId) {
+                currentStaffId = staffId;
+                $('#delete-staff-id').val(staffId);
+                $('#delete_modal').modal('show');
+            } else {
+                // Confirm deletion
+                const staffIdToDelete = $('#delete-staff-id').val();
+
+                $.ajax({
+                    url: API_BASE + '/' + staffIdToDelete,
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': 'Bearer ' + getAuthToken()
+                    },
+                    success: function(response) {
+                        showAlert('Staff member deleted successfully', 'success');
+                        $('#delete_modal').modal('hide');
+                        loadStaff();
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error deleting staff:', error);
+                        const errorMessage = xhr.responseJSON?.detail || error;
+                        showAlert('Error deleting staff: ' + errorMessage, 'danger');
+                    }
+                });
+            }
+        }
+
+        // Utility functions
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function getAuthToken() {
+            // Get token from localStorage or cookie
+            return localStorage.getItem('auth_token') || '';
+        }
+
+        function showAlert(message, type) {
+            // Create and show alert
+            const alertHtml = `
+                <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+
+            // Remove existing alerts
+            $('.alert').remove();
+
+            // Add new alert
+            $('.content').prepend(alertHtml);
+
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                $('.alert').fadeOut();
+            }, 5000);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>List Group | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords" content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">    
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+                <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-dark.svg" alt="dark logo"></span>
+                        </span>
+
+                        <!-- Logo Sm -->
+                        <span class="logo-small">
+                            <span class="logo-lg"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-bar-to-right"></i>
+                    </button> 
+
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-flex me-2">
+                        <button class="topbar-link btn topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex" alt=patient">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42" height="42" alt="patient">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
+                                    <span class="d-block fs-13">Administrator</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="general-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>          
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-dark.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-bar-to-left"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul role="menu" aria-label="Main navigation menu">
+                        <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
+
+                        <li>
+                            <a href="index.html">
+                                <i class="ti ti-layout-board"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-apps"></i><span>Applications</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="voice-call.html">Voice Call</a></li>
+                                        <li><a href="video-call.html">Video Call</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="calendar.html">Calendar</a></li>	
+                                <li><a href="email.html">Email</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="invoice.html">Invoices</a></li>
+                                        <li><a href="invoice-details.html">Invoice Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="todo.html">To Do</a></li>
+                                <li><a href="notes.html">Notes</a></li>
+                                <li><a href="kanban-view.html">Kanban Board</a></li>
+                                <li><a href="file-manager.html">File Manager</a></li>
+                                <li><a href="social-feed.html">Social Feed</a></li>
+                                <li><a href="search-result.html">Search Result</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="layout-mini.html">Mini</a></li>
+                                <li><a href="layout-hoverview.html">Hover View</a></li>
+                                <li><a href="layout-hidden.html">Hidden</a></li>
+                                <li><a href="layout-fullwidth.html">Full Width</a></li>
+                                <li><a href="layout-rtl.html">RTL</a></li>
+                                <li><a href="layout-dark.html">Dark</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
+
+                        <li>
+                            <a href="patients.html">
+                                <i class="ti ti-users"></i><span>Patients</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doctors.html">
+                                <i class="ti ti-stethoscope"></i><span>Doctors</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appointments.html">
+                                <i class="ti ti-calendar-time"></i><span>Appointments</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="visits.html">
+                                <i class="ti ti-e-passport"></i><span>Visits</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-test-pipe"></i><span>Laboratory</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="lab-results.html">Lab Results</a>
+                                </li>
+                                <li>
+                                    <a href="medical-results.html">Medical Rsults</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="pharmacy.html">
+                                <i class="ti ti-prescription"></i><span>Pharmacy</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
+
+                        <li>
+                            <a href="staffs.html">
+                                <i class="ti ti-users-group"></i><span>Staffs</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notifications.html">
+                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="general-settings.html">
+                                <i class="ti ti-settings"></i><span>Settings</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="forgot-password.html">Forgot Password</a></li>
+                                <li><a href="change-password.html">Change Password</a></li>
+                                <li><a href="lock-screen.html">Lock Screen</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="error-404.html">Error 404</a></li>
+                                <li><a href="error-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-files"></i><span>Other Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="starter-page.html">Starter Page</a></li>
+                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>   
+
+                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);" class="active subdrop">
+                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-accordion.html">Accordion</a></li>
+                                <li><a href="ui-alerts.html">Alerts</a></li>
+                                <li><a href="ui-avatar.html">Avatar</a></li>
+                                <li><a href="ui-badges.html">Badges</a></li>
+                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-buttons-group.html">Button Group</a></li>
+                                <li><a href="ui-cards.html">Card</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-collapse.html">Collapse</a></li>
+                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                <li><a href="ui-ratio.html">Ratio</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                                <li><a href="ui-images.html">Images</a></li>
+                                <li><a href="ui-links.html">Links</a></li>
+                                <li><a href="ui-list-group.html" class="active">List Group</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
+                                <li><a href="ui-pagination.html">Pagination</a></li>
+                                <li><a href="ui-placeholders.html">Placeholders</a></li>
+                                <li><a href="ui-popovers.html">Popovers</a></li>
+                                <li><a href="ui-progress.html">Progress</a></li>
+                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                <li><a href="ui-spinner.html">Spinner</a></li>
+                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
+                                <li><a href="ui-toasts.html">Toasts</a></li>
+                                <li><a href="ui-tooltips.html">Tooltips</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-utilities.html">Utilities</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-dragula.html">Dragula</a></li>
+                                <li><a href="ui-clipboard.html">Clipboard</a></li>
+                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
+                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+                                <li><a href="ui-lightbox.html">Lightbox</a></li>
+                                <li><a href="ui-rating.html">Rating</a></li>
+                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
+                                        <li><a href="form-input-groups.html">Input Groups</a></li>
+                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
+                                        <li><a href="form-mask.html">Input Masks</a></li>
+                                        <li><a href="form-fileupload.html">File Uploads</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
+                                        <li><a href="form-vertical.html">Vertical Form</a></li>
+                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                                <li><a href="form-select.html">Form Select</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                                <li><a href="form-pickers.html">Form Picker</a></li>
+                                <li><a href="form-editors.html">Form Editors</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="tables-basic.html">Basic Tables </a></li>
+                                <li><a href="data-tables.html">Data Table </a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chart-apex.html">Apex Charts</a></li>
+                                <li><a href="chart-c3.html">Chart C3</a></li>
+                                <li><a href="chart-js.html">Chart Js</a></li>
+                                <li><a href="chart-morris.html">Morris Charts</a></li>
+                                <li><a href="chart-flot.html">Flot Charts</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
+                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
+                                <li><a href="icon-remix.html">Remix Icons</a></li>
+                                <li><a href="icon-feather.html">Feather Icons</a></li>
+                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li> 
+
+                        <li>
+                            <a href="widgets.html">
+                                <i class="ti ti-components"></i><span>Widgets</span>
+                            </a>
+                        </li> 
+
+                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-file-type-doc"></i><span>Documentation</span></a>
+                        </li> 
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
+                                <span>Changelog</span>  
+                            </a>
+                        </li> 
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
+                                        <li class="submenu submenu-two submenu-three">
+                                            <a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                            <ul>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>                   
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+         
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content pb-0">
+
+                <!-- Page Header -->
+                <div class="breadcrumb-arrow mb-4">
+                    <h4 class="mb-1">List Group</h4>
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>                            
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Base UI</a></li>                            
+                            <li class="breadcrumb-item active">List Group</li>
+                        </ol>
+                    </div>
+				</div>
+				<!-- End Page Header -->
+
+                <!-- start row -->
+                <div class="row">
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Basic example</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
+								
+								<ul class="list-group">
+									<li class="list-group-item">
+										<i class="ti ti-brand-slack me-1 align-middle fs-18"></i> Slack Collaboration
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-nextcloud me-1 align-middle fs-18"></i> Nextcloud File Sharing
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-zoom me-1 align-middle fs-18"></i> Zoom Video Meetings
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-stripe me-1 align-middle fs-18"></i> Stripe Billing System
+									</li>
+								</ul>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Active Items</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Add <code>.active</code> to a <code>.list-group-item</code> to indicate the current active selection.</p>
+								
+								<ul class="list-group">
+									<li class="list-group-item active">
+										<i class="ti ti-brand-slack me-1 align-middle fs-18"></i> Slack Collaboration
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-nextcloud me-1 align-middle fs-18"></i> Nextcloud File Sharing
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-zoom me-1 align-middle fs-18"></i> Zoom Video Meetings
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-notion me-1 align-middle fs-18"></i> Notion Workspace
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-stripe me-1 align-middle fs-18"></i> Stripe Billing System
+									</li>
+								</ul>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Disabled Items</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Add <code>.disabled</code> to a <code>.list-group-item</code> to make it
+                                    <em>appear</em> disabled.
+                                </p>
+								
+								<ul class="list-group">
+									<li class="list-group-item disabled" aria-disabled="true">
+										<i class="ti ti-brand-slack me-1 align-middle fs-18"></i> Slack Collaboration
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-nextcloud me-1 align-middle fs-18"></i> Nextcloud File Sharing
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-zoom me-1 align-middle fs-18"></i> Zoom Video Meetings
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-notion me-1 align-middle fs-18"></i> Notion Workspace
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-stripe me-1 align-middle fs-18"></i> Stripe Billing System
+									</li>
+								</ul>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+                <!-- start row -->
+                <div class="row">
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Links and Buttons</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Use <code>&lt;a&gt;</code>s or <code>&lt;button&gt;</code>s to create  <em>actionable</em> list group items with hover, disabled, and active states by adding <code>.list-group-item-action</code>.</p>
+
+								<div class="list-group">
+									<a href="#" class="list-group-item list-group-item-action active">
+										<i class="ti ti-brand-slack me-1 align-middle fs-18"></i> Slack Collaboration
+									</a>
+									<a href="#" class="list-group-item list-group-item-action">
+										<i class="ti ti-brand-nextcloud me-1 align-middle fs-18"></i> Nextcloud File Sharing 
+									</a>
+									<button type="button" class="list-group-item list-group-item-action">
+										<i class="ti ti-brand-zoom me-1 align-middle fs-18"></i> Zoom Video Meetings
+									</button>
+									<button type="button" class="list-group-item list-group-item-action">
+										<i class="ti ti-brand-notion me-1 align-middle fs-18"></i> Notion Workspace
+									</button>
+									<a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1">
+										<i class="ti ti-brand-stripe me-1 align-middle fs-18"></i> Stripe Billing System
+									</a>
+								</div>
+							</div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Flush</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="ti ti-brand-slack me-1 align-middle fs-18"></i> Slack Collaboration</li>
+                                    <li class="list-group-item"><i class="ti ti-brand-nextcloud me-1 align-middle fs-18"></i> Nextcloud File Sharing</li>
+                                    <li class="list-group-item"><i class="ti ti-brand-zoom me-1 align-middle fs-18"></i> Zoom Video Meetings</li>
+                                    <li class="list-group-item"><i class="ti ti-brand-notion me-1 align-middle fs-18"></i> Notion Workspace</li>
+                                    <li class="list-group-item"><i class="ti ti-brand-stripe me-1 align-middle fs-18"></i> Stripe Billing System</li>
+                                </ul>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Numbered</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Numbers are generated by <code>counter-reset</code> on the <code>&lt;ol&gt;</code>, and then styled and placed with a <code>::before</code> psuedo-element on the <code>&lt;li&gt;</code> with <code>counter-increment</code> and <code>content</code>. </p>
+
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">SmartOne Admin</div>
+                                            SmartOne Admin
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">865</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">SmartOne React Admin</div>
+                                            SmartOne React Admin
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">140</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Angular Version</div>
+                                            Angular Version
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">85</span>
+                                    </li>
+                                </ol>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+                <!-- start row -->
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Contextual Classes</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Use contextual classes to style list items with a stateful background and color.</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                                    <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                                    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                                    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                                    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                                    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                                    <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                                    <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                                </ul>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Contextual Classes with Link</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="text-muted">Use contextual classes to style list items with a stateful background and color.</p>
+
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">Darius ac facilities in</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+                                </div>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Custom content</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="text-muted">Add nearly any HTML within, even for linked list groups like the one below, with the help of flexbox utilities.</p>
+
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="fs-16 mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="fs-16 mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="fs-16 mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                </div>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+                <!-- start row -->
+                <div class="row">
+
+                    <div class="col-xl-4">
+						<div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Horizontal</h5>
+                            </div>
+							<div class="card-body">
+								<p>Add <code>.list-group-horizontal</code> to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant <code>.list-group-horizontal-{sm|md|lg|xl|xxl}</code> to make a list group horizontal starting at that breakpoint’s <code>min-width</code>.</p>
+
+								<ul class="list-group list-group-horizontal mb-3">
+									<li class="list-group-item">
+										<i class="ti ti-brand-slack me-1 align-middle fs-18"></i> Slack
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-zoom me-1 align-middle fs-18"></i> Zoom
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-trello me-1 align-middle fs-18"></i> Trello
+									</li>
+								</ul>
+
+								<ul class="list-group list-group-horizontal-sm mb-3">
+									<li class="list-group-item">
+										<i class="ti ti-brand-notion me-1 align-middle fs-18"></i> Notion
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-stripe me-1 align-middle fs-18"></i> Stripe
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-dropbox me-1 align-middle fs-18"></i> Dropbox
+									</li>
+								</ul>
+
+								<ul class="list-group list-group-horizontal-md">
+									<li class="list-group-item">
+										<i class="ti ti-brand-github me-1 align-middle fs-18"></i> GitHub
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-discord me-1 align-middle fs-18"></i> Discord
+									</li>
+									<li class="list-group-item">
+										<i class="ti ti-brand-asana me-1 align-middle fs-18"></i> Asana
+									</li>
+								</ul>
+
+							</div> <!-- end card body -->							
+						</div> <!-- end card -->						
+                    </div> <!-- end col -->
+					
+                    <div class="col-xl-4">
+						<div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">With Badges</h5>
+                            </div>
+							<div class="card-body">
+								<p class="text-muted">Add badges to any list group item to show unread counts, activity, and more with the help of some utilities.</p>
+
+								<ul class="list-group">
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										New Task Assignments
+										<span class="badge bg-primary rounded-pill">5</span>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										Upcoming Meetings
+										<span class="badge bg-success rounded-pill">3</span>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										System Notifications
+										<span class="badge bg-danger rounded-pill">15+</span>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										Completed Projects
+										<span class="badge bg-success rounded-pill">8</span>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										Overdue Tasks
+										<span class="badge bg-warning rounded-pill">2</span>
+									</li>
+								</ul>
+							</div> <!-- end card body -->							
+						</div> <!-- end card -->						
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Checkboxes and Radios</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Place Bootstrap’s checkboxes and radios within list group items and customize as needed. You can use them without <code>&lt;label&gt;</code>s, but please remember to include an <code>aria-label</code> attribute and value for accessibility.</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                        <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                        <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                                    </li>
+                                </ul>
+
+                                <ul class="list-group mt-2">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+                                        <label class="form-check-label" for="firstRadio">First radio</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+                                        <label class="form-check-label" for="secondRadio">Second radio</label>
+                                    </li>
+                                </ul>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                </div>
+				<!-- end row -->
+                                
+            </div>
+            <!-- End Content -->            
+
+            <!-- Start Footer -->
+            <footer class="footer text-center">
+               <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a> - All Rights Reserved.</p>
+            </footer>
+            <!-- End Footer -->
+
+        </div>
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

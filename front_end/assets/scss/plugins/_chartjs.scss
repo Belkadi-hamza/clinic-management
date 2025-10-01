@@ -1,0 +1,42 @@
+//
+// chartjs.scss
+//
+
+@use "../variables" as *;
+
+.chartjs-chart {
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+.chart-container {
+    border-color: $border-color;
+}
+
+// Curved external tooltip for Chart.js
+.chartjs-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--chartjs-tooltip-bg, #222);
+  color: #fff;
+  border: 1px solid var(--chartjs-tooltip-border, #fff);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: 14px Arial, sans-serif;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  z-index: 9999;
+}
+
+.chartjs-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  background: var(--chartjs-tooltip-bg, #222);
+  border-left: 1px solid var(--chartjs-tooltip-border, #fff);
+  border-top: 1px solid var(--chartjs-tooltip-border, #fff);
+  border-radius: 2px;
+}
