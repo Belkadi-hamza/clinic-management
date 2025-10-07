@@ -1,0 +1,223 @@
+STAFF & SECURITY MANAGEMENT
+1. staff (الموظفين)
+English: Stores all personnel working in the clinic including doctors, nurses, receptionists, etc.
+العربية: يخزن جميع العاملين في العيادة بما في ذلك الأطباء والممرضين والموظفين الاستقبال وغيرهم.
+
+2. roles (الأدوار)
+English: Defines system roles with different permission levels (superadmin, doctor, nurse, etc.)
+العربية: يحدد أدوار النظام بمستويات صلاحيات مختلفة (المشرف العام، الطبيب، الممرض، إلخ)
+
+3. modules (الوحدات)
+English: System functional areas that can be controlled by permissions
+العربية: المناطق الوظيفية للنظام التي يمكن التحكم فيها عبر الصلاحيات
+
+4. role_permissions (صلاحيات الأدوار)
+English: Detailed permissions for each role per module (create, read, update, delete, export, manage users)
+العربية: صلاحيات مفصلة لكل دور لكل وحدة (إنشاء، قراءة، تحديث، حذف، تصدير، إدارة المستخدمين)
+
+5. system_users (مستخدمي النظام)
+English: Staff members who have system login access with authentication credentials
+العربية: أعضاء الموظفين الذين لديهم حق الوصول لتسجيل الدخول إلى النظام مع بيانات اعتماد المصادقة
+
+6. user_sessions (جلسات المستخدمين)
+English: Manages user login sessions for security and tracking
+العربية: يدير جلسات تسجيل دخول المستخدمين للأمان والتتبع
+
+7. audit_logs (سجلات التدقيق)
+English: Comprehensive audit trail recording all data changes in the system
+العربية: سجل تدقيق شامل يسجل جميع تغييرات البيانات في النظام
+
+CORE MEDICAL ENTITIES
+8. doctors (الأطباء)
+English: Medical professionals providing healthcare services
+العربية: المتخصصون الطبيون الذين يقدمون خدمات الرعاية الصحية
+
+9. patients (المرضى)
+English: Individuals receiving medical care with demographic and medical information
+العربية: الأفراد الذين يتلقون الرعاية الطبية مع المعلومات الديموغرافية والطبية
+
+CLINICAL CARE & VISITS
+10. patient_visits (زيارات المرضى)
+English: Records each patient consultation with clinical examination data
+العربية: يسجل كل استشارة للمريض مع بيانات الفحص السريري
+
+11. medical_services (الخدمات الطبية)
+English: Catalog of medical procedures and services with pricing
+العربية: كتالوج الإجراءات والخدمات الطبية مع التسعير
+
+12. visit_services (خدمات الزيارة)
+English: Links services performed during specific patient visits
+العربية: يربط الخدمات المقدمة خلال زيارات مرضى محددة
+
+MEDICAL CONDITIONS & DIAGNOSES
+13. medical_conditions (الحالات الطبية)
+English: Master list of diseases, disorders, and medical conditions
+العربية: القائمة الرئيسية للأمراض والاضطرابات والحالات الطبية
+
+14. patient_diagnoses (تشخيصات المرضى)
+English: Records specific diagnoses given to patients during visits
+العربية: يسجل التشخيصات المحددة الممنوحة للمرضى خلال الزيارات
+
+15. symptoms (الأعراض)
+English: Catalog of medical symptoms and patient complaints
+العربية: كتالوج الأعراض الطبية وشكاوى المرضى
+
+16. visit_symptoms (أعراض الزيارة)
+English: Records symptoms presented by patients during visits
+العربية: يسجل الأعراض التي يظهرها المرضى خلال الزيارات
+
+ALLERGY MANAGEMENT
+17. allergies (الحساسيات)
+English: Master list of known allergens and allergic substances
+العربية: القائمة الرئيسية لمسببات الحساسية والمواد المثيرة للحساسية المعروفة
+
+18. patient_allergies (حساسيات المرضى)
+English: Records patient-specific allergic reactions and sensitivities
+العربية: يسجل ردود الفعل التحسسية والحساسيات الخاصة بكل مريض
+
+MEDICATION MANAGEMENT
+19. medications (الأدوية)
+English: Pharmaceutical products catalog with drug information
+العربية: كتالوج المنتجات الصيدلانية مع معلومات الأدوية
+
+20. prescriptions (الوصفات الطبية)
+English: Medication orders prescribed to patients by doctors
+العربية: أوامر الأدوية الموصوفة للمرضى من قبل الأطباء
+
+DIAGNOSTIC SERVICES
+21. lab_tests (فحوصات المختبر)
+English: Laboratory investigations and diagnostic tests
+العربية: الفحوصات المخبرية والاختبارات التشخيصية
+
+22. lab_orders (طلبات المختبر)
+English: Laboratory test requests and results tracking
+العربية: طلبات فحوصات المختبر وتتبع النتائج
+
+23. radiology_exams (فحوصات الأشعة)
+English: Radiological procedures and imaging studies
+العربية: الإجراءات الإشعاعية ودراسات التصوير
+
+24. radiology_orders (طلبات الأشعة)
+English: Radiology exam requests and report management
+العربية: طلبات فحوصات الأشعة وإدارة التقارير
+
+APPOINTMENT & SCHEDULING
+25. appointment_slots (مواعيد الجدولة)
+English: Available time slots for patient appointments
+العربية: المواعيد الزمنية المتاحة لمواعيد المرضى
+
+26. appointments (المواعيد)
+English: Patient appointment scheduling and management
+العربية: جدولة مواعيد المرضى وإدارتها
+
+VACCINATION MANAGEMENT
+27. vaccines (اللقاحات)
+English: Immunization products and vaccine information
+العربية: منتجات التحصين ومعلومات اللقاحات
+
+28. vaccination_schedules (جداول التطعيم)
+English: Patient vaccination plans and administration tracking
+العربية: خطط تطعيم المرضى وتتبع الإعطاء
+
+BILLING & FINANCIAL
+29. billing_categories (فئات الفواتير)
+English: Expense classification system for financial reporting
+العربية: نظام تصنيف النفقات لإعداد التقارير المالية
+
+30. patient_payments (مدفوعات المرضى)
+English: Records patient payments for medical services
+العربية: يسجل مدفوعات المرضى للخدمات الطبية
+
+31. expenses (النفقات)
+English: Tracks clinic operational expenses and costs
+العربية: يتتبع النفقات والتكاليف التشغيلية للعيادة
+
+MEDICAL DOCUMENTATION
+32. medical_certificates (الشهادات الطبية)
+English: Medical certificates, work excuses, and fitness reports
+العربية: الشهادات الطبية وإجازات العمل وتقارير اللياقة
+
+33. medical_reports (التقارير الطبية)
+English: Various medical reports and clinical documentation
+العربية: التقارير الطبية المختلفة والوثائق السريرية
+
+REFERENCE DATA
+34. pharmacies (الصيدليات)
+English: Pharmacy partners and medication suppliers
+العربية: شركاء الصيدليات وموردي الأدوية
+
+35. banks (البنوك)
+English: Bank information for payment processing
+العربية: معلومات البنوك لمعالجة المدفوعات
+
+36. doctor_specialties (تخصصات الأطباء)
+English: Doctor specialization and area of expertise
+العربية: تخصص الطبيب ومجال خبرته
+
+DATA FLOW OVERVIEW - تدفق البيانات
+English Workflow:
+Staff Registration → staff table
+
+User Account Creation → system_users table
+
+Patient Registration → patients table
+
+Appointment Booking → appointments table
+
+Clinical Visit → patient_visits table
+
+Diagnosis & Treatment → patient_diagnoses, prescriptions
+
+Lab/Radiology Orders → lab_orders, radiology_orders
+
+Billing & Payment → patient_payments
+
+Medical Documentation → medical_reports, medical_certificates
+
+التدفق بالعربية:
+١. تسجيل الموظفين → جدول staff
+٢. إنشاء حسابات المستخدمين → جدول system_users
+٣. تسجيل المرضى → جدول patients
+٤. حجز المواعيد → جدول appointments
+٥. الزيارة السريرية → جدول patient_visits
+٦. التشخيص والعلاج → patient_diagnoses, prescriptions
+٧. طلبات المختبر/الأشعة → lab_orders, radiology_orders
+٨. الفواتير والمدفوعات → patient_payments
+٩. التوثيق الطبي → medical_reports, medical_certificates
+
+PERMISSION HIERARCHY - التسلسل الهرمي للصلاحيات
+English:
+Super Admin: Full system access + User management
+
+Admin: Full system access (except user management)
+
+Doctor: Patient care, prescriptions, medical records
+
+Nurse: Limited medical access, patient monitoring
+
+Receptionist: Patient registration, appointment scheduling
+
+Lab Technician: Lab test management and results
+
+Accountant: Billing and financial management
+
+Pharmacist: Medication and inventory management
+
+العربية:
+المشرف العام: وصول كامل للنظام + إدارة المستخدمين
+
+المشرف: وصول كامل للنظام (ما عدا إدارة المستخدمين)
+
+الطبيب: رعاية المرضى، الوصفات الطبية، السجلات الطبية
+
+الممرض: وصول طبي محدود، مراقبة المرضى
+
+موظف الاستقبال: تسجيل المرضى، جدولة المواعيد
+
+فني المختبر: إدارة فحوصات المختبر والنتائج
+
+المحاسب: الفواتير والإدارة المالية
+
+الصيدلي: إدارة الأدوية والمخزون
+
+This comprehensive structure supports complete medical practice management from staff administration through patient care to financial operations, with full audit trails and role-based access control.

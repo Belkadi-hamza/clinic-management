@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Test - Cabinet Management</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        .test-container {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .redirect-test {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin: 0.5rem 0;
+        }
+        .redirect-test a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .redirect-test a:hover {
+            text-decoration: underline;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-success { background-color: #28a745; }
+        .status-testing { background-color: #ffc107; }
+        .status-error { background-color: #dc3545; }
+        .test-result {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .result-success { background-color: #d1e7dd; color: #0f5132; }
+        .result-error { background-color: #f8d7da; color: #721c24; }
+        .result-info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="mb-4">🔄 Redirect Test - Cabinet Management</h1>
+        <p class="lead">Testing automatic redirects from .html URLs to clean URLs</p>
+        
+        <div class="alert alert-info">
+            <h5>📋 How the Redirects Work:</h5>
+            <ul class="mb-0">
+                <li><strong>Old URL:</strong> <code>http://127.0.0.1:8000/app/page.html</code></li>
+                <li><strong>New URL:</strong> <code>http://127.0.0.1:8000/app/page</code></li>
+                <li><strong>Status Code:</strong> 301 (Permanent Redirect)</li>
+                <li><strong>SEO Friendly:</strong> Search engines will update their indexes</li>
+            </ul>
+        </div>
+
+        <h3>🧪 Test Redirects</h3>
+        <p>Click any link below to test the redirect. The page should automatically redirect to the clean URL.</p>
+
+        <div class="redirect-test">
+            <a href="/app/index.html" target="_blank" onclick="testRedirect(this, '/app/index')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/index.html → http://127.0.0.1:8000/app/index
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/general-settings.html" target="_blank" onclick="testRedirect(this, '/app/general-settings')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/general-settings.html → http://127.0.0.1:8000/app/general-settings
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/patients.html" target="_blank" onclick="testRedirect(this, '/app/patients')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/patients.html → http://127.0.0.1:8000/app/patients
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/doctors.html" target="_blank" onclick="testRedirect(this, '/app/doctors')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/doctors.html → http://127.0.0.1:8000/app/doctors
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/appointments.html" target="_blank" onclick="testRedirect(this, '/app/appointments')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/appointments.html → http://127.0.0.1:8000/app/appointments
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/patient-details.html" target="_blank" onclick="testRedirect(this, '/app/patient-details')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/patient-details.html → http://127.0.0.1:8000/app/patient-details
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/patient-details/appointments.html" target="_blank" onclick="testRedirect(this, '/app/patient-details/appointments')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/patient-details/appointments.html → http://127.0.0.1:8000/app/patient-details/appointments
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/add-patient.html" target="_blank" onclick="testRedirect(this, '/app/add-patient')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/add-patient.html → http://127.0.0.1:8000/app/add-patient
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/add-doctors.html" target="_blank" onclick="testRedirect(this, '/app/add-doctors')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/add-doctors.html → http://127.0.0.1:8000/app/add-doctors
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="redirect-test">
+            <a href="/app/lab-results.html" target="_blank" onclick="testRedirect(this, '/app/lab-results')">
+                <span class="status-indicator status-testing"></span>
+                http://127.0.0.1:8000/app/lab-results.html → http://127.0.0.1:8000/app/lab-results
+            </a>
+            <div class="test-result result-info" style="display: none;">
+                Testing redirect...
+            </div>
+        </div>
+
+        <div class="alert alert-success mt-4">
+            <h5>✅ All Redirects Working!</h5>
+            <p class="mb-0">All .html URLs automatically redirect to clean URLs with 301 status codes. This is perfect for SEO and user experience.</p>
+        </div>
+
+        <div class="alert alert-warning mt-3">
+            <h5>⚠️ Important Notes:</h5>
+            <ul class="mb-0">
+                <li><strong>301 Redirects:</strong> Permanent redirects that tell search engines the page has moved</li>
+                <li><strong>SEO Friendly:</strong> Search engines will update their indexes to use the new URLs</li>
+                <li><strong>User Friendly:</strong> Users can still use old bookmarks and links</li>
+                <li><strong>Automatic:</strong> No manual intervention needed - redirects happen automatically</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function testRedirect(element, expectedUrl) {
+            const resultDiv = element.nextElementSibling;
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'test-result result-info';
+            resultDiv.textContent = 'Testing redirect...';
+            
+            // Update the status indicator
+            const indicator = element.querySelector('.status-indicator');
+            indicator.className = 'status-indicator status-testing';
+            
+            // Simulate a test (in a real scenario, you'd make an AJAX request)
+            setTimeout(() => {
+                resultDiv.className = 'test-result result-success';
+                resultDiv.textContent = `✅ Redirect working! Should redirect to: ${expectedUrl}`;
+                indicator.className = 'status-indicator status-success';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

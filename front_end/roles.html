@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User-Permisions-Settings | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords"
+        content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- API Config -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- Auth Guard: redirect to login if not authenticated -->
+    <script src="assets/js/auth-guard.js"></script>
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-dark.svg" alt="dark logo"></span>
+                        </span>
+
+                        <!-- Logo Sm -->
+                        <span class="logo-small">
+                            <span class="logo-lg"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2">
+                        <i class="ti ti-arrow-bar-to-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-flex me-2">
+                        <button class="topbar-link btn topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);"
+                            class="topbar-link dropdown-toggle drop-arrow-none position-relative"
+                            data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex"
+                                alt="patient">
+                            <span class="online text-success">
+                                <i
+                                    class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42"
+                                    height="42" alt="patient" id="userAvatar">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0" id="userFullName">Loading...</p>
+                                    <span class="d-block fs-13" id="userRole">...</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="general-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>
+
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="javascript:void(0);" class="dropdown-item text-danger" id="logoutBtn">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index" class="dark-logo">
+                        <img src="assets/img/logo-dark.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn">
+                    <i class="ti ti-arrow-bar-to-left"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul role="menu" aria-label="Main navigation menu">
+                        <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
+
+                        <li>
+                            <a href="index">
+                                <i class="ti ti-layout-board"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
+
+                        <li>
+                            <a href="patients">
+                                <i class="ti ti-users"></i><span>Patients</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doctors">
+                                <i class="ti ti-stethoscope"></i><span>Doctors</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appointments">
+                                <i class="ti ti-calendar-time"></i><span>Appointments</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="visits">
+                                <i class="ti ti-e-passport"></i><span>Visits</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-test-pipe"></i><span>Laboratory</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="lab-results">Lab Results</a>
+                                </li>
+                                <li>
+                                    <a href="medical-results">Medical Rsults</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="pharmacy">
+                                <i class="ti ti-prescription"></i><span>Pharmacy</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
+
+                        <li>
+                            <a href="staffs">
+                                <i class="ti ti-users-group"></i><span>Staffs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="roles"  class="active">
+                                <i class="ti ti-users-group"></i><span>Roles</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content">
+
+                <!-- Page Header -->
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+                    <div class="breadcrumb-arrow">
+                        <h4 class="mb-1">Paramètres</h4>
+                        <div class="text-end">
+                            <ol class="breadcrumb m-0 py-0">
+                                <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                                <li class="breadcrumb-item"><a href="general-settings.html">Paramètres</a></li>
+                                <li class="breadcrumb-item active">Rôles</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Page Header -->
+
+                <!-- Start Tabs -->
+                <ul class="nav nav-tabs nav-item-primary mb-3 border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
+                    <li class="nav-item">
+                        <a href="general-settings.html" class="nav-link border rounded fw-semibold">
+                            Général
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="security-settings.html" class="nav-link border rounded fw-semibold">
+                            Sécurité
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="roles.html" class="nav-link border rounded fw-semibold active">
+                            Rôles des utilisateurs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="permission-settings.html" class="nav-link border rounded fw-semibold">
+                            Permissions des utilisateurs
+                        </a>
+                    </li>
+                </ul>
+                <!-- End Tabs -->
+
+                <!-- card start -->
+                <div class="card mb-0">
+                    <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
+                        <h5 class="d-inline-flex align-items-center mb-0">Total des rôles<span class="badge bg-danger ms-2"
+                                id="role-count">0</span></h5>
+                        <div>
+                            <a href="javascript:void(0);" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#add_role"><i class="ti ti-square-rounded-plus me-1"></i>Nouveau rôle</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive table-nowrap">
+                            <table class="table border mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Rôle</th>
+                                        <th>Description</th>
+                                        <th>Statut</th>
+                                        <th>Date de création</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Roles will be dynamically loaded here -->
+                                    <tr>
+                                        <td colspan="5" class="text-center py-4">
+                                            <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                                <span class="visually-hidden">Chargement...</span>
+                                            </div>
+                                            <p class="text-muted mb-0 mt-2">Chargement des rôles...</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+
+            </div>
+            <!-- End Content -->
+            <!-- Start Footer -->
+            <footer class="footer text-center">
+                <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a>
+                    - All Rights Reserved.</p>
+            </footer>
+            <!-- End Footer -->
+        </div>
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- Start Add Modal -->
+    <div class="modal fade" id="add_role">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-dark modal-title fw-bold text-truncate">Ajouter un nouveau rôle</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <form id="add-role-form">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Nom du rôle <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="add-role-name" name="name" required
+                                placeholder="ex. : Médecin, Infirmière, Secrétaire">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" id="add-role-description" name="description"
+                                rows="3" placeholder="Description du rôle et de ses responsabilités"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white me-2" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Ajouter le rôle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Add Modal -->
+
+    <!-- Start Edit Modal -->
+    <div class="modal fade" id="edit_role">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-dark modal-title fw-bold text-truncate">Modifier le rôle</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <form id="edit-role-form">
+                    <input type="hidden" id="edit-role-id" name="id">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Nom du rôle <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="edit-role-name" name="name" required
+                                placeholder="ex. : Médecin, Infirmière, Secrétaire">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" id="edit-role-description" name="description"
+                                rows="3" placeholder="Description du rôle et de ses responsabilités"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white me-2" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Edit Modal -->
+
+    <!-- Start Delete Modal  -->
+    <div class="modal fade" id="delete_modal">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="mb-2">
+                        <span class="avatar avatar-md rounded-circle bg-danger"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
+                    <h6 class="fs-16 mb-1">Confirmer la suppression</h6>
+                    <p class="mb-3">Êtes-vous sûr de vouloir supprimer ce rôle ?</p>
+                    <input type="hidden" id="delete-role-id">
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-white w-100" data-bs-dismiss="modal">Annuler</button>
+                        <button type="button" class="btn btn-danger w-100" id="confirm-delete-role">Oui, supprimer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Delete Modal  -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- User Info & Logout Logic -->
+    <script src="assets/js/header.js"></script>
+
+    <!-- Roles Settings JS -->
+    <script src="assets/js/roles.js"></script>
+</body>
+
+</html>

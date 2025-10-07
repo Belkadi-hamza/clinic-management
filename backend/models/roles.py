@@ -22,4 +22,3 @@ class Role(Base):
     creator = relationship("SystemUser", foreign_keys=[created_by])
     updater = relationship("SystemUser", foreign_keys=[updated_by])
     deleter = relationship("SystemUser", foreign_keys=[deleted_by])
-    system_users = relationship("SystemUser", back_populates="role")

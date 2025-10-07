@@ -8,6 +8,7 @@ from . import appointments
 from . import audit_logs
 from . import banks
 from . import billing_categories
+from . import departments
 from . import doctor_specialties
 from . import doctors
 from . import expenses
@@ -46,6 +47,7 @@ __all__ = [
     "audit_logs",
     "banks",
     "billing_categories",
+    "departments",
     "doctor_specialties",
     "doctors",
     "expenses",

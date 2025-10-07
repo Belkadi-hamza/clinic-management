@@ -6,13 +6,13 @@ from ..crud.role import (
     get_roles, get_role_by_id, get_role_by_name,
     create_role, update_role, soft_delete_role, restore_role
 )
-from ..deps import require_admin_or_super
+from ..deps import require_admin_or_super, require_roles
 from typing import List
 
 router = APIRouter()
 
 @router.get("/", response_model=List[RoleResponse])
-def read_roles(current_user: dict = Depends(require_admin_or_super), db: Session = Depends(get_db)):
+def read_roles(current_user: dict = Depends(require_roles("superadmin", "admin", "doctor")), db: Session = Depends(get_db)):
     roles = get_roles(db)
     return [
         RoleResponse(
@@ -23,7 +23,7 @@ def read_roles(current_user: dict = Depends(require_admin_or_super), db: Session
     ]
 
 @router.get("/{role_id}", response_model=RoleResponse)
-def read_role(role_id: int, current_user: dict = Depends(require_admin_or_super), db: Session = Depends(get_db)):
+def read_role(role_id: int, current_user: dict = Depends(require_roles("superadmin", "admin", "doctor")), db: Session = Depends(get_db)):
     role = get_role_by_id(db, role_id)
     if not role:
         raise HTTPException(status_code=404, detail="Role not found")

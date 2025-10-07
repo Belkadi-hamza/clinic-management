@@ -3,20 +3,28 @@
 
 <head>
 
-	<!-- Meta Tags -->
+    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Consultation | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
-    <meta name="keywords" content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
-    <meta name="author" content="dreamstechnologies">    
-	
+    <meta name="description"
+        content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords"
+        content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <!-- Apple Icon -->
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- API Config -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- Auth Guard: redirect to login if not authenticated -->
+    <script src="assets/js/auth-guard.js"></script>
 
     <!-- Theme Config Js -->
     <script src="assets/js/theme-script.js"></script>
@@ -47,7 +55,7 @@
     <div class="main-wrapper">
 
         <!-- Topbar Start -->
-                <header class="navbar-header">
+        <header class="navbar-header">
             <div class="page-container topbar-menu">
                 <div class="d-flex align-items-center gap-2">
                     <!-- Sidebar Mobile Button -->
@@ -73,9 +81,9 @@
                         </span>
                     </a>
 
-                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2">
                         <i class="ti ti-arrow-bar-to-right"></i>
-                    </button> 
+                    </button>
 
                 </div>
 
@@ -87,20 +95,27 @@
                             <i class="ti ti-moon fs-16"></i>
                         </button>
                     </div>
-					
-					<!-- User Dropdown -->
-					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
-                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex" alt=patient">
-                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);"
+                            class="topbar-link dropdown-toggle drop-arrow-none position-relative"
+                            data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex"
+                                alt="patient">
+                            <span class="online text-success">
+                                <i
+                                    class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i>
+                            </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
-                        
+
                             <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
-                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42" height="42" alt="patient">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42"
+                                    height="42" alt="patient" id="userAvatar">
                                 <div class="ms-2">
-                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
-                                    <span class="d-block fs-13">Administrator</span>
+                                    <p class="fw-medium text-dark mb-0" id="userFullName">Loading...</p>
+                                    <span class="d-block fs-13" id="userRole">...</span>
                                 </div>
                             </div>
 
@@ -108,18 +123,18 @@
                             <a href="general-settings.html" class="dropdown-item">
                                 <i class="ti ti-user-circle me-1 align-middle"></i>
                                 <span class="align-middle">Profile Settings</span>
-                            </a>          
-                            
+                            </a>
+
                             <!-- Item-->
                             <div class="pt-2 mt-2 border-top">
-                                <a href="login.html" class="dropdown-item text-danger">
+                                <a href="javascript:void(0);" class="dropdown-item text-danger" id="logoutBtn">
                                     <i class="ti ti-logout me-1 fs-17 align-middle"></i>
                                     <span class="align-middle">Sign Out</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-						
+
                 </div>
             </div>
         </header>
@@ -127,119 +142,71 @@
 
 
         <!-- Sidenav Menu Start -->
-        <div class="sidebar" id="sidebar">
-            
+                        <div class="sidebar" id="sidebar">
+
             <!-- Start Logo -->
             <div class="sidebar-logo">
                 <div>
                     <!-- Logo Normal -->
-                    <a href="index.html" class="logo logo-normal">
+                    <a href="index" class="logo logo-normal">
                         <img src="assets/img/logo.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Small -->
-                    <a href="index.html" class="logo-small">
+                    <a href="index" class="logo-small">
                         <img src="assets/img/logo-small.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Dark -->
-                    <a href="index.html" class="dark-logo">
+                    <a href="index" class="dark-logo">
                         <img src="assets/img/logo-dark.svg" alt="Logo">
                     </a>
                 </div>
-                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn">
                     <i class="ti ti-arrow-bar-to-left"></i>
                 </button>
 
                 <!-- Sidebar Menu Close -->
                 <button class="sidebar-close">
                     <i class="ti ti-x align-middle"></i>
-                </button>                
+                </button>
             </div>
             <!-- End Logo -->
 
             <!-- Sidenav Menu -->
-            <div class="sidebar-inner" data-simplebar>                
+            <div class="sidebar-inner" data-simplebar>
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul role="menu" aria-label="Main navigation menu">
                         <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
 
                         <li>
-                            <a href="index.html">
+                            <a href="index" >
                                 <i class="ti ti-layout-board"></i><span>Dashboard</span>
                             </a>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-apps"></i><span>Applications</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="chat.html">Chat</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="voice-call.html">Voice Call</a></li>
-                                        <li><a href="video-call.html">Video Call</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="calendar.html">Calendar</a></li>	
-                                <li><a href="email.html">Email</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="invoice.html">Invoices</a></li>
-                                        <li><a href="invoice-details.html">Invoice Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="todo.html">To Do</a></li>
-                                <li><a href="notes.html">Notes</a></li>
-                                <li><a href="kanban-view.html">Kanban Board</a></li>
-                                <li><a href="file-manager.html">File Manager</a></li>
-                                <li><a href="social-feed.html">Social Feed</a></li>
-                                <li><a href="search-result.html">Search Result</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="layout-mini.html">Mini</a></li>
-                                <li><a href="layout-hoverview.html">Hover View</a></li>
-                                <li><a href="layout-hidden.html">Hidden</a></li>
-                                <li><a href="layout-fullwidth.html">Full Width</a></li>
-                                <li><a href="layout-rtl.html">RTL</a></li>
-                                <li><a href="layout-dark.html">Dark</a></li>
-                            </ul>
                         </li>
 
                         <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
 
                         <li>
-                            <a href="patients.html">
+                            <a href="patients" >
                                 <i class="ti ti-users"></i><span>Patients</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="doctors.html">
+                            <a href="doctors" >
                                 <i class="ti ti-stethoscope"></i><span>Doctors</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="appointments.html" class="active">
+                            <a href="appointments" class="active">
                                 <i class="ti ti-calendar-time"></i><span>Appointments</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="visits.html">
+                            <a href="visits" >
                                 <i class="ti ti-e-passport"></i><span>Visits</span>
                             </a>
                         </li>
@@ -250,16 +217,16 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="lab-results.html">Lab Results</a>
+                                    <a href="lab-results" >Lab Results</a>
                                 </li>
                                 <li>
-                                    <a href="medical-results.html">Medical Rsults</a>
+                                    <a href="medical-results" >Medical Rsults</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="pharmacy.html">
+                            <a href="pharmacy" >
                                 <i class="ti ti-prescription"></i><span>Pharmacy</span>
                             </a>
                         </li>
@@ -267,238 +234,17 @@
                         <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
 
                         <li>
-                            <a href="staffs.html">
+                            <a href="staffs" >
                                 <i class="ti ti-users-group"></i><span>Staffs</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="notifications.html">
-                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            <a href="roles" >
+                                <i class="ti ti-users-group"></i><span>Roles</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="general-settings.html">
-                                <i class="ti ti-settings"></i><span>Settings</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="sign-up.html">Sign Up</a></li>
-                                <li><a href="forgot-password.html">Forgot Password</a></li>
-                                <li><a href="change-password.html">Change Password</a></li>
-                                <li><a href="lock-screen.html">Lock Screen</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="error-404.html">Error 404</a></li>
-                                <li><a href="error-500.html">Error 500</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-files"></i><span>Other Pages</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="starter-page.html">Starter Page</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>   
-
-                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="ui-accordion.html">Accordion</a></li>
-                                <li><a href="ui-alerts.html">Alerts</a></li>
-                                <li><a href="ui-avatar.html">Avatar</a></li>
-                                <li><a href="ui-badges.html">Badges</a></li>
-                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
-                                <li><a href="ui-buttons.html">Buttons</a></li>
-                                <li><a href="ui-buttons-group.html">Button Group</a></li>
-                                <li><a href="ui-cards.html">Card</a></li>
-                                <li><a href="ui-carousel.html">Carousel</a></li>
-                                <li><a href="ui-collapse.html">Collapse</a></li>
-                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                <li><a href="ui-ratio.html">Ratio</a></li>
-                                <li><a href="ui-grid.html">Grid</a></li>
-                                <li><a href="ui-images.html">Images</a></li>
-                                <li><a href="ui-links.html">Links</a></li>
-                                <li><a href="ui-list-group.html">List Group</a></li>
-                                <li><a href="ui-modals.html">Modals</a></li>
-                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
-                                <li><a href="ui-pagination.html">Pagination</a></li>
-                                <li><a href="ui-placeholders.html">Placeholders</a></li>
-                                <li><a href="ui-popovers.html">Popovers</a></li>
-                                <li><a href="ui-progress.html">Progress</a></li>
-                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
-                                <li><a href="ui-spinner.html">Spinner</a></li>
-                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
-                                <li><a href="ui-toasts.html">Toasts</a></li>
-                                <li><a href="ui-tooltips.html">Tooltips</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
-                                <li><a href="ui-utilities.html">Utilities</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="ui-dragula.html">Dragula</a></li>
-                                <li><a href="ui-clipboard.html">Clipboard</a></li>
-                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
-                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
-                                <li><a href="ui-lightbox.html">Lightbox</a></li>
-                                <li><a href="ui-rating.html">Rating</a></li>
-                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
-                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
-                                        <li><a href="form-input-groups.html">Input Groups</a></li>
-                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
-                                        <li><a href="form-mask.html">Input Masks</a></li>
-                                        <li><a href="form-fileupload.html">File Uploads</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
-                                        <li><a href="form-vertical.html">Vertical Form</a></li>
-                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="form-validation.html">Form Validation</a></li>
-                                <li><a href="form-select.html">Form Select</a></li>
-                                <li><a href="form-wizard.html">Form Wizard</a></li>
-                                <li><a href="form-pickers.html">Form Picker</a></li>
-                                <li><a href="form-editors.html">Form Editors</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="tables-basic.html">Basic Tables </a></li>
-                                <li><a href="data-tables.html">Data Table </a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="chart-apex.html">Apex Charts</a></li>
-                                <li><a href="chart-c3.html">Chart C3</a></li>
-                                <li><a href="chart-js.html">Chart Js</a></li>
-                                <li><a href="chart-morris.html">Morris Charts</a></li>
-                                <li><a href="chart-flot.html">Flot Charts</a></li>
-                                <li><a href="chart-peity.html">Peity Charts</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
-                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
-                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
-                                <li><a href="icon-remix.html">Remix Icons</a></li>
-                                <li><a href="icon-feather.html">Feather Icons</a></li>
-                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
-                                <li><a href="icon-material.html">Material Icons</a></li>
-                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
-                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
-                                <li><a href="icon-themify.html">Themify Icons</a></li>
-                                <li><a href="icon-weather.html">Weather Icons</a></li>
-                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
-                                <li><a href="icon-flag.html">Flag Icons</a></li>
-                            </ul>
-                        </li> 
-
-                        <li>
-                            <a href="widgets.html">
-                                <i class="ti ti-components"></i><span>Widgets</span>
-                            </a>
-                        </li> 
-
-                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
-
-                        <li>
-                            <a href="javascript:void(0);"><i class="ti ti-file-type-doc"></i><span>Documentation</span></a>
-                        </li> 
-
-                        <li>
-                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
-                                <span>Changelog</span>  
-                            </a>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
-                                        <li class="submenu submenu-two submenu-three">
-                                            <a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
-                                            <ul>
-                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
-                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>                   
+                    </ul>
                 </div>
             </div>
 
@@ -508,7 +254,7 @@
         <!-- ========================
 			Start Page Content
 		========================= -->
-         
+
         <div class="page-wrapper">
 
             <!-- Start Content -->
@@ -521,14 +267,14 @@
                         <div class="text-end">
                             <ol class="breadcrumb m-0 py-0">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="appointments.html">Appointments</a></li>                              
+                                <li class="breadcrumb-item"><a href="appointments.html">Appointments</a></li>
                                 <li class="breadcrumb-item active">Consultation</li>
                             </ol>
                         </div>
                     </div>
                 </div>
-				<!-- End Page Header -->
-                
+                <!-- End Page Header -->
+
                 <!-- card start -->
                 <div class="card">
                     <div class="card-header">
@@ -538,44 +284,46 @@
                         <div class="row row-gap-3 align-items-center">
                             <div class="col-xl-6">
                                 <div class="d-sm-flex align-items-center">
-                                    <a href="javascript:void(0);" class="avatar avatar-xxxl mb-3 mb-sm-0 me-sm-3 flex-shrink-0">
+                                    <a href="javascript:void(0);"
+                                        class="avatar avatar-xxxl mb-3 mb-sm-0 me-sm-3 flex-shrink-0">
                                         <img src="assets/img/avatars/avatar-05.jpg" alt="patient" class="rounded">
                                     </a>
                                     <div>
                                         <span class="badge badge-soft-danger mb-1">Out Patient</span>
                                         <h6 class="mb-1"><a href="patient-details.html">James Carter</a></h6>
                                         <p class="mb-1">Patient / Consultation ID : OP1245654 / C243546566</p>
-                                        <p class="mb-0">Known Allergies : <span class="text-dark fw-medium">Pain near left chest, Pelvic Salinity</span></p>
+                                        <p class="mb-0">Known Allergies : <span class="text-dark fw-medium">Pain near
+                                                left chest, Pelvic Salinity</span></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="p-3 bg-light rounded">
                                     <div class="row row-gap-2">
-                                       <div class="col-sm-4">
-                                           <h6 class="fs-14 fw-semibold mb-1 text-truncate">Age / Gender</h6>
-                                           <p class="fs-13 mb-0 text-truncate">28 Years / Male</p>
-                                       </div>
-                                       <div class="col-sm-4">
-                                           <h6 class="fs-14 fw-semibold mb-1 text-truncate">Department</h6>
-                                           <p class="fs-13 mb-0 text-truncate">Cardiology</p>
-                                       </div>
-                                       <div class="col-sm-4">
-                                           <h6 class="fs-14 fw-semibold mb-1">Date</h6>
-                                           <p class="fs-13 mb-0 text-truncate">25 Jan 2024, 07:00</p>
-                                       </div>
-                                       <div class="col-sm-4">
-                                           <h6 class="fs-14 fw-semibold mb-1">Gender</h6>
-                                           <p class="fs-13 mb-0">Male</p>
-                                       </div>
-                                       <div class="col-sm-4">
-                                           <h6 class="fs-14 fw-semibold mb-1 text-truncate">Blood Group</h6>
-                                           <p class="fs-13 mb-0">O+ve</p>
-                                       </div>
-                                       <div class="col-sm-4">
-                                           <h6 class="fs-14 fw-semibold mb-1 text-truncate">Consultation Type</h6>
-                                           <p class="fs-13 mb-0">Video</p>
-                                       </div>
+                                        <div class="col-sm-4">
+                                            <h6 class="fs-14 fw-semibold mb-1 text-truncate">Age / Gender</h6>
+                                            <p class="fs-13 mb-0 text-truncate">28 Years / Male</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h6 class="fs-14 fw-semibold mb-1 text-truncate">Department</h6>
+                                            <p class="fs-13 mb-0 text-truncate">Cardiology</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h6 class="fs-14 fw-semibold mb-1">Date</h6>
+                                            <p class="fs-13 mb-0 text-truncate">25 Jan 2024, 07:00</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h6 class="fs-14 fw-semibold mb-1">Gender</h6>
+                                            <p class="fs-13 mb-0">Male</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h6 class="fs-14 fw-semibold mb-1 text-truncate">Blood Group</h6>
+                                            <p class="fs-13 mb-0">O+ve</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h6 class="fs-14 fw-semibold mb-1 text-truncate">Consultation Type</h6>
+                                            <p class="fs-13 mb-0">Video</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -596,7 +344,8 @@
                                 <div class="row gx-3">
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Temperature <span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">Temperature <span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">F</span>
@@ -605,7 +354,8 @@
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Pulse<span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">Pulse<span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">mmHg</span>
@@ -614,7 +364,8 @@
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Respiratory Rate<span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">Respiratory Rate<span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">rpm</span>
@@ -623,7 +374,8 @@
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">SPO2<span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">SPO2<span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">%</span>
@@ -632,7 +384,8 @@
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Height<span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">Height<span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">cm</span>
@@ -641,7 +394,8 @@
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Weight<span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">Weight<span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">Kg</span>
@@ -659,7 +413,8 @@
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Waist<span class="text-danger ms-1">*</span></label>
+                                            <label class="form-label">Waist<span
+                                                    class="text-danger ms-1">*</span></label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control">
                                                 <span class="input-group-text">cm</span>
@@ -674,10 +429,11 @@
                                                 <span class="input-group-text">M</span>
                                             </div>
                                         </div>
-                                    </div>                                
-                                </div>                            
+                                    </div>
+                                </div>
                             </div>
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1"></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -692,17 +448,18 @@
                                 <div class="row gx-3 align-items-center">
                                     <div class="col-md-2">
                                         <div class="mb-md-3">
-                                            <label class="form-label mb-md-0">Fever</label> 
+                                            <label class="form-label mb-md-0">Fever</label>
                                         </div>
                                     </div>
                                     <div class="col-md-10">
-                                        <div class="mb-3">                                        
+                                        <div class="mb-3">
                                             <input type="text" class="form-control" placeholder="Add Symptoms">
                                         </div>
-                                    </div>                               
-                                </div>                            
+                                    </div>
+                                </div>
                             </div>
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1"></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -717,27 +474,29 @@
                                 <div class="row gx-3 align-items-center">
                                     <div class="col-md-2">
                                         <div class="mb-md-3">
-                                            <label class="form-label mb-md-0">Fever</label> 
+                                            <label class="form-label mb-md-0">Fever</label>
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="mb-3">   
+                                        <div class="mb-3">
                                             <select class="select">
                                                 <option>Diagonosis Type</option>
                                                 <option>Hectic</option>
                                                 <option>Continuous Fever</option>
                                                 <option>Relapsing</option>
-                                            </select>                                     
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="mb-3">                                        
-                                            <input type="text" class="form-control" placeholder="Complaint History ( Enter Min 400 Words)">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control"
+                                                placeholder="Complaint History ( Enter Min 400 Words)">
                                         </div>
-                                    </div>                               
-                                </div>                            
+                                    </div>
+                                </div>
                             </div>
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1"></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -751,7 +510,8 @@
                             <div class="row gx-3">
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Medicine Name<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Medicine Name<span
+                                                class="text-danger ms-1">*</span></label>
                                         <input class="form-control">
                                     </div>
                                 </div>
@@ -766,7 +526,8 @@
                                 </div>
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Duration<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Duration<span
+                                                class="text-danger ms-1">*</span></label>
                                         <div class="input-group">
                                             <input type="text" class="form-control">
                                             <span class="input-group-text">M</span>
@@ -775,7 +536,8 @@
                                 </div>
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Frequency<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Frequency<span
+                                                class="text-danger ms-1">*</span></label>
                                         <select class="select">
                                             <option>Select</option>
                                             <option>1-0-1</option>
@@ -796,7 +558,8 @@
                                 </div>
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Instructions<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Instructions<span
+                                                class="text-danger ms-1">*</span></label>
                                         <input class="form-control">
                                     </div>
                                 </div>
@@ -804,7 +567,8 @@
                             <div class="row gx-3">
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Medicine Name<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Medicine Name<span
+                                                class="text-danger ms-1">*</span></label>
                                         <input class="form-control">
                                     </div>
                                 </div>
@@ -819,7 +583,8 @@
                                 </div>
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Duration<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Duration<span
+                                                class="text-danger ms-1">*</span></label>
                                         <div class="input-group">
                                             <input type="text" class="form-control">
                                             <span class="input-group-text">M</span>
@@ -828,7 +593,8 @@
                                 </div>
                                 <div class="col-xl-2 col-md-4 col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Frequency<span class="text-danger ms-1">*</span></label>
+                                        <label class="form-label">Frequency<span
+                                                class="text-danger ms-1">*</span></label>
                                         <select class="select">
                                             <option>Select</option>
                                             <option>1-0-1</option>
@@ -848,16 +614,20 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-2 col-md-4 col-sm-6">
-                                    <label class="form-label">Instructions<span class="text-danger ms-1">*</span></label>
+                                    <label class="form-label">Instructions<span
+                                            class="text-danger ms-1">*</span></label>
                                     <div class="d-flex align-items-center">
                                         <div class="mb-3 w-100">
                                             <input class="form-control">
                                         </div>
-                                        <a href="javascript:void(0);" class="ms-2 mb-3 d-flex align-items-center rounded-circle btn-icon btn-xs fs-12 btn-soft-danger p-0 flex-shrink-0"><i class="ti ti-trash"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="ms-2 mb-3 d-flex align-items-center rounded-circle btn-icon btn-xs fs-12 btn-soft-danger p-0 flex-shrink-0"><i
+                                                class="ti ti-trash"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1 "></i>Add New</a>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1 "></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -868,10 +638,11 @@
                             <h5 class="mb-0">Investigations & Procedure</h5>
                         </div>
                         <div class="card-body">
-                            <div class="mb-3">                                        
+                            <div class="mb-3">
                                 <input type="text" class="form-control">
                             </div>
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1"></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -882,10 +653,11 @@
                             <h5 class="mb-0">Advice</h5>
                         </div>
                         <div class="card-body">
-                            <div class="mb-3">                                        
+                            <div class="mb-3">
                                 <input type="text" class="form-control">
                             </div>
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1"></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -899,11 +671,11 @@
                             <div class="row gx-3 align-items-center">
                                 <div class="col-md-6">
                                     <div class="mb-md-3">
-                                        <label class="form-label mb-md-0">Next Consultation</label> 
+                                        <label class="form-label mb-md-0">Next Consultation</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="mb-3">                                        
+                                    <div class="mb-3">
                                         <select class="select">
                                             <option>Select</option>
                                             <option>Yes</option>
@@ -913,21 +685,24 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-md-3">
-                                        <label class="form-label mb-md-0">Whether to come on empty Stomach?</label> 
+                                        <label class="form-label mb-md-0">Whether to come on empty Stomach?</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6 d-flex align-items-center">
-                                    <div class="mb-3 w-100">                                        
+                                    <div class="mb-3 w-100">
                                         <select class="select">
                                             <option>Select</option>
                                             <option>Yes</option>
                                             <option>No</option>
                                         </select>
                                     </div>
-                                    <a href="javascript:void(0);" class="ms-2 mb-3 d-flex align-items-center rounded-circle btn-icon btn-xs fs-12 btn-soft-danger p-0"><i class="ti ti-trash"></i></a>
-                                </div>                                                              
-                            </div>   
-                            <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                                    <a href="javascript:void(0);"
+                                        class="ms-2 mb-3 d-flex align-items-center rounded-circle btn-icon btn-xs fs-12 btn-soft-danger p-0"><i
+                                            class="ti ti-trash"></i></a>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                    class="ti ti-plus me-1"></i>Add New</a>
                         </div>
                     </div>
                     <!-- card end -->
@@ -938,31 +713,37 @@
                             <h5 class="mb-0">Invoice</h5>
                         </div>
                         <div class="card-body pb-1">
-                            <div class="mb-3"> 
-                                <label class="form-label">Service & Product</label>                                       
+                            <div class="mb-3">
+                                <label class="form-label">Service & Product</label>
                                 <input type="text" class="form-control">
-                            </div> 
+                            </div>
                             <div class="d-flex align-items-center">
-                                <div class="mb-3 w-100">                                       
+                                <div class="mb-3 w-100">
                                     <input type="text" class="form-control">
                                 </div>
-                                <a href="javascript:void(0);" class="ms-2 mb-3 d-flex align-items-center rounded-circle btn-icon btn-xs fs-12 btn-soft-danger p-0"><i class="ti ti-trash"></i></a>
-                            </div> 
+                                <a href="javascript:void(0);"
+                                    class="ms-2 mb-3 d-flex align-items-center rounded-circle btn-icon btn-xs fs-12 btn-soft-danger p-0"><i
+                                        class="ti ti-trash"></i></a>
+                            </div>
                             <div class="border-bottom pb-3 mb-3">
-                                <a href="javascript:void(0);" class="link-primary fw-medium"><i class="ti ti-plus me-1"></i>Add New</a>
+                                <a href="javascript:void(0);" class="link-primary fw-medium"><i
+                                        class="ti ti-plus me-1"></i>Add New</a>
                             </div>
                             <div class="row justify-content-end">
                                 <div class="col-lg-3 col-sm-5">
-                                    <p class="text-dark mb-2 fw-semibold">Amount :<span class="fw-normal float-end">$0.00</span></p>
-                                    <p class="text-dark mb-2 fw-semibold">Tax (0%) :<span class="fw-normal float-end">$0.00</span></p>
-                                    <p class="text-dark mb-2 fw-semibold pb-2 border-bottom">Discount (0%) :<span class="fw-normal float-end">$0.00</span></p>
+                                    <p class="text-dark mb-2 fw-semibold">Amount :<span
+                                            class="fw-normal float-end">$0.00</span></p>
+                                    <p class="text-dark mb-2 fw-semibold">Tax (0%) :<span
+                                            class="fw-normal float-end">$0.00</span></p>
+                                    <p class="text-dark mb-2 fw-semibold pb-2 border-bottom">Discount (0%) :<span
+                                            class="fw-normal float-end">$0.00</span></p>
                                     <h6 class="mb-3">Total :<span class="float-end">$0.00</span></h6>
                                 </div>
                             </div>
                             <div class="row gx-3">
                                 <div class="col-md-6">
-                                    <div class="mb-3">    
-                                        <label class="form-label">Payment Mode</label>         
+                                    <div class="mb-3">
+                                        <label class="form-label">Payment Mode</label>
                                         <select class="select">
                                             <option>Select</option>
                                             <option>Cash</option>
@@ -971,8 +752,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="mb-3">    
-                                        <label class="form-label">Amount</label>                           
+                                    <div class="mb-3">
+                                        <label class="form-label">Amount</label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
@@ -989,11 +770,12 @@
                 </form>
 
             </div>
-            <!-- End Content -->            
+            <!-- End Content -->
 
-           <!-- Start Footer -->
+            <!-- Start Footer -->
             <footer class="footer text-center">
-                <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a> - All Rights Reserved.</p>
+                <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a>
+                    - All Rights Reserved.</p>
             </footer>
             <!-- End Footer -->
 
@@ -1010,13 +792,13 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
     <!-- Bootstrap Core JS -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>  
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- Select2 JS -->
     <script src="assets/plugins/select2/js/select2.min.js"></script>
 
-	<!-- Simplebar JS -->
-	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+    <!-- Simplebar JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
 
     <!-- Datatable JS -->
     <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>

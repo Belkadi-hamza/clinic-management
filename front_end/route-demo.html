@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Demo - Cabinet Management</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nav-category {
+            margin-bottom: 2rem;
+        }
+        .nav-category-title {
+            color: #6c757d;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .nav-category-list {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-item {
+            margin-bottom: 0.25rem;
+        }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            transition: all 0.15s ease-in-out;
+        }
+        .nav-link:hover {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+        }
+        .nav-item.active .nav-link {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .breadcrumb {
+            background-color: #f8f9fa;
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+        }
+        .route-info {
+            background-color: #e9ecef;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mt-4 mb-4">Cabinet Management - Route Demo</h1>
+                
+                <!-- Breadcrumb -->
+                <div id="breadcrumb-container"></div>
+                
+                <!-- Current Route Info -->
+                <div class="route-info">
+                    <h5>Current Route Information</h5>
+                    <p><strong>Route:</strong> <span id="current-route"></span></p>
+                    <p><strong>Title:</strong> <span id="current-title"></span></p>
+                    <p><strong>Description:</strong> <span id="current-description"></span></p>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Available Routes</h3>
+                        <div id="navigation-menu"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Quick Navigation</h3>
+                        <div class="list-group">
+                            <button class="list-group-item list-group-item-action" onclick="navigation.navigateTo('/')">
+                                🏠 Dashboard
+                            </button>
+                            <button class="list-group-item list-group-item-action" onclick="navigation.navigateTo('/patients')">
+                                👥 Patients
+                            </button>
+                            <button class="list-group-item list-group-item-action" onclick="navigation.navigateTo('/doctors')">
+                                👨‍⚕️ Doctors
+                            </button>
+                            <button class="list-group-item list-group-item-action" onclick="navigation.navigateTo('/appointments')">
+                                📅 Appointments
+                            </button>
+                            <button class="list-group-item list-group-item-action" onclick="navigation.navigateTo('/general-settings')">
+                                ⚙️ Settings
+                            </button>
+                        </div>
+                        
+                        <h4 class="mt-4">Route Testing</h4>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="test-route" placeholder="Enter route (e.g., /patients)">
+                            <button class="btn btn-outline-secondary" onclick="testRoute()">Test Route</button>
+                        </div>
+                        <div id="route-test-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        async function loadPageInfo() {
+            try {
+                // Update current route info
+                document.getElementById('current-route').textContent = navigation.currentRoute;
+                
+                // Get page info
+                const pageInfo = await navigation.getPageInfo(navigation.currentRoute);
+                if (pageInfo) {
+                    document.getElementById('current-title').textContent = pageInfo.title;
+                    document.getElementById('current-description').textContent = pageInfo.description;
+                } else {
+                    document.getElementById('current-title').textContent = 'Unknown';
+                    document.getElementById('current-description').textContent = 'No description available';
+                }
+                
+                // Load breadcrumb
+                const breadcrumbHTML = await navigation.generateBreadcrumbHTML();
+                document.getElementById('breadcrumb-container').innerHTML = breadcrumbHTML;
+                
+                // Load navigation menu
+                const menuHTML = await navigation.generateNavigationHTML();
+                document.getElementById('navigation-menu').innerHTML = menuHTML;
+                
+            } catch (error) {
+                console.error('Error loading page info:', error);
+            }
+        }
+        
+        async function testRoute() {
+            const route = document.getElementById('test-route').value;
+            const resultDiv = document.getElementById('route-test-result');
+            
+            if (!route) {
+                resultDiv.innerHTML = '<div class="alert alert-warning">Please enter a route to test</div>';
+                return;
+            }
+            
+            try {
+                const exists = await navigation.routeExists(route);
+                const pageInfo = await navigation.getPageInfo(route);
+                
+                if (exists && pageInfo) {
+                    resultDiv.innerHTML = `
+                        <div class="alert alert-success">
+                            <strong>Route exists!</strong><br>
+                            <strong>Title:</strong> ${pageInfo.title}<br>
+                            <strong>Description:</strong> ${pageInfo.description}
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="alert alert-danger">
+                            <strong>Route not found:</strong> ${route}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>Error testing route:</strong> ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadPageInfo();
+        });
+    </script>
+</body>
+</html>

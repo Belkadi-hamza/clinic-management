@@ -8,6 +8,7 @@ from .appointments import Appointment
 from .audit_logs import AuditLog
 from .banks import Bank
 from .billing_categories import BillingCategory
+from .departments import Department
 from .doctor_specialties import DoctorSpecialty
 from .doctors import Doctor
 from .expenses import Expense
@@ -49,6 +50,7 @@ __all__ = [
     "AuditLog",
     "Bank",
     "BillingCategory",
+    "Department",
     "DoctorSpecialty",
     "Doctor",
     "Expense",

@@ -1,9 +1,8 @@
 from sqlalchemy import Column, Integer, String, Text, Date, ForeignKey, TIMESTAMP
 from sqlalchemy.dialects.postgresql import ENUM
 from sqlalchemy.sql import func
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from sqlalchemy.orm import relationship
+from .base import Base
 
 class Patient(Base):
     __tablename__ = "patients"
@@ -24,3 +23,10 @@ class Patient(Base):
     updated_at = Column(TIMESTAMP(timezone=True), server_default=func.now(), onupdate=func.now())
     deleted_at = Column(TIMESTAMP(timezone=True), nullable=True)
     deleted_by = Column(Integer, ForeignKey("system_users.id"), nullable=True)
+    
+    # Relationships
+    patient_allergies = relationship("PatientAllergy", back_populates="patient")
+    patient_visits = relationship("PatientVisit", back_populates="patient")
+    creator = relationship("SystemUser", foreign_keys=[created_by])
+    updater = relationship("SystemUser", foreign_keys=[updated_by])
+    deleter = relationship("SystemUser", foreign_keys=[deleted_by])

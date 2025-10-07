@@ -8,8 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Patient Details | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
-    <meta name="keywords" content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="description"
+        content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords"
+        content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
     <meta name="author" content="dreamstechnologies">
 
     <!-- Favicon -->
@@ -17,6 +19,12 @@
 
     <!-- Apple Icon -->
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- API Config -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- Auth Guard: redirect to login if not authenticated -->
+    <script src="assets/js/auth-guard.js"></script>
 
     <!-- Theme Config Js -->
     <script src="assets/js/theme-script.js"></script>
@@ -41,7 +49,7 @@
     <div class="main-wrapper">
 
         <!-- Topbar Start -->
-                <header class="navbar-header">
+        <header class="navbar-header">
             <div class="page-container topbar-menu">
                 <div class="d-flex align-items-center gap-2">
                     <!-- Sidebar Mobile Button -->
@@ -67,9 +75,9 @@
                         </span>
                     </a>
 
-                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2">
                         <i class="ti ti-arrow-bar-to-right"></i>
-                    </button> 
+                    </button>
 
                 </div>
 
@@ -81,20 +89,27 @@
                             <i class="ti ti-moon fs-16"></i>
                         </button>
                     </div>
-					
-					<!-- User Dropdown -->
-					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
-                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex" alt=patient">
-                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);"
+                            class="topbar-link dropdown-toggle drop-arrow-none position-relative"
+                            data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex"
+                                alt="patient">
+                            <span class="online text-success">
+                                <i
+                                    class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i>
+                            </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
-                        
+
                             <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
-                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42" height="42" alt="patient">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42"
+                                    height="42" alt="patient" id="userAvatar">
                                 <div class="ms-2">
-                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
-                                    <span class="d-block fs-13">Administrator</span>
+                                    <p class="fw-medium text-dark mb-0" id="userFullName">Loading...</p>
+                                    <span class="d-block fs-13" id="userRole">...</span>
                                 </div>
                             </div>
 
@@ -102,18 +117,18 @@
                             <a href="general-settings.html" class="dropdown-item">
                                 <i class="ti ti-user-circle me-1 align-middle"></i>
                                 <span class="align-middle">Profile Settings</span>
-                            </a>          
-                            
+                            </a>
+
                             <!-- Item-->
                             <div class="pt-2 mt-2 border-top">
-                                <a href="login.html" class="dropdown-item text-danger">
+                                <a href="javascript:void(0);" class="dropdown-item text-danger" id="logoutBtn">
                                     <i class="ti ti-logout me-1 fs-17 align-middle"></i>
                                     <span class="align-middle">Sign Out</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-						
+
                 </div>
             </div>
         </header>
@@ -121,119 +136,71 @@
 
 
         <!-- Sidenav Menu Start -->
-        <div class="sidebar" id="sidebar">
-            
+                        <div class="sidebar" id="sidebar">
+
             <!-- Start Logo -->
             <div class="sidebar-logo">
                 <div>
                     <!-- Logo Normal -->
-                    <a href="index.html" class="logo logo-normal">
+                    <a href="index" class="logo logo-normal">
                         <img src="assets/img/logo.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Small -->
-                    <a href="index.html" class="logo-small">
+                    <a href="index" class="logo-small">
                         <img src="assets/img/logo-small.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Dark -->
-                    <a href="index.html" class="dark-logo">
+                    <a href="index" class="dark-logo">
                         <img src="assets/img/logo-dark.svg" alt="Logo">
                     </a>
                 </div>
-                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn">
                     <i class="ti ti-arrow-bar-to-left"></i>
                 </button>
 
                 <!-- Sidebar Menu Close -->
                 <button class="sidebar-close">
                     <i class="ti ti-x align-middle"></i>
-                </button>                
+                </button>
             </div>
             <!-- End Logo -->
 
             <!-- Sidenav Menu -->
-            <div class="sidebar-inner" data-simplebar>                
+            <div class="sidebar-inner" data-simplebar>
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul role="menu" aria-label="Main navigation menu">
                         <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
 
                         <li>
-                            <a href="index.html">
+                            <a href="index" >
                                 <i class="ti ti-layout-board"></i><span>Dashboard</span>
                             </a>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-apps"></i><span>Applications</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="chat.html">Chat</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="voice-call.html">Voice Call</a></li>
-                                        <li><a href="video-call.html">Video Call</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="calendar.html">Calendar</a></li>	
-                                <li><a href="email.html">Email</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="invoice.html">Invoices</a></li>
-                                        <li><a href="invoice-details.html">Invoice Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="todo.html">To Do</a></li>
-                                <li><a href="notes.html">Notes</a></li>
-                                <li><a href="kanban-view.html">Kanban Board</a></li>
-                                <li><a href="file-manager.html">File Manager</a></li>
-                                <li><a href="social-feed.html">Social Feed</a></li>
-                                <li><a href="search-result.html">Search Result</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="layout-mini.html">Mini</a></li>
-                                <li><a href="layout-hoverview.html">Hover View</a></li>
-                                <li><a href="layout-hidden.html">Hidden</a></li>
-                                <li><a href="layout-fullwidth.html">Full Width</a></li>
-                                <li><a href="layout-rtl.html">RTL</a></li>
-                                <li><a href="layout-dark.html">Dark</a></li>
-                            </ul>
                         </li>
 
                         <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
 
                         <li>
-                            <a href="patients.html" class="active">
+                            <a href="patients" class="active">
                                 <i class="ti ti-users"></i><span>Patients</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="doctors.html">
+                            <a href="doctors" >
                                 <i class="ti ti-stethoscope"></i><span>Doctors</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="appointments.html">
+                            <a href="appointments" >
                                 <i class="ti ti-calendar-time"></i><span>Appointments</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="visits.html">
+                            <a href="visits" >
                                 <i class="ti ti-e-passport"></i><span>Visits</span>
                             </a>
                         </li>
@@ -244,16 +211,16 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="lab-results.html">Lab Results</a>
+                                    <a href="lab-results" >Lab Results</a>
                                 </li>
                                 <li>
-                                    <a href="medical-results.html">Medical Rsults</a>
+                                    <a href="medical-results" >Medical Rsults</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="pharmacy.html">
+                            <a href="pharmacy" >
                                 <i class="ti ti-prescription"></i><span>Pharmacy</span>
                             </a>
                         </li>
@@ -261,238 +228,17 @@
                         <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
 
                         <li>
-                            <a href="staffs.html">
+                            <a href="staffs" >
                                 <i class="ti ti-users-group"></i><span>Staffs</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="notifications.html">
-                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            <a href="roles" >
+                                <i class="ti ti-users-group"></i><span>Roles</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="general-settings.html">
-                                <i class="ti ti-settings"></i><span>Settings</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="sign-up.html">Sign Up</a></li>
-                                <li><a href="forgot-password.html">Forgot Password</a></li>
-                                <li><a href="change-password.html">Change Password</a></li>
-                                <li><a href="lock-screen.html">Lock Screen</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="error-404.html">Error 404</a></li>
-                                <li><a href="error-500.html">Error 500</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-files"></i><span>Other Pages</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="starter-page.html">Starter Page</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>   
-
-                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="ui-accordion.html">Accordion</a></li>
-                                <li><a href="ui-alerts.html">Alerts</a></li>
-                                <li><a href="ui-avatar.html">Avatar</a></li>
-                                <li><a href="ui-badges.html">Badges</a></li>
-                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
-                                <li><a href="ui-buttons.html">Buttons</a></li>
-                                <li><a href="ui-buttons-group.html">Button Group</a></li>
-                                <li><a href="ui-cards.html">Card</a></li>
-                                <li><a href="ui-carousel.html">Carousel</a></li>
-                                <li><a href="ui-collapse.html">Collapse</a></li>
-                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                <li><a href="ui-ratio.html">Ratio</a></li>
-                                <li><a href="ui-grid.html">Grid</a></li>
-                                <li><a href="ui-images.html">Images</a></li>
-                                <li><a href="ui-links.html">Links</a></li>
-                                <li><a href="ui-list-group.html">List Group</a></li>
-                                <li><a href="ui-modals.html">Modals</a></li>
-                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
-                                <li><a href="ui-pagination.html">Pagination</a></li>
-                                <li><a href="ui-placeholders.html">Placeholders</a></li>
-                                <li><a href="ui-popovers.html">Popovers</a></li>
-                                <li><a href="ui-progress.html">Progress</a></li>
-                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
-                                <li><a href="ui-spinner.html">Spinner</a></li>
-                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
-                                <li><a href="ui-toasts.html">Toasts</a></li>
-                                <li><a href="ui-tooltips.html">Tooltips</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
-                                <li><a href="ui-utilities.html">Utilities</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="ui-dragula.html">Dragula</a></li>
-                                <li><a href="ui-clipboard.html">Clipboard</a></li>
-                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
-                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
-                                <li><a href="ui-lightbox.html">Lightbox</a></li>
-                                <li><a href="ui-rating.html">Rating</a></li>
-                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
-                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
-                                        <li><a href="form-input-groups.html">Input Groups</a></li>
-                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
-                                        <li><a href="form-mask.html">Input Masks</a></li>
-                                        <li><a href="form-fileupload.html">File Uploads</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
-                                        <li><a href="form-vertical.html">Vertical Form</a></li>
-                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="form-validation.html">Form Validation</a></li>
-                                <li><a href="form-select.html">Form Select</a></li>
-                                <li><a href="form-wizard.html">Form Wizard</a></li>
-                                <li><a href="form-pickers.html">Form Picker</a></li>
-                                <li><a href="form-editors.html">Form Editors</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="tables-basic.html">Basic Tables </a></li>
-                                <li><a href="data-tables.html">Data Table </a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="chart-apex.html">Apex Charts</a></li>
-                                <li><a href="chart-c3.html">Chart C3</a></li>
-                                <li><a href="chart-js.html">Chart Js</a></li>
-                                <li><a href="chart-morris.html">Morris Charts</a></li>
-                                <li><a href="chart-flot.html">Flot Charts</a></li>
-                                <li><a href="chart-peity.html">Peity Charts</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
-                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
-                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
-                                <li><a href="icon-remix.html">Remix Icons</a></li>
-                                <li><a href="icon-feather.html">Feather Icons</a></li>
-                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
-                                <li><a href="icon-material.html">Material Icons</a></li>
-                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
-                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
-                                <li><a href="icon-themify.html">Themify Icons</a></li>
-                                <li><a href="icon-weather.html">Weather Icons</a></li>
-                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
-                                <li><a href="icon-flag.html">Flag Icons</a></li>
-                            </ul>
-                        </li> 
-
-                        <li>
-                            <a href="widgets.html">
-                                <i class="ti ti-components"></i><span>Widgets</span>
-                            </a>
-                        </li> 
-
-                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
-
-                        <li>
-                            <a href="javascript:void(0);"><i class="ti ti-file-type-doc"></i><span>Documentation</span></a>
-                        </li> 
-
-                        <li>
-                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
-                                <span>Changelog</span>  
-                            </a>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
-                                        <li class="submenu submenu-two submenu-three">
-                                            <a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
-                                            <ul>
-                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
-                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>                   
+                    </ul>
                 </div>
             </div>
 
@@ -519,12 +265,13 @@
                             </ol>
                         </div>
                     </div>
-                    <a href="patients.html" class="fw-medium d-flex align-items-center"><i class="ti ti-arrow-left me-1"></i>Back to Patients</a>
+                    <a href="patients.html" class="fw-medium d-flex align-items-center"><i
+                            class="ti ti-arrow-left me-1"></i>Back to Patients</a>
                 </div>
-				<!-- End Page Header -->
+                <!-- End Page Header -->
 
                 <!-- tabs start -->
-                 <ul class="nav nav-tabs nav-item-primary border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
+                <ul class="nav nav-tabs nav-item-primary border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
                     <li class="nav-item">
                         <a href="patient-details.html" class="nav-link border rounded fw-semibold">
                             Patient Profile
@@ -542,7 +289,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="patient-details-visit-history.html" class="nav-link border rounded fw-semibold">
-                           Visit History
+                            Visit History
                         </a>
                     </li>
                     <li class="nav-item">
@@ -572,11 +319,15 @@
                 <div class="card mb-0">
 
                     <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h5 class="d-inline-flex align-items-center mb-0">Total Lab Results <span class="badge bg-danger ms-2">658</span></h5>
+                        <h5 class="d-inline-flex align-items-center mb-0">Total Lab Results <span
+                                class="badge bg-danger ms-2">658</span></h5>
                         <div class="d-flex align-items-center flex-wrap gap-2">
                             <div class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center" data-bs-toggle="dropdown">
-                                    <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span> Newest
+                                <a href="javascript:void(0);"
+                                    class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center"
+                                    data-bs-toggle="dropdown">
+                                    <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span>
+                                    Newest
                                 </a>
                                 <ul class="dropdown-menu  dropdown-menu-end p-2">
                                     <li>
@@ -590,7 +341,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                       <!-- table start -->
+                        <!-- table start -->
                         <div class="table-responsive table-nowrap">
                             <table class="table mb-0 border">
                                 <thead class="table-light">
@@ -605,271 +356,381 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0025</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0025</a></td>
                                         <td>17 Jun 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-01.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-01.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Andrew Clark</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Andrew Clark</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Blood Test</td>
                                         <td><span class="badge badge-soft-success">Received</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0024</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0024</a></td>
                                         <td>10 Jun 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-03.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-03.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Katherine Brooks</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Katherine Brooks</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Urinalysis</td>
                                         <td><span class="badge badge-soft-info">In Progress</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0023</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0023</a></td>
                                         <td>22 May 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-04.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-04.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Benjamin Harris</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Benjamin Harris</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Throat Culture</td>
                                         <td><span class="badge badge-soft-warning">Pending</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0022</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0022</a></td>
                                         <td>15 May 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-05.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-05.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Laura Mitchell</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Laura Mitchell</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Iron Panel</td>
                                         <td><span class="badge badge-soft-success">Received</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0021</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0021</a></td>
                                         <td>30 Apr 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-06.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-06.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Christopher Lewis</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Christopher Lewis</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Vitamin D Test</td>
                                         <td><span class="badge badge-soft-info">In Progress</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0020</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0020</a></td>
                                         <td>25 Apr 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-07.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-07.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Natalie Foster</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Natalie Foster</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Liver Function Test</td>
                                         <td><span class="badge badge-soft-warning">Pending</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0019</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0019</a></td>
                                         <td>13 Mar 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-10.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-10.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Jonathan Adams</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Jonathan Adams</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Thyroid Test</td>
                                         <td><span class="badge badge-soft-success">Received</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0018</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0018</a></td>
                                         <td>16 Feb 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-08.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-08.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Rebecca Scott</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Rebecca Scott</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Lipid Panel</td>
                                         <td><span class="badge badge-soft-info">In Progress</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0017</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0017</a></td>
                                         <td>20 Jan 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-12.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-12.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Samuel Turner</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Samuel Turner</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Troponin Test</td>
                                         <td><span class="badge badge-soft-warning">Pending</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#TE0016</a></td>
+                                        <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#view_modal">#TE0016</a></td>
                                         <td>15 Jan 2025</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <a href="doctor-details.html" class="avatar avatar-xs me-2">
-                                                    <img src="assets/img/doctors/doctor-11.jpg" alt="doctor" class="rounded">
+                                                    <img src="assets/img/doctors/doctor-11.jpg" alt="doctor"
+                                                        class="rounded">
                                                 </a>
                                                 <div>
-                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr. Victoria Evans</a></h6>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Victoria Evans</a></h6>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>Hepatitis Panel</td>
                                         <td><span class="badge badge-soft-success">Received</span></td>
                                         <td class="text-end">
-                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                                data-bs-toggle="dropdown" aria-label="more options"><i
+                                                    class="ti ti-dots-vertical"></i></a>
                                             <ul class="dropdown-menu p-2">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                            class="ti ti-eye me-1"></i>View Details</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="dropdown-item d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                            class="ti ti-trash me-1"></i>Delete</a>
                                                 </li>
                                             </ul>
                                         </td>
@@ -889,7 +750,8 @@
 
             <!-- Start Footer -->
             <footer class="footer text-center">
-               <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a> - All Rights Reserved.</p>
+                <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a>
+                    - All Rights Reserved.</p>
             </footer>
             <!-- End Footer -->
 
@@ -913,8 +775,10 @@
                     <h5 class="mb-1">Delete Confirmation</h5>
                     <p class="mb-3">Are you sure you want to delete?</p>
                     <div class="d-flex justify-content-center gap-2">
-                        <a href="javascript:void(0);" class="btn btn-white position-relative w-100 z-1" data-bs-dismiss="modal">Cancel</a>
-                        <a href="javascript:void(0);" class="btn btn-danger position-relative w-100 z-1" data-bs-dismiss="modal">Yes, Delete</a>
+                        <a href="javascript:void(0);" class="btn btn-white position-relative w-100 z-1"
+                            data-bs-dismiss="modal">Cancel</a>
+                        <a href="javascript:void(0);" class="btn btn-danger position-relative w-100 z-1"
+                            data-bs-dismiss="modal">Yes, Delete</a>
                     </div>
                 </div>
             </div>
@@ -928,7 +792,8 @@
             <div class="modal-content">
                 <div class="modal-header justify-content-between">
                     <h5 class="text-dark modal-title fw-bold text-truncate">View Report</h5>
-                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
                 </div>
                 <div class="modal-body">
                     <div class="invoice-logo d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
@@ -945,15 +810,18 @@
                         </div>
                         <div class="text-lg-end">
                             <p class="mb-1"><span class="text-dark fw-medium">Test Type : </span>CBC</p>
-                            <p class="mb-1"><span class="text-dark fw-medium">Collected On: </span>25 Jan 2024, 10:00 AM</p>
-                            <p class="mb-0"><span class="text-dark fw-medium">Reported On: </span>25 Jan 2024, 11:00 AM</p>
+                            <p class="mb-1"><span class="text-dark fw-medium">Collected On: </span>25 Jan 2024, 10:00 AM
+                            </p>
+                            <p class="mb-0"><span class="text-dark fw-medium">Reported On: </span>25 Jan 2024, 11:00 AM
+                            </p>
                         </div>
                     </div>
                     <h6 class="mb-1">Patient Details</h6>
-                    <div class="mb-4 bg-light rounded p-2 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div
+                        class="mb-4 bg-light rounded p-2 d-flex align-items-center justify-content-between flex-wrap gap-2">
                         <h6 class="fs-14 fw-medium mb-0">M. Reyan Verol</h6>
                         <div class="d-flex align-items-center gap-3">
-                            <p class="mb-0">28Y /  Male</p>
+                            <p class="mb-0">28Y / Male</p>
                             <p class="mb-0">Blood : O+ve</p>
                             <p class="mb-0">Type : Out Patient</p>
                         </div>
@@ -971,7 +839,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><h6 class="mb-0 fs-14 fw-semibold">Differntial WBC Count</h6></td>
+                                    <td>
+                                        <h6 class="mb-0 fs-14 fw-semibold">Differntial WBC Count</h6>
+                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1007,7 +877,9 @@
                                     <td>%</td>
                                 </tr>
                                 <tr>
-                                    <td><h6 class="mb-0 fw-semibold fs-14">Platelet Count</h6></td>
+                                    <td>
+                                        <h6 class="mb-0 fw-semibold fs-14">Platelet Count</h6>
+                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1043,11 +915,14 @@
     <!-- Bootstrap Core JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Simplebar JS -->
-	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+    <!-- Simplebar JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
 
     <!-- Main JS -->
     <script src="assets/js/script.js"></script>
+
+    <!-- User Info & Logout Logic -->
+    <script src="assets/js/header.js"></script>
 
 </body>
 

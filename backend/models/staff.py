@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Date, Text, TIMESTAMP, ForeignKey, Enum
+from sqlalchemy import Column, Integer, String, Date, Text, TIMESTAMP, ForeignKey, Enum, Boolean
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from .base import Base
@@ -16,13 +16,16 @@ class Staff(Base):
     home_phone = Column(String(20))
     fax = Column(String(20))
     email = Column(String(150))
-    country = Column(String(100))
-    region = Column(String(100))
+    line = Column(String(255))
     city = Column(String(100))
     profile_image = Column(Text)
-    position = Column(String(100))
     hire_date = Column(Date)
-    department = Column(String(100))
+    department_id = Column(Integer, ForeignKey('departments.id'), nullable=True)
+    role_id = Column(Integer, ForeignKey('roles.id'), nullable=True)
+    doctor_code = Column(String(20), unique=True, nullable=True)
+    specialization = Column(String(100), nullable=True)
+    license_number = Column(String(100), nullable=True)
+    is_doctor = Column(Boolean, default=False, nullable=True)
     
     # Audit fields
     created_at = Column(TIMESTAMP(timezone=True), server_default=func.now())
@@ -33,7 +36,8 @@ class Staff(Base):
     deleted_by = Column(Integer, ForeignKey('system_users.id'), nullable=True)
     
     # Relationships
+    department = relationship("Department", foreign_keys=[department_id])
+    role = relationship("Role", foreign_keys=[role_id])
     creator = relationship("SystemUser", foreign_keys=[created_by])
     updater = relationship("SystemUser", foreign_keys=[updated_by])
     deleter = relationship("SystemUser", foreign_keys=[deleted_by])
-    system_user = relationship("SystemUser", back_populates="staff", uselist=False)

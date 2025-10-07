@@ -1,9 +1,11 @@
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from ..models.roles import Role
 from ..schemas.role import RoleCreate, RoleUpdate
 
 def get_roles(db: Session):
-    return db.query(Role).order_by(Role.created_at.desc()).all()
+    # Exclude superadmin role from the list
+    return db.query(Role).filter(Role.name != 'superadmin').order_by(Role.created_at.desc()).all()
 
 def get_role_by_id(db: Session, role_id: int):
     return db.query(Role).filter(Role.id == role_id).first()
@@ -33,7 +35,10 @@ def soft_delete_role(db: Session, role_id: int, user_id: int):
     db_role = db.query(Role).filter(Role.id == role_id, Role.deleted_at == None).first()
     if not db_role:
         return None
-    db_role.deleted_at = db.func.now()
+    # Prevent deletion of superadmin role
+    if db_role.name.lower() == 'superadmin':
+        return None
+    db_role.deleted_at = func.now()
     db_role.deleted_by = user_id
     db.commit()
     return db_role

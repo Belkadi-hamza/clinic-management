@@ -1,8 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, Date, ForeignKey, TIMESTAMP, Enum
 from sqlalchemy.sql import func
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from sqlalchemy.orm import relationship
+from .base import Base
 
 class PatientDiagnosis(Base):
     __tablename__ = "patient_diagnoses"
@@ -18,3 +17,8 @@ class PatientDiagnosis(Base):
     created_at = Column(TIMESTAMP(timezone=True), server_default=func.now())
     deleted_at = Column(TIMESTAMP(timezone=True), nullable=True)
     deleted_by = Column(Integer, ForeignKey("system_users.id"), nullable=True)
+    
+    # Relationships
+    visit = relationship("PatientVisit")
+    creator = relationship("SystemUser", foreign_keys=[created_by])
+    deleter = relationship("SystemUser", foreign_keys=[deleted_by])

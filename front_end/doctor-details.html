@@ -3,20 +3,28 @@
 
 <head>
 
-	<!-- Meta Tags -->
+    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Doctors - Details | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
-    <meta name="keywords" content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
-    <meta name="author" content="dreamstechnologies">    
-	
+    <meta name="description"
+        content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords"
+        content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <!-- Apple Icon -->
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- API Config -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- Auth Guard: redirect to login if not authenticated -->
+    <script src="assets/js/auth-guard.js"></script>
 
     <!-- Theme Config Js -->
     <script src="assets/js/theme-script.js"></script>
@@ -41,7 +49,7 @@
     <div class="main-wrapper">
 
         <!-- Topbar Start -->
-                <header class="navbar-header">
+        <header class="navbar-header">
             <div class="page-container topbar-menu">
                 <div class="d-flex align-items-center gap-2">
                     <!-- Sidebar Mobile Button -->
@@ -67,9 +75,9 @@
                         </span>
                     </a>
 
-                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2">
                         <i class="ti ti-arrow-bar-to-right"></i>
-                    </button> 
+                    </button>
 
                 </div>
 
@@ -81,20 +89,27 @@
                             <i class="ti ti-moon fs-16"></i>
                         </button>
                     </div>
-					
-					<!-- User Dropdown -->
-					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
-                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex" alt=patient">
-                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);"
+                            class="topbar-link dropdown-toggle drop-arrow-none position-relative"
+                            data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex"
+                                alt="patient">
+                            <span class="online text-success">
+                                <i
+                                    class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i>
+                            </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
-                        
+
                             <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
-                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42" height="42" alt="patient">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42"
+                                    height="42" alt="patient" id="userAvatar">
                                 <div class="ms-2">
-                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
-                                    <span class="d-block fs-13">Administrator</span>
+                                    <p class="fw-medium text-dark mb-0" id="userFullName">Loading...</p>
+                                    <span class="d-block fs-13" id="userRole">...</span>
                                 </div>
                             </div>
 
@@ -102,18 +117,18 @@
                             <a href="general-settings.html" class="dropdown-item">
                                 <i class="ti ti-user-circle me-1 align-middle"></i>
                                 <span class="align-middle">Profile Settings</span>
-                            </a>          
-                            
+                            </a>
+
                             <!-- Item-->
                             <div class="pt-2 mt-2 border-top">
-                                <a href="login.html" class="dropdown-item text-danger">
+                                <a href="javascript:void(0);" class="dropdown-item text-danger" id="logoutBtn">
                                     <i class="ti ti-logout me-1 fs-17 align-middle"></i>
                                     <span class="align-middle">Sign Out</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-						
+
                 </div>
             </div>
         </header>
@@ -121,119 +136,71 @@
 
 
         <!-- Sidenav Menu Start -->
-        <div class="sidebar" id="sidebar">
-            
+                        <div class="sidebar" id="sidebar">
+
             <!-- Start Logo -->
             <div class="sidebar-logo">
                 <div>
                     <!-- Logo Normal -->
-                    <a href="index.html" class="logo logo-normal">
+                    <a href="index" class="logo logo-normal">
                         <img src="assets/img/logo.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Small -->
-                    <a href="index.html" class="logo-small">
+                    <a href="index" class="logo-small">
                         <img src="assets/img/logo-small.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Dark -->
-                    <a href="index.html" class="dark-logo">
+                    <a href="index" class="dark-logo">
                         <img src="assets/img/logo-dark.svg" alt="Logo">
                     </a>
                 </div>
-                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn">
                     <i class="ti ti-arrow-bar-to-left"></i>
                 </button>
 
                 <!-- Sidebar Menu Close -->
                 <button class="sidebar-close">
                     <i class="ti ti-x align-middle"></i>
-                </button>                
+                </button>
             </div>
             <!-- End Logo -->
 
             <!-- Sidenav Menu -->
-            <div class="sidebar-inner" data-simplebar>                
+            <div class="sidebar-inner" data-simplebar>
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul role="menu" aria-label="Main navigation menu">
                         <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
 
                         <li>
-                            <a href="index.html">
+                            <a href="index" >
                                 <i class="ti ti-layout-board"></i><span>Dashboard</span>
                             </a>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-apps"></i><span>Applications</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="chat.html">Chat</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="voice-call.html">Voice Call</a></li>
-                                        <li><a href="video-call.html">Video Call</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="calendar.html">Calendar</a></li>	
-                                <li><a href="email.html">Email</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="invoice.html">Invoices</a></li>
-                                        <li><a href="invoice-details.html">Invoice Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="todo.html">To Do</a></li>
-                                <li><a href="notes.html">Notes</a></li>
-                                <li><a href="kanban-view.html">Kanban Board</a></li>
-                                <li><a href="file-manager.html">File Manager</a></li>
-                                <li><a href="social-feed.html">Social Feed</a></li>
-                                <li><a href="search-result.html">Search Result</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="layout-mini.html">Mini</a></li>
-                                <li><a href="layout-hoverview.html">Hover View</a></li>
-                                <li><a href="layout-hidden.html">Hidden</a></li>
-                                <li><a href="layout-fullwidth.html">Full Width</a></li>
-                                <li><a href="layout-rtl.html">RTL</a></li>
-                                <li><a href="layout-dark.html">Dark</a></li>
-                            </ul>
                         </li>
 
                         <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
 
                         <li>
-                            <a href="patients.html">
+                            <a href="patients" >
                                 <i class="ti ti-users"></i><span>Patients</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="doctors.html" class="active">
+                            <a href="doctors" class="active">
                                 <i class="ti ti-stethoscope"></i><span>Doctors</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="appointments.html">
+                            <a href="appointments" >
                                 <i class="ti ti-calendar-time"></i><span>Appointments</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="visits.html">
+                            <a href="visits" >
                                 <i class="ti ti-e-passport"></i><span>Visits</span>
                             </a>
                         </li>
@@ -244,16 +211,16 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="lab-results.html">Lab Results</a>
+                                    <a href="lab-results" >Lab Results</a>
                                 </li>
                                 <li>
-                                    <a href="medical-results.html">Medical Rsults</a>
+                                    <a href="medical-results" >Medical Rsults</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="pharmacy.html">
+                            <a href="pharmacy" >
                                 <i class="ti ti-prescription"></i><span>Pharmacy</span>
                             </a>
                         </li>
@@ -261,238 +228,17 @@
                         <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
 
                         <li>
-                            <a href="staffs.html">
+                            <a href="staffs" >
                                 <i class="ti ti-users-group"></i><span>Staffs</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="notifications.html">
-                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            <a href="roles" >
+                                <i class="ti ti-users-group"></i><span>Roles</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="general-settings.html">
-                                <i class="ti ti-settings"></i><span>Settings</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="sign-up.html">Sign Up</a></li>
-                                <li><a href="forgot-password.html">Forgot Password</a></li>
-                                <li><a href="change-password.html">Change Password</a></li>
-                                <li><a href="lock-screen.html">Lock Screen</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="error-404.html">Error 404</a></li>
-                                <li><a href="error-500.html">Error 500</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-files"></i><span>Other Pages</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="starter-page.html">Starter Page</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </li>   
-
-                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="ui-accordion.html">Accordion</a></li>
-                                <li><a href="ui-alerts.html">Alerts</a></li>
-                                <li><a href="ui-avatar.html">Avatar</a></li>
-                                <li><a href="ui-badges.html">Badges</a></li>
-                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
-                                <li><a href="ui-buttons.html">Buttons</a></li>
-                                <li><a href="ui-buttons-group.html">Button Group</a></li>
-                                <li><a href="ui-cards.html">Card</a></li>
-                                <li><a href="ui-carousel.html">Carousel</a></li>
-                                <li><a href="ui-collapse.html">Collapse</a></li>
-                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                <li><a href="ui-ratio.html">Ratio</a></li>
-                                <li><a href="ui-grid.html">Grid</a></li>
-                                <li><a href="ui-images.html">Images</a></li>
-                                <li><a href="ui-links.html">Links</a></li>
-                                <li><a href="ui-list-group.html">List Group</a></li>
-                                <li><a href="ui-modals.html">Modals</a></li>
-                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
-                                <li><a href="ui-pagination.html">Pagination</a></li>
-                                <li><a href="ui-placeholders.html">Placeholders</a></li>
-                                <li><a href="ui-popovers.html">Popovers</a></li>
-                                <li><a href="ui-progress.html">Progress</a></li>
-                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
-                                <li><a href="ui-spinner.html">Spinner</a></li>
-                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
-                                <li><a href="ui-toasts.html">Toasts</a></li>
-                                <li><a href="ui-tooltips.html">Tooltips</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
-                                <li><a href="ui-utilities.html">Utilities</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="ui-dragula.html">Dragula</a></li>
-                                <li><a href="ui-clipboard.html">Clipboard</a></li>
-                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
-                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
-                                <li><a href="ui-lightbox.html">Lightbox</a></li>
-                                <li><a href="ui-rating.html">Rating</a></li>
-                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
-                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
-                                        <li><a href="form-input-groups.html">Input Groups</a></li>
-                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
-                                        <li><a href="form-mask.html">Input Masks</a></li>
-                                        <li><a href="form-fileupload.html">File Uploads</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
-                                        <li><a href="form-vertical.html">Vertical Form</a></li>
-                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="form-validation.html">Form Validation</a></li>
-                                <li><a href="form-select.html">Form Select</a></li>
-                                <li><a href="form-wizard.html">Form Wizard</a></li>
-                                <li><a href="form-pickers.html">Form Picker</a></li>
-                                <li><a href="form-editors.html">Form Editors</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="tables-basic.html">Basic Tables </a></li>
-                                <li><a href="data-tables.html">Data Table </a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="chart-apex.html">Apex Charts</a></li>
-                                <li><a href="chart-c3.html">Chart C3</a></li>
-                                <li><a href="chart-js.html">Chart Js</a></li>
-                                <li><a href="chart-morris.html">Morris Charts</a></li>
-                                <li><a href="chart-flot.html">Flot Charts</a></li>
-                                <li><a href="chart-peity.html">Peity Charts</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
-                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
-                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
-                                <li><a href="icon-remix.html">Remix Icons</a></li>
-                                <li><a href="icon-feather.html">Feather Icons</a></li>
-                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
-                                <li><a href="icon-material.html">Material Icons</a></li>
-                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
-                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
-                                <li><a href="icon-themify.html">Themify Icons</a></li>
-                                <li><a href="icon-weather.html">Weather Icons</a></li>
-                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
-                                <li><a href="icon-flag.html">Flag Icons</a></li>
-                            </ul>
-                        </li> 
-
-                        <li>
-                            <a href="widgets.html">
-                                <i class="ti ti-components"></i><span>Widgets</span>
-                            </a>
-                        </li> 
-
-                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
-
-                        <li>
-                            <a href="javascript:void(0);"><i class="ti ti-file-type-doc"></i><span>Documentation</span></a>
-                        </li> 
-
-                        <li>
-                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
-                                <span>Changelog</span>  
-                            </a>
-                        </li> 
-
-                        <li class="submenu">
-                            <a href="javascript:void(0);">
-                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul>
-                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
-                                <li class="submenu submenu-two">
-                                    <a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
-                                    <ul>
-                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
-                                        <li class="submenu submenu-two submenu-three">
-                                            <a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
-                                            <ul>
-                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
-                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>                   
+                    </ul>
                 </div>
             </div>
 
@@ -502,7 +248,7 @@
         <!-- ========================
 			Start Page Content
 		========================= -->
-         
+
         <div class="page-wrapper">
 
             <!-- Start Content -->
@@ -514,16 +260,17 @@
                         <h4 class="mb-1">Doctor Details</h4>
                         <div class="text-end">
                             <ol class="breadcrumb m-0 py-0">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>                            
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item active">Doctor Details</li>
                             </ol>
                         </div>
                     </div>
                     <div class="gap-2 d-flex align-items-center flex-wrap">
-                        <a href="doctors.html" class="fw-medium d-flex align-items-center"><i class="ti ti-arrow-left me-1"></i>Back to Doctors</a>
+                        <a href="doctors.html" class="fw-medium d-flex align-items-center"><i
+                                class="ti ti-arrow-left me-1"></i>Back to Doctors</a>
                     </div>
                 </div>
-				<!-- End Page Header -->
+                <!-- End Page Header -->
 
                 <!-- row start -->
                 <div class="row">
@@ -537,12 +284,14 @@
                                     </a>
                                     <div>
                                         <span class="badge badge-md badge-soft-primary">#DR0025</span>
-                                        <h5 class="mb-1 fw-semibold mt-2"><a href="javascript:void(0);">Dr. Andrew Clark</a></h5>
+                                        <h5 class="mb-1 fw-semibold mt-2"><a href="javascript:void(0);">Dr. Andrew
+                                                Clark</a></h5>
                                         <p class="fs-13 mb-0">Cardiology, MD, FRCS</p>
                                     </div>
                                 </div>
                                 <h6 class="mb-3">Basic Information</h6>
-                                <p class="mb-3">Specialist <span class="float-end text-dark">Interventional Cardiology</span></p>
+                                <p class="mb-3">Specialist <span class="float-end text-dark">Interventional
+                                        Cardiology</span></p>
                                 <p class="mb-3">Member Since <span class="float-end text-dark">24 May 2024</span></p>
                                 <p class="mb-3">DOB <span class="float-end text-dark">10 Jan 1991</span></p>
                                 <p class="mb-3">Gender <span class="float-end text-dark">Male</span></p>
@@ -550,8 +299,10 @@
                                 <p class="mb-3">Phone Number <span class="float-end text-dark">+1 75964 25493</span></p>
                                 <p class="mb-3">Email <span class="float-end text-dark">andrew@example.com</span></p>
                                 <p class="mb-3">Registered On <span class="float-end text-dark">24 May 1996</span></p>
-                                <p class="mb-3">Registration Number <span class="float-end text-dark">DV457888AY4542</span></p>
-                                <p class="mb-3">Total No of Appointments <span class="float-end text-dark">+300</span></p>
+                                <p class="mb-3">Registration Number <span
+                                        class="float-end text-dark">DV457888AY4542</span></p>
+                                <p class="mb-3">Total No of Appointments <span class="float-end text-dark">+300</span>
+                                </p>
                                 <h6 class="mt-3 mb-2 pt-3 border-top">Address Information</h6>
                                 <p class="mb-0">8/15 Francis street, UK 454787</p>
                             </div>
@@ -566,13 +317,20 @@
                             <!-- Start About  -->
                             <div class="accordion-item bg-white mb-4">
                                 <h2 class="accordion-header" id="about_view_header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#about_view" aria-expanded="true" aria-controls="about_view">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#about_view" aria-expanded="true" aria-controls="about_view">
                                         About
                                     </button>
                                 </h2>
-                                <div id="about_view" class="accordion-collapse collapse show" aria-labelledby="about_view_header" data-bs-parent="#BorderedaccordionExample">
+                                <div id="about_view" class="accordion-collapse collapse show"
+                                    aria-labelledby="about_view_header" data-bs-parent="#BorderedaccordionExample">
                                     <div class="accordion-body">
-                                        <p class="mb-0">Highly motivated and experienced doctor with a passion for providing excellent care to patients. Experienced in a wide variety of medical settings, with particular expertise in diagnostics, primary care and emergency medicine. Skilled in using the latest technology to streamline patient care. Committed to delivering compassionate, personalized care to each and every patient.</p>
+                                        <p class="mb-0">Highly motivated and experienced doctor with a passion for
+                                            providing excellent care to patients. Experienced in a wide variety of
+                                            medical settings, with particular expertise in diagnostics, primary care and
+                                            emergency medicine. Skilled in using the latest technology to streamline
+                                            patient care. Committed to delivering compassionate, personalized care to
+                                            each and every patient.</p>
                                     </div>
                                 </div>
                             </div>
@@ -581,48 +339,60 @@
                             <!-- Start Education  -->
                             <div class="accordion-item bg-white  mb-4">
                                 <h2 class="accordion-header" id="education_view_header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#education_view" aria-expanded="false" aria-controls="education_view">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#education_view" aria-expanded="false"
+                                        aria-controls="education_view">
                                         Education
                                     </button>
                                 </h2>
-                                <div id="education_view" class="accordion-collapse collapse" aria-labelledby="education_view_header" data-bs-parent="#BorderedaccordionExample">
+                                <div id="education_view" class="accordion-collapse collapse"
+                                    aria-labelledby="education_view_header" data-bs-parent="#BorderedaccordionExample">
                                     <div class="accordion-body">
-                                        <div class="d-flex align-items-center flex-wrap gap-2 p-3 rounded border justify-content-between mb-3">
+                                        <div
+                                            class="d-flex align-items-center flex-wrap gap-2 p-3 rounded border justify-content-between mb-3">
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" class="avatar flex-shrink-0 bg-light text-dark">
+                                                <a href="javascript:void(0);"
+                                                    class="avatar flex-shrink-0 bg-light text-dark">
                                                     <i class="ti ti-book-2 fs-16"></i>
                                                 </a>
                                                 <div class="ms-2">
                                                     <div>
-                                                        <h6 class="fw-semibold fs-14 text-truncate mb-1">Oxford Medical Center</h6>
+                                                        <h6 class="fw-semibold fs-14 text-truncate mb-1">Oxford Medical
+                                                            Center</h6>
                                                         <p class="fs-13 mb-0">BAMS</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <span class="badge bg-primary">2015 - 2020</span>
                                         </div>
-                                        <div class="d-flex align-items-center flex-wrap gap-2 p-3 rounded border justify-content-between mb-3">
+                                        <div
+                                            class="d-flex align-items-center flex-wrap gap-2 p-3 rounded border justify-content-between mb-3">
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" class="avatar flex-shrink-0 bg-light text-dark">
+                                                <a href="javascript:void(0);"
+                                                    class="avatar flex-shrink-0 bg-light text-dark">
                                                     <i class="ti ti-book-2 fs-16"></i>
                                                 </a>
                                                 <div class="ms-2">
                                                     <div>
-                                                        <h6 class="fw-semibold fs-14 text-truncate mb-1">Duke University Medical Center</h6>
+                                                        <h6 class="fw-semibold fs-14 text-truncate mb-1">Duke University
+                                                            Medical Center</h6>
                                                         <p class="fs-13 mb-0">MD/MS</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <span class="badge bg-primary">2021 - 2023</span>
                                         </div>
-                                        <div class="d-flex align-items-center flex-wrap gap-2 p-3 rounded border justify-content-between">
+                                        <div
+                                            class="d-flex align-items-center flex-wrap gap-2 p-3 rounded border justify-content-between">
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" class="avatar flex-shrink-0 bg-light text-dark">
+                                                <a href="javascript:void(0);"
+                                                    class="avatar flex-shrink-0 bg-light text-dark">
                                                     <i class="ti ti-book-2 fs-16"></i>
                                                 </a>
                                                 <div class="ms-2">
                                                     <div>
-                                                        <h6 class="fw-semibold fs-14 text-truncate mb-1">City of Hope National Medical Center</h6>
+                                                        <h6 class="fw-semibold fs-14 text-truncate mb-1">City of Hope
+                                                            National Medical Center</h6>
                                                         <p class="fs-13 mb-0">Super - Specialization</p>
                                                     </div>
                                                 </div>
@@ -637,21 +407,30 @@
                             <!-- Start Experience  -->
                             <div class="accordion-item bg-white  mb-4">
                                 <h2 class="accordion-header" id="about_experience_header">
-                                    <button class="accordion-button fs-16 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#about_experience" aria-expanded="false" aria-controls="about_experience">
+                                    <button class="accordion-button fs-16 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#about_experience"
+                                        aria-expanded="false" aria-controls="about_experience">
                                         Experience
                                     </button>
                                 </h2>
-                                <div id="about_experience" class="accordion-collapse collapse" aria-labelledby="about_experience_header" data-bs-parent="#BorderedaccordionExample">
+                                <div id="about_experience" class="accordion-collapse collapse"
+                                    aria-labelledby="about_experience_header"
+                                    data-bs-parent="#BorderedaccordionExample">
                                     <div class="accordion-body">
                                         <div class="p-3 rounded border mb-3">
-                                            <h6 class="fs-14 fw-semibold mb-1">Cambridge University Hospital, NHS Foundation Trust Cambridge</h6>
+                                            <h6 class="fs-14 fw-semibold mb-1">Cambridge University Hospital, NHS
+                                                Foundation Trust Cambridge</h6>
                                             <p class="fs-13 mb-2">Jan 2022 - Jan 2023</p>
-                                            <p class="mb-0">Experienced in a wide variety of medical settings, with particular expertise in diagnostics, primary care and emergency medicine.</p>
+                                            <p class="mb-0">Experienced in a wide variety of medical settings, with
+                                                particular expertise in diagnostics, primary care and emergency
+                                                medicine.</p>
                                         </div>
                                         <div class="p-3 rounded border">
                                             <h6 class="fs-14 fw-semibold mb-1">Hill Medical Hospital, Newcastle</h6>
                                             <p class="fs-13 mb-2">Jan 2021 - Jan 2022</p>
-                                            <p class="mb-0">Experienced in a wide variety of medical settings, with particular expertise in diagnostics, primary care and emergency medicine.</p>
+                                            <p class="mb-0">Experienced in a wide variety of medical settings, with
+                                                particular expertise in diagnostics, primary care and emergency
+                                                medicine.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -661,16 +440,22 @@
                             <!-- Start Membership  -->
                             <div class="accordion-item bg-white  mb-4">
                                 <h2 class="accordion-header" id="member_view_header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#member_view" aria-expanded="false" aria-controls="member_view">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#member_view" aria-expanded="false" aria-controls="member_view">
                                         Membership
                                     </button>
                                 </h2>
-                                <div id="member_view" class="accordion-collapse collapse" aria-labelledby="member_view_header" data-bs-parent="#BorderedaccordionExample">
+                                <div id="member_view" class="accordion-collapse collapse"
+                                    aria-labelledby="member_view_header" data-bs-parent="#BorderedaccordionExample">
                                     <div class="accordion-body">
                                         <div class="p-3 rounded border mb-3">
                                             <h6 class="fs-14 fw-semibold mb-1">Affilate Member</h6>
                                             <p class="fs-13 mb-2">Jan 2022</p>
-                                            <p class="mb-0">Affiliate members include related allied health professionals- evidence based (Dietitians, Physiotherapist, Occupational therapist and Clinical Psychologist) who will team up with allopathic physicians to support the Lifestyle Medicine movement in India through ISLM.</p>
+                                            <p class="mb-0">Affiliate members include related allied health
+                                                professionals- evidence based (Dietitians, Physiotherapist, Occupational
+                                                therapist and Clinical Psychologist) who will team up with allopathic
+                                                physicians to support the Lifestyle Medicine movement in India through
+                                                ISLM.</p>
                                         </div>
                                         <div class="p-3 rounded border">
                                             <h6 class="fs-14 fw-semibold mb-1">Group Head</h6>
@@ -685,44 +470,55 @@
                             <!-- Start Awards  -->
                             <div class="accordion-item bg-white">
                                 <h2 class="accordion-header" id="awards_view_header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#awards_view" aria-expanded="false" aria-controls="awards_view">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#awards_view" aria-expanded="false" aria-controls="awards_view">
                                         Awards
                                     </button>
                                 </h2>
-                                <div id="awards_view" class="accordion-collapse collapse" aria-labelledby="awards_view_header" data-bs-parent="#BorderedaccordionExample">
+                                <div id="awards_view" class="accordion-collapse collapse"
+                                    aria-labelledby="awards_view_header" data-bs-parent="#BorderedaccordionExample">
                                     <div class="accordion-body">
                                         <!-- start row -->
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="p-3 rounded border">
                                                     <div class="d-flex align-items-center mb-2">
-                                                        <a href="javascript:void(0);" class="avatar flex-shrink-0 bg-light text-dark">
+                                                        <a href="javascript:void(0);"
+                                                            class="avatar flex-shrink-0 bg-light text-dark">
                                                             <i class="ti ti-award fs-16"></i>
                                                         </a>
                                                         <div class="ms-2">
                                                             <div>
-                                                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a href="javascript:void(0);">McLaughlin Medal</a></h6>
+                                                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                                        href="javascript:void(0);">McLaughlin Medal</a>
+                                                                </h6>
                                                                 <p class="fs-13 mb-0">Dec 2022</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p class="mb-0 text-truncate line-clamb-2">Important research of sustained excellence in any branch of medical sciences</p>
+                                                    <p class="mb-0 text-truncate line-clamb-2">Important research of
+                                                        sustained excellence in any branch of medical sciences</p>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="p-3 rounded border">
                                                     <div class="d-flex align-items-center mb-2">
-                                                        <a href="javascript:void(0);" class="avatar flex-shrink-0 bg-light text-dark">
+                                                        <a href="javascript:void(0);"
+                                                            class="avatar flex-shrink-0 bg-light text-dark">
                                                             <i class="ti ti-award fs-16"></i>
                                                         </a>
                                                         <div class="ms-2">
                                                             <div>
-                                                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a href="javascript:void(0);">Chanchlani Global Health</a></h6>
+                                                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                                        href="javascript:void(0);">Chanchlani Global
+                                                                        Health</a></h6>
                                                                 <p class="fs-13 mb-0">Mar 2023</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p class="mb-0 text-truncate line-clamb-2">Vital world-class research to explore the causes of blindness and vision loss...</p>
+                                                    <p class="mb-0 text-truncate line-clamb-2">Vital world-class
+                                                        research to explore the causes of blindness and vision loss...
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -737,11 +533,12 @@
                 </div>
                 <!-- row end -->
             </div>
-            <!-- End Content -->            
+            <!-- End Content -->
 
             <!-- Start Footer -->
             <footer class="footer text-center">
-               <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a> - All Rights Reserved.</p>
+                <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a>
+                    - All Rights Reserved.</p>
             </footer>
             <!-- End Footer -->
         </div>
@@ -756,13 +553,16 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
     <!-- Bootstrap Core JS -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Simplebar JS -->
-	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+    <!-- Simplebar JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
 
     <!-- Main JS -->
     <script src="assets/js/script.js"></script>
+
+    <!-- User Info & Logout Logic -->
+    <script src="assets/js/header.js"></script>
 
 </body>
 

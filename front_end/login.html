@@ -1,331 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign In | Cabinet Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Management - Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="description" content="Cabinet Management System - Medical administration and management platform">
+    <meta name="keywords" content="medical admin, cabinet management, healthcare management, medical template">
+    <meta name="author" content="Cabinet Management">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
-        .login-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
 
-        .login-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-        .login-header h1 {
-            color: #333;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
 
-        .login-header p {
-            color: #666;
-            font-size: 0.9rem;
-        }
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: 500;
-        }
+    <!-- API Config -->
+    <script src="assets/js/config.js"></script>
 
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e1e5e9;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .login-btn {
-            width: 100%;
-            padding: 0.75rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .login-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .login-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .error-message {
-            background: #fee;
-            color: #c33;
-            padding: 0.75rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            border: 1px solid #fcc;
-            display: none;
-        }
-
-        .success-message {
-            background: #efe;
-            color: #3c3;
-            padding: 0.75rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            border: 1px solid #cfc;
-            display: none;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .user-info {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            display: none;
-        }
-
-        .user-info h3 {
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .user-info p {
-            color: #666;
-            margin-bottom: 0.25rem;
-        }
-
-        .logout-btn {
-            background: #dc3545;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-top: 0.5rem;
-        }
-
-        .logout-btn:hover {
-            background: #c82333;
-        }
-    </style>
 </head>
+
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <h1>🏥 Cabinet Management</h1>
-            <p>Please sign in to continue</p>
-        </div>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
 
-        <div class="error-message" id="errorMessage"></div>
-        <div class="success-message" id="successMessage"></div>
+        <!-- Start Content -->
+        <div class="container-fuild position-relative z-1">
+            <div class="w-100 overflow-hidden position-relative flex-wrap d-block vh-100 bg-white lock-screen-cover">
+                <!-- début de la ligne -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="row justify-content-center align-items-center overflow-auto flex-wrap vh-100">
+                            <div class="col-md-8 mx-auto">
+                                <form class="d-flex justify-content-center align-items-center" id="loginForm">
+                                    <div class="d-flex flex-column justify-content-lg-center flex-fill">
+                                        <div class="card border-1 p-lg-3 shadow-md rounded-3 m-0">
+                                            <div class="card-body">
+                                                <div class="mb-4">
+                                                    <a href="index.html">
+                                                        <img src="assets/img/logo-dark.svg"
+                                                            class="img-fluid logo m-auto" alt="Logo">
+                                                    </a>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <h5 class="mb-1 fw-bold">Bonjour, ravi de vous revoir</h5>
+                                                    <p class="text-muted">Veuillez vous connecter à votre compte</p>
+                                                </div>
 
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                                                <!-- Conteneur d’alerte -->
+                                                <div class="mb-3 alert-container">
+                                                    <!-- Alerte de succès -->
+                                                    <div class="alert alert-success alert-dismissible fade show"
+                                                        id="successAlert" role="alert" style="display: none;">
+                                                        <strong>Succès !</strong> <span id="successMessage">Connexion
+                                                            réussie !</span>
+                                                    </div>
+
+                                                    <!-- Alerte d’erreur -->
+                                                    <div class="alert alert-danger alert-dismissible fade show"
+                                                        id="errorAlert" role="alert" style="display: none;">
+                                                        <strong>Erreur !</strong> <span id="errorMessage">Échec de la
+                                                            connexion. Veuillez réessayer.</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label class="form-label">Nom d’utilisateur<span
+                                                            class="text-danger ms-1">*</span></label>
+                                                    <div class="input-group input-group-flat">
+                                                        <input type="text" class="form-control border-end-0"
+                                                            id="username" name="username"
+                                                            placeholder="Entrez votre nom d’utilisateur" required>
+                                                        <span class="input-group-text bg-white">
+                                                            <i class="ti ti-user fs-14 text-dark"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label class="form-label">Mot de passe<span
+                                                            class="text-danger ms-1">*</span></label>
+                                                    <div class="input-group input-group-flat pass-group">
+                                                        <input type="password" class="form-control pass-input"
+                                                            id="password" name="password"
+                                                            placeholder="Entrez votre mot de passe" required>
+                                                        <span class="input-group-text toggle-password">
+                                                            <i class="ti ti-eye-off"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2">
+                                                    <button type="submit" class="btn btn-primary w-100" id="loginBtn">
+                                                        <span id="loginText">Se connecter</span>
+                                                        <span id="loginSpinner"
+                                                            class="spinner-border spinner-border-sm ms-2"
+                                                            style="display: none;"></span>
+                                                    </button>
+                                                </div>
+                                            </div><!-- fin du corps de la carte -->
+                                        </div><!-- fin de la carte -->
+                                    </div>
+                                </form>
+                            </div> <!-- fin de la ligne -->
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 p-0">
+                        <div
+                            class="login-backgrounds login-covers bg-primary d-lg-flex align-items-center justify-content-center d-none flex-wrap position-relative h-100 z-0">
+                            <div class="authentication-card">
+                                <div class="authen-overlay-item w-100">
+                                    <div class="authen-head text-center">
+                                        <h1 class="text-white fs-28 fw-bold mb-2">Votre parcours de bien-être commence
+                                            ici</h1>
+                                        <p class="text-light fw-normal text-light mb-0">Notre application médicale pour
+                                            les administrateurs
+                                            offre une interface intuitive pour une gestion efficace et
+                                            une organisation optimale des données médicales</p>
+                                    </div>
+                                </div>
+                                <div class="auth-person">
+                                    <img src="assets/img/logo-small.svg" alt="docteur" class="img-fluid w-100">
+                                </div>
+                            </div>
+                            <img src="assets/img/auth/auth-img-01.png" alt="ombre"
+                                class="position-absolute top-0 start-0">
+                            <img src="assets/img/auth/auth-img-02.png" alt="bulle"
+                                class="img-fluid position-absolute top-0 end-0">
+                            <img src="assets/img/auth/auth-img-03.png" alt="ombre"
+                                class="img-fluid position-absolute auth-img-01">
+                            <img src="assets/img/auth/auth-img-04.png" alt="bulle"
+                                class="img-fluid position-absolute auth-img-02">
+                            <img src="assets/img/auth/auth-img-05.png" alt="bulle"
+                                class="img-fluid position-absolute bottom-0">
+                        </div>
+                    </div> <!-- fin de la ligne -->
+
+                </div>
+                <!-- fin de la ligne -->
+
             </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <button type="submit" class="login-btn" id="loginBtn">Sign In</button>
-        </form>
-
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p>Signing in...</p>
         </div>
+        <!-- End Content -->
 
-        <div class="user-info" id="userInfo">
-            <h3>Welcome!</h3>
-            <p><strong>Username:</strong> <span id="userUsername"></span></p>
-            <p><strong>Role:</strong> <span id="userRole"></span></p>
-            <p><strong>Doctor ID:</strong> <span id="userMedecinId"></span></p>
-            <button class="logout-btn" onclick="logout()">Logout</button>
-        </div>
     </div>
+    <!-- End Wrapper -->
 
-    <script>
-        // Check if user is already logged in
-        window.addEventListener('DOMContentLoaded', function() {
-            const token = localStorage.getItem('access_token');
-            if (token) {
-                // Verify token is still valid
-                fetch('/auth/me', {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        return response.json();
-                    } else {
-                        localStorage.removeItem('access_token');
-                        throw new Error('Token expired');
-                    }
-                })
-                .then(user => {
-                    showUserInfo(user);
-                })
-                .catch(error => {
-                    console.log('Token verification failed:', error);
-                });
-            }
-        });
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
 
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (!username || !password) {
-                showError('Please enter both username and password');
-                return;
-            }
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-            showLoading(true);
-            hideMessages();
+    <!-- Select2 JS -->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
 
-            try {
-                const formData = new FormData();
-                formData.append('username', username);
-                formData.append('password', password);
+    <!-- Simplebar JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
 
-                const response = await fetch('/auth/token', {
-                    method: 'POST',
-                    body: formData
-                });
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
 
-                const data = await response.json();
-
-                if (response.ok) {
-                    // Store token
-                    localStorage.setItem('access_token', data.access_token);
-                    
-                    showSuccess('Login successful!');
-                    showUserInfo(data.user);
-                    
-                    // Redirect to main app after a short delay
-                    setTimeout(() => {
-                        window.location.href = '/app/index.html';
-                    }, 1500);
-                } else {
-                    showError(data.detail || 'Login failed');
-                }
-            } catch (error) {
-                showError('Network error. Please try again.');
-                console.error('Login error:', error);
-            } finally {
-                showLoading(false);
-            }
-        });
-
-        function showLoading(show) {
-            document.getElementById('loading').style.display = show ? 'block' : 'none';
-            document.getElementById('loginBtn').disabled = show;
-        }
-
-        function showError(message) {
-            const errorDiv = document.getElementById('errorMessage');
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
-        }
-
-        function showSuccess(message) {
-            const successDiv = document.getElementById('successMessage');
-            successDiv.textContent = message;
-            successDiv.style.display = 'block';
-        }
-
-        function hideMessages() {
-            document.getElementById('errorMessage').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'none';
-        }
-
-        function showUserInfo(user) {
-            document.getElementById('userUsername').textContent = user.username;
-            document.getElementById('userRole').textContent = user.role;
-            document.getElementById('userMedecinId').textContent = user.medecin_id || 'N/A';
-            document.getElementById('userInfo').style.display = 'block';
-            document.getElementById('loginForm').style.display = 'none';
-        }
-
-        function logout() {
-            localStorage.removeItem('access_token');
-            document.getElementById('userInfo').style.display = 'none';
-            document.getElementById('loginForm').style.display = 'block';
-            document.getElementById('username').value = '';
-            document.getElementById('password').value = '';
-            hideMessages();
-        }
-
-        // Add Enter key support
-        document.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && !document.getElementById('loginBtn').disabled) {
-                document.getElementById('loginForm').dispatchEvent(new Event('submit'));
-            }
-        });
-    </script>
+    <script src="assets/js/login.js"></script>
 </body>
+
 </html>

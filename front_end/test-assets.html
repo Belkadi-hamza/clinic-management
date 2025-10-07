@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Test - Cabinet Management</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        .test-container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-success { background-color: #28a745; }
+        .status-error { background-color: #dc3545; }
+        .status-loading { background-color: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="mb-4">🔧 Asset Loading Test</h1>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Static Assets Status</h5>
+            </div>
+            <div class="card-body">
+                <div id="asset-status">
+                    <p><span class="status-indicator status-loading"></span>Testing assets...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Navigation System Test</h5>
+            </div>
+            <div class="card-body">
+                <div id="navigation-status">
+                    <p><span class="status-indicator status-loading"></span>Testing navigation...</p>
+                </div>
+                <div id="navigation-menu" class="mt-3"></div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Quick Navigation Test</h5>
+            </div>
+            <div class="card-body">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary" onclick="testNavigation('/patients')">Test Patients</button>
+                    <button type="button" class="btn btn-success" onclick="testNavigation('/doctors')">Test Doctors</button>
+                    <button type="button" class="btn btn-info" onclick="testNavigation('/appointments')">Test Appointments</button>
+                </div>
+                <div id="navigation-result" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    
+    <script>
+        // Test asset loading
+        function testAssets() {
+            const assetStatus = document.getElementById('asset-status');
+            const tests = [
+                { name: 'Bootstrap CSS', test: () => document.querySelector('link[href*="bootstrap"]') },
+                { name: 'Style CSS', test: () => document.querySelector('link[href*="style.css"]') },
+                { name: 'jQuery', test: () => typeof $ !== 'undefined' },
+                { name: 'Bootstrap JS', test: () => typeof bootstrap !== 'undefined' },
+                { name: 'Navigation Helper', test: () => typeof navigation !== 'undefined' }
+            ];
+            
+            let results = [];
+            tests.forEach(test => {
+                try {
+                    const result = test.test();
+                    results.push(`<p><span class="status-indicator ${result ? 'status-success' : 'status-error'}"></span>${test.name}: ${result ? '✅ Loaded' : '❌ Failed'}</p>`);
+                } catch (e) {
+                    results.push(`<p><span class="status-indicator status-error"></span>${test.name}: ❌ Error - ${e.message}</p>`);
+                }
+            });
+            
+            assetStatus.innerHTML = results.join('');
+        }
+        
+        // Test navigation system
+        async function testNavigation() {
+            const navStatus = document.getElementById('navigation-status');
+            const navMenu = document.getElementById('navigation-menu');
+            
+            try {
+                // Test navigation helper
+                if (typeof navigation !== 'undefined') {
+                    navStatus.innerHTML = '<p><span class="status-indicator status-success"></span>Navigation Helper: ✅ Loaded</p>';
+                    
+                    // Test route loading
+                    const routes = await navigation.getAllRoutes();
+                    navStatus.innerHTML += `<p><span class="status-indicator status-success"></span>Routes API: ✅ ${routes.length} routes loaded</p>`;
+                    
+                    // Generate navigation menu
+                    const menuHTML = await navigation.generateNavigationHTML();
+                    navMenu.innerHTML = menuHTML;
+                } else {
+                    navStatus.innerHTML = '<p><span class="status-indicator status-error"></span>Navigation Helper: ❌ Not loaded</p>';
+                }
+            } catch (error) {
+                navStatus.innerHTML = `<p><span class="status-indicator status-error"></span>Navigation Test: ❌ Error - ${error.message}</p>`;
+            }
+        }
+        
+        // Test specific navigation
+        async function testNavigation(route) {
+            const resultDiv = document.getElementById('navigation-result');
+            resultDiv.innerHTML = '<p class="text-info">Testing navigation...</p>';
+            
+            try {
+                if (typeof navigation !== 'undefined') {
+                    const exists = await navigation.routeExists(route);
+                    const pageInfo = await navigation.getPageInfo(route);
+                    
+                    if (exists && pageInfo) {
+                        resultDiv.innerHTML = `
+                            <div class="alert alert-success">
+                                <strong>✅ Route exists!</strong><br>
+                                <strong>Route:</strong> ${route}<br>
+                                <strong>Title:</strong> ${pageInfo.title}<br>
+                                <strong>Description:</strong> ${pageInfo.description}
+                            </div>
+                        `;
+                    } else {
+                        resultDiv.innerHTML = `
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Route not found:</strong> ${route}
+                            </div>
+                        `;
+                    }
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="alert alert-danger">
+                            <strong>❌ Navigation helper not available</strong>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>❌ Error testing route:</strong> ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        // Initialize tests when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            testAssets();
+            testNavigation();
+        });
+    </script>
+</body>
+</html>

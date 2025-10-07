@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = os.getenv("DB_PORT", "5432")
 DB_NAME = os.getenv("DB_NAME", "cabinet_management")
-DB_USER = os.getenv("DB_USER", "cabinet_management")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "cabinet_management")
+DB_USER = os.getenv("DB_USER", "cabinet_user")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "cm123")
 
 try:
     # Try PostgreSQL first using psycopg v3

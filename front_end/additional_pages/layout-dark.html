@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dreams EMR is a flexible, powerful, modern, and responsive Bootstrap 5 admin template with endless potential.">
+    <meta name="keywords"
+        content="Dreams EMR admin template, admin template, dashboard template, responsive admin template, medical admin template, web app">
+    <meta name="author" content="dreamstechnologies">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="assets/plugins/flatpickr/flatpickr.min.css">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Daterangepikcer CSS -->
+    <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-dark.svg" alt="dark logo"></span>
+                        </span>
+
+                        <!-- Logo Sm -->
+                        <span class="logo-small">
+                            <span class="logo-lg"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2">
+                        <i class="ti ti-arrow-bar-to-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-flex me-2">
+                        <button class="topbar-link btn topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);"
+                            class="topbar-link dropdown-toggle drop-arrow-none position-relative"
+                            data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/avatars/avatar-31.jpg" width="32" class="rounded-2 d-flex"
+                                alt=patient">
+                            <span class="online text-success"><i
+                                    class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-2">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded-circle" width="42"
+                                    height="42" alt="patient">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
+                                    <span class="d-block fs-13">Administrator</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="general-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>
+
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-dark.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn">
+                    <i class="ti ti-arrow-bar-to-left"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul role="menu" aria-label="Main navigation menu">
+                        <li class="menu-title" aria-disabled="true"><span>MAIN</span></li>
+
+                        <li>
+                            <a href="index.html">
+                                <i class="ti ti-layout-board"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-apps"></i><span>Applications</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="voice-call.html">Voice Call</a></li>
+                                        <li><a href="video-call.html">Video Call</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="calendar.html">Calendar</a></li>
+                                <li><a href="email.html">Email</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="invoice.html">Invoices</a></li>
+                                        <li><a href="invoice-details.html">Invoice Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="todo.html">To Do</a></li>
+                                <li><a href="notes.html">Notes</a></li>
+                                <li><a href="kanban-view.html">Kanban Board</a></li>
+                                <li><a href="file-manager.html">File Manager</a></li>
+                                <li><a href="social-feed.html">Social Feed</a></li>
+                                <li><a href="search-result.html">Search Result</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);" class="active subdrop">
+                                <i class="ti ti-layout-kanban"></i><span>Layouts</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="layout-mini.html">Mini</a></li>
+                                <li><a href="layout-hoverview.html">Hover View</a></li>
+                                <li><a href="layout-hidden.html">Hidden</a></li>
+                                <li><a href="layout-fullwidth.html">Full Width</a></li>
+                                <li><a href="layout-rtl.html">RTL</a></li>
+                                <li><a href="layout-dark.html" class="active">Dark</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>HEALTHCARE</span></li>
+
+                        <li>
+                            <a href="patients.html">
+                                <i class="ti ti-users"></i><span>Patients</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doctors.html">
+                                <i class="ti ti-stethoscope"></i><span>Doctors</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appointments.html">
+                                <i class="ti ti-calendar-time"></i><span>Appointments</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="visits.html">
+                                <i class="ti ti-e-passport"></i><span>Visits</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-test-pipe"></i><span>Laboratory</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="lab-results.html">Lab Results</a>
+                                </li>
+                                <li>
+                                    <a href="medical-results.html">Medical Rsults</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="pharmacy.html">
+                                <i class="ti ti-prescription"></i><span>Pharmacy</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>MANAGE</span></li>
+
+                        <li>
+                            <a href="staffs.html">
+                                <i class="ti ti-users-group"></i><span>Staffs</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notifications.html">
+                                <i class="ti ti-bell"></i><span>Notifications</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="general-settings.html">
+                                <i class="ti ti-settings"></i><span>Settings</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>PAGES</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-lock-square-rounded"></i><span>Authentication</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="forgot-password.html">Forgot Password</a></li>
+                                <li><a href="change-password.html">Change Password</a></li>
+                                <li><a href="lock-screen.html">Lock Screen</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-face-id-error"></i><span>Error Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="error-404.html">Error 404</a></li>
+                                <li><a href="error-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-files"></i><span>Other Pages</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="starter-page.html">Starter Page</a></li>
+                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                <li><a href="under-maintenance.html">Under Maintenance</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>UI Interface</span></li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-hierarchy"></i><span>Base UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-accordion.html">Accordion</a></li>
+                                <li><a href="ui-alerts.html">Alerts</a></li>
+                                <li><a href="ui-avatar.html">Avatar</a></li>
+                                <li><a href="ui-badges.html">Badges</a></li>
+                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-buttons-group.html">Button Group</a></li>
+                                <li><a href="ui-cards.html">Card</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-collapse.html">Collapse</a></li>
+                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                <li><a href="ui-ratio.html">Ratio</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                                <li><a href="ui-images.html">Images</a></li>
+                                <li><a href="ui-links.html">Links</a></li>
+                                <li><a href="ui-list-group.html">List Group</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-offcanvas.html">Offcanvas</a></li>
+                                <li><a href="ui-pagination.html">Pagination</a></li>
+                                <li><a href="ui-placeholders.html">Placeholders</a></li>
+                                <li><a href="ui-popovers.html">Popovers</a></li>
+                                <li><a href="ui-progress.html">Progress</a></li>
+                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                <li><a href="ui-spinner.html">Spinner</a></li>
+                                <li><a href="ui-nav-tabs.html">Tabs</a></li>
+                                <li><a href="ui-toasts.html">Toasts</a></li>
+                                <li><a href="ui-tooltips.html">Tooltips</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-utilities.html">Utilities</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-whirl"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="ui-dragula.html">Dragula</a></li>
+                                <li><a href="ui-clipboard.html">Clipboard</a></li>
+                                <li><a href="ui-rangeslider.html">Range Slider</a></li>
+                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+                                <li><a href="ui-lightbox.html">Lightbox</a></li>
+                                <li><a href="ui-rating.html">Rating</a></li>
+                                <li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Form Elements<span
+                                            class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+                                        <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
+                                        <li><a href="form-input-groups.html">Input Groups</a></li>
+                                        <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
+                                        <li><a href="form-mask.html">Input Masks</a></li>
+                                        <li><a href="form-fileupload.html">File Uploads</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Layouts<span
+                                            class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="form-horizontal.html">Horizontal Form</a></li>
+                                        <li><a href="form-vertical.html">Vertical Form</a></li>
+                                        <li><a href="form-floating-labels.html">Floating Labels</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                                <li><a href="form-select.html">Form Select</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                                <li><a href="form-pickers.html">Form Picker</a></li>
+                                <li><a href="form-editors.html">Form Editors</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-table"></i><span>Tables</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="tables-basic.html">Basic Tables </a></li>
+                                <li><a href="data-tables.html">Data Table </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-chart-pie-3"></i><span>Charts</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="chart-apex.html">Apex Charts</a></li>
+                                <li><a href="chart-c3.html">Chart C3</a></li>
+                                <li><a href="chart-js.html">Chart Js</a></li>
+                                <li><a href="chart-morris.html">Morris Charts</a></li>
+                                <li><a href="chart-flot.html">Flot Charts</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-icons"></i><span>Icons</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-tabler.html">Tabler Icons</a></li>
+                                <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
+                                <li><a href="icon-remix.html">Remix Icons</a></li>
+                                <li><a href="icon-feather.html">Feather Icons</a></li>
+                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="widgets.html">
+                                <i class="ti ti-components"></i><span>Widgets</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" aria-disabled="true"><span>HELP</span></li>
+
+                        <li>
+                            <a href="javascript:void(0);"><i
+                                    class="ti ti-file-type-doc"></i><span>Documentation</span></a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);"><i class="ti ti-git-compare"></i>
+                                <span>Changelog</span>
+                            </a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-menu-order"></i><span>Multi Level</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                                <li class="submenu submenu-two">
+                                    <a href="javascript:void(0);">Multilevel 2<span
+                                            class="menu-arrow inside-submenu"></span></a>
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
+                                        <li class="submenu submenu-two submenu-three">
+                                            <a href="javascript:void(0);">Multilevel 2.2<span
+                                                    class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                            <ul>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
+                                                <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content">
+
+                <!-- Page Header -->
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+                    <div class="breadcrumb-arrow">
+                        <h4 class="mb-1">Welcome, Admin</h4>
+                        <p class="mb-0">Today you have 10 visits, <a href="visits.html"
+                                class="text-decoration-underline">View Details</a></p>
+                    </div>
+                    <div id="reportrange" class="reportrange-picker bg-white d-flex align-items-center">
+                        <i class="ti ti-calendar text-body fs-14 me-1"></i><span class="reportrange-picker-field">16 Apr
+                            25 - 16 Apr 25</span>
+                    </div>
+                </div>
+                <!-- End Page Header -->
+
+                <!-- row start -->
+                <div class="row">
+
+                    <!-- col start -->
+                    <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="card pb-2 flex-fill">
+                            <div class="d-flex align-items-center justify-content-between gap-1 card-body pb-0 mb-1">
+                                <div class="d-flex align-items-center overflow-hidden">
+                                    <span class="avatar bg-primary rounded-circle flex-shrink-0"><i
+                                            class="ti ti-user-exclamation fs-20"></i></span>
+                                    <div class="ms-2 overflow-hidden">
+                                        <p class="mb-1 text-truncate">Patients</p>
+                                        <h5 class="mb-0">108</h5>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge badge-soft-success">+20%</span>
+                                </div>
+                            </div>
+                            <div id="chart-1" class="chart-set"></div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="card pb-2 flex-fill">
+                            <div class="d-flex align-items-center justify-content-between gap-1 card-body pb-0 mb-1">
+                                <div class="d-flex align-items-center overflow-hidden">
+                                    <span class="avatar bg-orange rounded-circle flex-shrink-0"><i
+                                            class="ti ti-calendar-check fs-20"></i></span>
+                                    <div class="ms-2 overflow-hidden">
+                                        <p class="mb-1 text-truncate">Appointments</p>
+                                        <h5 class="mb-0">658</h5>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge badge-soft-danger">-15%</span>
+                                </div>
+                            </div>
+                            <div id="chart-2" class="chart-set"></div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="card pb-2 flex-fill">
+                            <div class="d-flex align-items-center justify-content-between gap-1 card-body pb-0 mb-1">
+                                <div class="d-flex align-items-center overflow-hidden">
+                                    <span class="avatar bg-purple rounded-circle flex-shrink-0"><i
+                                            class="ti ti-stethoscope fs-20"></i></span>
+                                    <div class="ms-2 overflow-hidden">
+                                        <p class="mb-1 text-truncate">Doctors</p>
+                                        <h5 class="mb-0">565</h5>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge badge-soft-success">+18%</span>
+                                </div>
+                            </div>
+                            <div id="chart-3" class="chart-set"></div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="card pb-2 flex-fill">
+                            <div class="d-flex align-items-center justify-content-between gap-1 card-body pb-0 mb-1">
+                                <div class="d-flex align-items-center overflow-hidden">
+                                    <span class="avatar bg-pink rounded-circle flex-shrink-0"><i
+                                            class="ti ti-moneybag fs-20"></i></span>
+                                    <div class="ms-2 overflow-hidden">
+                                        <p class="mb-1 text-truncate">Transactions</p>
+                                        <h5 class="mb-0">$5,523.56</h5>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge badge-soft-success">+12%</span>
+                                </div>
+                            </div>
+                            <div id="chart-4" class="chart-set"></div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                </div>
+                <!-- row end -->
+
+                <!-- row start -->
+                <div class="row">
+
+                    <!-- col start -->
+                    <div class="col-xl-6 d-flex">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <h5 class="fw-bold mb-0">Appointment Request</h5>
+                                <a href="appointments.html" class="btn btn-sm btn-white flex-shrink-0">All
+                                    Appointments</a>
+                            </div>
+                            <div class="card-body p-1 py-2">
+                                <!-- table start -->
+                                <div class="table-responsive table-nowrap">
+                                    <table class="table table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="patient-details.html" class="avatar me-2">
+                                                            <img src="assets/img/avatars/avatar-23.jpg" alt="patient"
+                                                                class="rounded">
+                                                        </a>
+                                                        <div>
+                                                            <h6 class="fs-14 mb-1 fw-semibold"><a
+                                                                    href="patient-details.html">Dominic Foster</a></h6>
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-calendar me-1"></i>12 Aug 2025</p>
+                                                                <span><i
+                                                                        class="ti ti-minus-vertical text-light fs-14"></i></span>
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-clock-hour-7 me-1"></i>11:35 PM</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge badge-soft-success">Urology</span></td>
+                                                <td class="text-end border-0">
+                                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-xbox-x"></i></a>
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-check"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="patient-details.html" class="avatar me-2">
+                                                            <img src="assets/img/avatars/avatar-08.jpg" alt="patient"
+                                                                class="rounded">
+                                                        </a>
+                                                        <div>
+                                                            <h6 class="fs-14 mb-1 fw-semibold"><a
+                                                                    href="patient-details.html">Charlotte Bennett</a>
+                                                            </h6>
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-calendar me-1"></i>06 Aug 2025</p>
+                                                                <span><i
+                                                                        class="ti ti-minus-vertical text-light fs-14"></i></span>
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-clock-hour-7 me-1"></i>09:58 AM</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge badge-soft-info">Cardiology</span></td>
+                                                <td class="text-end border-0">
+                                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-xbox-x"></i></a>
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-check"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="patient-details.html" class="avatar me-2">
+                                                            <img src="assets/img/avatars/avatar-21.jpg" alt="patient"
+                                                                class="rounded">
+                                                        </a>
+                                                        <div>
+                                                            <h6 class="fs-14 mb-1 fw-semibold"><a
+                                                                    href="patient-details.html">Ethan Sullivan</a></h6>
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-calendar me-1"></i>01 Aug 2025</p>
+                                                                <span><i
+                                                                        class="ti ti-minus-vertical text-light fs-14"></i></span>
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-clock-hour-7 me-1"></i>12:10 PM</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge badge-soft-teal">Dermatology</span></td>
+                                                <td class="text-end border-0">
+                                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-xbox-x"></i></a>
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-check"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="patient-details.html" class="avatar me-2">
+                                                            <img src="assets/img/avatars/avatar-55.jpg" alt="patient"
+                                                                class="rounded">
+                                                        </a>
+                                                        <div>
+                                                            <h6 class="fs-14 mb-1 fw-semibold"><a
+                                                                    href="patient-details.html">Brianna Thompson</a>
+                                                            </h6>
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-calendar me-1"></i>26 Jul 2025</p>
+                                                                <span><i
+                                                                        class="ti ti-minus-vertical text-light fs-14"></i></span>
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-clock-hour-7 me-1"></i>08:20 AM</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge badge-soft-purple">ENT Surgery</span></td>
+                                                <td class="text-end border-0">
+                                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-xbox-x"></i></a>
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-check"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="patient-details.html" class="avatar me-2">
+                                                            <img src="assets/img/avatars/avatar-28.jpg" alt="patient"
+                                                                class="rounded">
+                                                        </a>
+                                                        <div>
+                                                            <h6 class="fs-14 mb-1 fw-semibold"><a
+                                                                    href="patient-details.html">Braun Tucker</a></h6>
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-calendar me-1"></i>23 Jul 2025</p>
+                                                                <span><i
+                                                                        class="ti ti-minus-vertical text-light fs-14"></i></span>
+                                                                <p
+                                                                    class="mb-0 fs-13 d-inline-flex align-items-center text-body">
+                                                                    <i class="ti ti-clock-hour-7 me-1"></i>10:30 AM</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge badge-soft-info">Radiology</span></td>
+                                                <td class="text-end border-0">
+                                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-xbox-x"></i></a>
+                                                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i
+                                                                class="ti ti-check"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- table start -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-6 d-flex">
+                        <div class="card shadow flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                                <h5 class="fw-bold mb-0">Patients Statistics</h5>
+                                <a href="all-patients-list.html" class="btn btn-sm btn-white">View All</a>
+                            </div>
+                            <div class="card-body pb-0">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <h6 class="fs-14 fw-semibold mb-0">Total No of Patients : 480</h6>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <p class="mb-0 text-dark"><i
+                                                class="ti ti-point-filled me-1 text-primary"></i>New Patients</p>
+                                        <p class="mb-0 text-dark"><i
+                                                class="ti ti-point-filled me-1 text-soft-primary"></i>Old Patients</p>
+                                    </div>
+                                </div>
+                                <div id="chart-5" class="chart-set"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                </div>
+                <!-- row end -->
+
+                <!-- row start -->
+                <div class="row">
+
+                    <!-- col start -->
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <a href="patients.html" class="card">
+                            <div class="card-body text-center">
+                                <span
+                                    class="badge-soft-primary rounded w-100 d-flex p-3 justify-content-center fs-32 mb-2"><i
+                                        class="ti ti-users"></i></span>
+                                <h6 class="fs-14 fw-semibold text-truncate mb-0">All Patient</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <a href="doctors.html" class="card">
+                            <div class="card-body text-center">
+                                <span
+                                    class="badge-soft-success rounded w-100 d-flex p-3 justify-content-center fs-32 mb-2"><i
+                                        class="ti ti-topology-bus"></i></span>
+                                <h6 class="fs-14 fw-semibold text-truncate mb-0">Doctors</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <a href="lab-results.html" class="card">
+                            <div class="card-body text-center">
+                                <span
+                                    class="badge-soft-warning rounded w-100 d-flex p-3 justify-content-center fs-32 mb-2"><i
+                                        class="ti ti-test-pipe-2"></i></span>
+                                <h6 class="fs-14 fw-semibold text-truncate mb-0">Labs Results</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <a href="pharmacy.html" class="card">
+                            <div class="card-body text-center">
+                                <span
+                                    class="badge-soft-danger rounded w-100 d-flex p-3 justify-content-center fs-32 mb-2"><i
+                                        class="ti ti-prescription"></i></span>
+                                <h6 class="fs-14 fw-semibold text-truncate mb-0">Prescriptions</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <a href="visits.html" class="card">
+                            <div class="card-body text-center">
+                                <span
+                                    class="badge-soft-purple rounded w-100 d-flex p-3 justify-content-center fs-32 mb-2"><i
+                                        class="ti ti-e-passport"></i></span>
+                                <h6 class="fs-14 fw-semibold text-truncate mb-0">Visits</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <a href="medical-results.html" class="card">
+                            <div class="card-body text-center">
+                                <span
+                                    class="badge-soft-teal rounded w-100 d-flex p-3 justify-content-center fs-32 mb-2"><i
+                                        class="ti ti-file-description"></i></span>
+                                <h6 class="fs-14 fw-semibold text-truncate mb-0">Medical Results</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- col end -->
+
+                </div>
+                <!-- row end -->
+
+                <!-- row start -->
+                <div class="row">
+
+                    <!-- col start -->
+                    <div class="col-xl-4 d-flex">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <h5 class="mb-0">Patient Reports</h5>
+                                <a href="lab-results.html" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                            </div>
+                            <div class="card-body pb-1">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);"
+                                            class="avatar me-2 badge-soft-primary rounded-circle">
+                                            <i class="ti ti-droplet fs-20"></i>
+                                        </a>
+                                        <div>
+                                            <h6 class="fs-14 fw-semibold text-truncate mb-1"><a
+                                                    href="patient-details.html">David Marshall</a></h6>
+                                            <p class="mb-0 fs-13">Hemoglobin</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-light me-1"><i
+                                            class="ti ti-download"></i></a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);"
+                                            class="avatar me-2 badge-soft-success rounded-circle">
+                                            <i class="ti ti-mood-neutral fs-20"></i>
+                                        </a>
+                                        <div>
+                                            <h6 class="fs-14 fw-semibold text-truncate mb-1"><a
+                                                    href="patient-details.html">Thomas McLean</a></h6>
+                                            <p class="mb-0 fs-13">X Ray</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-light me-1"><i
+                                            class="ti ti-download"></i></a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);"
+                                            class="avatar me-2 badge-soft-danger rounded-circle">
+                                            <i class="ti ti-rainbow fs-20"></i>
+                                        </a>
+                                        <div>
+                                            <h6 class="fs-14 fw-semibold text-truncate mb-1"><a
+                                                    href="patient-details.html">Greta Kinney</a></h6>
+                                            <p class="mb-0 fs-13">MRI Scan</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-light me-1"><i
+                                            class="ti ti-download"></i></a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);"
+                                            class="avatar me-2 badge-soft-purple rounded-circle">
+                                            <i class="ti ti-rosette fs-20"></i>
+                                        </a>
+                                        <div>
+                                            <h6 class="fs-14 fw-semibold text-truncate mb-1"><a
+                                                    href="patient-details.html">Larry Wilburn</a></h6>
+                                            <p class="mb-0 fs-13">Blood Test</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-light me-1"><i
+                                            class="ti ti-download"></i></a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);"
+                                            class="avatar me-2 badge-soft-teal rounded-circle">
+                                            <i class="ti ti-radio fs-20"></i>
+                                        </a>
+                                        <div>
+                                            <h6 class="fs-14 fw-semibold text-truncate mb-1"><a
+                                                    href="patient-details.html">Reyan Verol</a></h6>
+                                            <p class="mb-0 fs-13">CT Scan</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-light me-1"><i
+                                            class="ti ti-download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-4 col-md-6 d-flex">
+                        <div class="card shadow flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <h5 class="mb-0">Patient Visits</h5>
+                                <a href="visits.html" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div id="patients-visits" class="mb-3"></div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <span class="avatar bg-primary rounded-circle flex-shrink-0"><i
+                                                class="ti ti-gender-male fs-20"></i></span>
+                                        <div class="ms-2">
+                                            <h6 class="mb-1 fs-14 fw-semibold">Male</h6>
+                                            <p class="mb-1 fs-13 text-truncate"><span class="text-success">-15%</span>
+                                                Since Last Week</p>
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-0">69%</h6>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-0">
+                                    <div class="d-flex align-items-center">
+                                        <span class="avatar bg-purple rounded-circle flex-shrink-0"><i
+                                                class="ti ti-gender-female fs-20"></i></span>
+                                        <div class="ms-2">
+                                            <h6 class="mb-1 fs-14 fw-semibold">Female</h6>
+                                            <p class="mb-1 fs-13 text-truncate"><span class="text-success">-15%</span>
+                                                Since Last Week</p>
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-0">56%</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-4 col-md-6 d-flex">
+                        <div class="card shadow flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <h5 class="mb-0">Doctors</h5>
+                                <a href="doctors.html" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="overflow-auto">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <a href="doctor-details.html" class="avatar flex-shrink-0">
+                                                <img src="assets/img/doctors/doctor-01.jpg" class="rounded"
+                                                    alt="doctor">
+                                            </a>
+                                            <div class="ms-2">
+                                                <div>
+                                                    <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                            href="doctor-details.html">Dr. William Harrison</a></h6>
+                                                    <p class="fs-13 mb-0">Cardiology</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <span class="badge badge-soft-success">Available</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <a href="doctor-details.html" class="avatar flex-shrink-0">
+                                                <img src="assets/img/doctors/doctor-11.jpg" class="rounded"
+                                                    alt="doctor">
+                                            </a>
+                                            <div class="ms-2">
+                                                <div>
+                                                    <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                            href="doctor-details.html">Dr. Victoria Adams</a></h6>
+                                                    <p class="fs-13 mb-0">Urology</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <span class="badge badge-soft-danger">Unavailable</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <a href="doctor-details.html" class="avatar flex-shrink-0">
+                                                <img src="assets/img/doctors/doctor-06.jpg" class="rounded"
+                                                    alt="doctor">
+                                            </a>
+                                            <div class="ms-2">
+                                                <div>
+                                                    <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                            href="doctor-details.html">Dr. Jonathan Bennett</a></h6>
+                                                    <p class="fs-13 mb-0">Radiology</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <span class="badge badge-soft-success">Available</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <a href="doctor-details.html" class="avatar flex-shrink-0">
+                                                <img src="assets/img/doctors/doctor-07.jpg" class="rounded"
+                                                    alt="doctor">
+                                            </a>
+                                            <div class="ms-2">
+                                                <div>
+                                                    <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                            href="doctor-details.html">Dr. Natalie Brooks</a></h6>
+                                                    <p class="fs-13 mb-0">ENT Surgery</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <span class="badge badge-soft-success">Available</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-0">
+                                        <div class="d-flex align-items-center">
+                                            <a href="doctor-details.html" class="avatar flex-shrink-0">
+                                                <img src="assets/img/doctors/doctor-12.jpg" class="rounded"
+                                                    alt="doctor">
+                                            </a>
+                                            <div class="ms-2">
+                                                <div>
+                                                    <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                                            href="doctor-details.html">Dr. Samuel Reed</a></h6>
+                                                    <p class="fs-13 mb-0">Dermatology</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <span class="badge badge-soft-success">Available</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                </div>
+                <!-- row end -->
+
+                <!-- row start -->
+                <div class="row">
+                    <!-- col start -->
+                    <div class="col-xl-5 d-flex">
+                        <div class="card shadow flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                                <h5 class="mb-0">Top Departments</h5>
+                                <a href="javascript:void(0);" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row row-gap-3 align-items-center mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="position-relative">
+                                            <canvas id="attendance" height="180"></canvas>
+                                            <div class="position-absolute text-center top-50 start-50 translate-middle">
+                                                <p class="fs-13 mb-1">Appointments</p>
+                                                <h3>3656</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="text-sm-start text-center">
+                                            <p class="text-dark mb-2"><i
+                                                    class="ti ti-circle-filled text-info fs-13 me-1"></i>Cardiology</p>
+                                            <p class="text-dark mb-2"><i
+                                                    class="ti ti-circle-filled text-cyan fs-13 me-1"></i>Neurology</p>
+                                            <p class="text-dark mb-2"><i
+                                                    class="ti ti-circle-filled text-purple fs-13 me-1"></i>Dermatology
+                                            </p>
+                                            <p class="text-dark mb-2"><i
+                                                    class="ti ti-circle-filled text-orange fs-13 me-1"></i>Orthopedics
+                                            </p>
+                                            <p class="text-dark mb-2"><i
+                                                    class="ti ti-circle-filled text-warning fs-13 me-1"></i>Urology</p>
+                                            <p class="text-dark mb-0"><i
+                                                    class="ti ti-circle-filled text-indigo fs-13 me-1"></i>Radiology</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border rounded p-1">
+                                    <div class="row g-0">
+                                        <div class="col-6 p-2 border-end text-center">
+                                            <h5 class="mb-1">$2512.32</h5>
+                                            <p class="mb-0">Revenue Generated</p>
+                                        </div>
+                                        <div class="col-6 p-2 text-center">
+                                            <h5 class="mb-1">3125+</h5>
+                                            <p class="mb-0">Appointments Last Month</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col start -->
+                    <div class="col-xl-7 d-flex">
+                        <!-- card start -->
+                        <div class="card shadow flex-fill w-100">
+                            <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <h5 class="mb-0">Patient Record</h5>
+                                <a href="medical-results.html" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <!-- table start -->
+                                <div class="table-responsive table-nowrap">
+                                    <table class="table border mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Patient Name</th>
+                                                <th>Diagnosis</th>
+                                                <th>Department</th>
+                                                <th>Last Visit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">James Carter</a></h6>
+                                                </td>
+                                                <td>Male</td>
+                                                <td><span class="badge badge-soft-info">Cardiology</span></td>
+                                                <td>17 Jun 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">Emily Davis</a></h6>
+                                                </td>
+                                                <td>Female</td>
+                                                <td><span class="badge badge-soft-success">Urology</span></td>
+                                                <td>10 Jun 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">Michael John</a></h6>
+                                                </td>
+                                                <td>Male</td>
+                                                <td><span class="badge badge-soft-info">Radiology</span></td>
+                                                <td>22 May 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">Olivia Miller</a></h6>
+                                                </td>
+                                                <td>Female</td>
+                                                <td><span class="badge badge-soft-purple">ENT Surgery</span></td>
+                                                <td>15 May 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">David Smith</a></h6>
+                                                </td>
+                                                <td>Male</td>
+                                                <td><span class="badge badge-soft-teal">Dermatology</span></td>
+                                                <td>30 Apr 2025</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- table start -->
+                            </div>
+                        </div>
+                        <!-- card end -->
+                    </div>
+                    <!-- col end -->
+
+                </div>
+                <!-- row end -->
+
+                <!-- card start -->
+                <div class="card shadow flex-fill w-100 mb-0">
+                    <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <h5 class="mb-0">Latest Appointments</h5>
+                        <a href="appointments.html" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <!-- table start -->
+                        <div class="table-responsive table-nowrap">
+                            <table class="table border mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Patient ID</th>
+                                        <th>Patient Name</th>
+                                        <th>Session Type</th>
+                                        <th>Doctor Name</th>
+                                        <th>Date & Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="javascript:void(0);" class="link-muted" data-bs-toggle="modal"
+                                                data-bs-target="#view_appointment_modal">#PT0025</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-31.jpg" alt="patient"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">James Carter</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Visit</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="doctor-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/doctors/doctor-01.jpg" alt="patient"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Andrew Clark</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>17 Jun 2025, 09:00 AM to 10:00 AM</td>
+                                        <td><span class="badge badge-soft-purple">Inprogress</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);" class="link-muted" data-bs-toggle="modal"
+                                                data-bs-target="#view_appointment_modal">#PT0024</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-54.jpg" alt="patient"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">Emily Davis</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Consultation</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="doctor-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/doctors/doctor-07.jpg" alt="doctor"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Katherine Brooks</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10 Jun 2025, 10:30 AM to 11:30 AM</td>
+                                        <td><span class="badge badge-soft-purple">Inprogress</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);" class="link-muted" data-bs-toggle="modal"
+                                                data-bs-target="#view_appointment_modal">#PT0023</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-38.jpg" alt="patient"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">Michael Johnson</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Visit</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="doctor-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/doctors/doctor-12.jpg" alt="doctor"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Benjamin Harris</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>22 May 2025, 01:15 PM to 02:15 PM</td>
+                                        <td><span class="badge badge-soft-success">Completed</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);" class="link-muted" data-bs-toggle="modal"
+                                                data-bs-target="#view_appointment_modal">#PT0022</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-43.jpg" alt="patient"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">Olivia Miller</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Consultation</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="doctor-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/doctors/doctor-03.jpg" alt="doctor"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Laura Mitchell</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>15 May 2025, 11:30 AM to 12:30 PM</td>
+                                        <td><span class="badge badge-soft-success">Completed</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0);" class="link-muted" data-bs-toggle="modal"
+                                                data-bs-target="#view_appointment_modal">#PT0021</a></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="patient-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/avatars/avatar-41.jpg" alt="patient"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a
+                                                            href="patient-details.html">David Smith</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Consultation</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="doctor-details.html" class="avatar avatar-xs me-2">
+                                                    <img src="assets/img/doctors/doctor-15.jpg" alt="doctor"
+                                                        class="rounded">
+                                                </a>
+                                                <div>
+                                                    <h6 class="fs-14 mb-0 fw-medium"><a href="doctor-details.html">Dr.
+                                                            Christopher Lewis</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>30 Apr 2025, 12:20 PM to 01:20 PM</td>
+                                        <td><span class="badge badge-soft-success">Completed</span></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- table end -->
+                    </div>
+                </div>
+                <!-- card end -->
+
+            </div>
+            <!-- End Content -->
+
+            <!-- Start Footer -->
+            <footer class="footer text-center">
+                <p class="mb-0 text-dark">2025 &copy; <a href="javascript:void(0);" class="link-primary">Dreams EMR</a>
+                    - All Rights Reserved.</p>
+            </footer>
+            <!-- End Footer -->
+
+        </div>
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- Start view Modal -->
+    <div id="view_appointment_modal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header justify-content-between">
+                    <h5 class="modal-title text-truncate">Appointment Details</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="d-flex align-items-center">
+                            <a href="patient-details.html" class="avatar flex-shrink-0">
+                                <img src="assets/img/avatars/avatar-31.jpg" class="rounded" alt="patient-image">
+                            </a>
+                            <div class="ms-2">
+                                <div>
+                                    <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                            href="patient-details.html">Gifford</a></h6>
+                                    <p class="fs-13 mb-0">Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="badge badge-soft-purple">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="row mb-3 row-gap-3">
+                        <div class="col-sm-12">
+                            <h6 class="mb-1">Date & Time</h6>
+                            <p class="text-dark mb-1">$500 / 1 Hr</p>
+                            <p class="fs-13 mb-0">24 Jan 2024, 09:00 AM to 10:00 PM</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <h6 class="mb-1">Consultation With</h6>
+                            <p class="text-dark mb-1">Dr. Laird</p>
+                            <p class="fs-13 mb-0">Dermatologist</p>
+                        </div>
+                    </div>
+                    <h6 class="mb-1">Reason</h6>
+                    <p class="mb-3">Fever, Stomach pain, Drowsiness</p>
+                    <h6 class="mb-1">Notes</h6>
+                    <p class="mb-0">Provide detailed instructions on how to use prescribed medications. Include dosage,
+                        frequency, and any specific application guidelines.</p>
+                </div>
+                <div class="modal-footer d-flex align-items-center gap-1">
+                    <button type="button" class="btn btn-white" data-bs-dismiss="modal">Cancel</button>
+                    <a href="appointment-consultation.html" type="submit" class="btn btn-primary">Start Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End view Modal -->
+
+    <!-- Start edit Modal -->
+    <div id="edit_appointment_modal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header justify-content-between">
+                    <h5 class="modal-title text-truncate">Edit Appointment</h5>
+                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>
+                </div>
+                <form action="layout-dark.html">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Select Patient</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option selected>James Carter</option>
+                                        <option>Emily Davis</option>
+                                        <option>Michael Johnson</option>
+                                        <option>Olivia Miller</option>
+                                        <option>David Smith</option>
+                                        <option>Sophia Wilson</option>
+                                        <option>Daniel Williams</option>
+                                        <option>Isabella Anderson</option>
+                                        <option>William Brown</option>
+                                        <option>Charlotte Taylor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Patient Type</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option selected>In Patient</option>
+                                        <option>Out Patient</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Select Department<span
+                                            class="text-danger ms-1">*</span></label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option selected>Anaesthesiology</option>
+                                        <option>Dental Surgery</option>
+                                        <option>Dermatology</option>
+                                        <option>ENT Surgery</option>
+                                        <option>Ophthalmology</option>
+                                        <option>Orthopaedics</option>
+                                        <option>Pediatrics </option>
+                                        <option>Radiology</option>
+                                        <option>Cardiology</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Select Doctor<span
+                                            class="text-danger ms-1">*</span></label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option selected>Dr. Andrew Clark</option>
+                                        <option>Dr. Katherine Brooks</option>
+                                        <option>Dr. Benjamin Harris</option>
+                                        <option>Dr. Laura Mitchell</option>
+                                        <option>Dr. Christopher Lewis</option>
+                                        <option>Dr. Natalie Foster</option>
+                                        <option>Dr. Jonathan Adams</option>
+                                        <option>Dr. Rebecca Scott</option>
+                                        <option>Dr. Samuel Turner</option>
+                                        <option>Dr. Victoria Evans</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Preffered Mode of Consultation<span
+                                            class="text-danger ms-1">*</span></label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option selected>In-Person</option>
+                                        <option>Video</option>
+                                        <option>Phone</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Date</label>
+                                    <div class="input-group w-auto input-group-flat">
+                                        <input type="text" class="form-control" data-provider="flatpickr"
+                                            data-date-format="d M, Y" value="15 Jun, 2025">
+                                        <span class="input-group-text">
+                                            <i class="ti ti-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Start Time</label>
+                                    <div class="input-icon-end position-relative">
+                                        <input type="text" class="form-control form-control" data-provider="timepickr"
+                                            data-time-basic="true" value="10:00 AM">
+                                        <span class="input-icon-addon">
+                                            <i class="ti ti-clock-hour-10 text-dark"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label">End Time</label>
+                                    <div class="input-icon-end position-relative">
+                                        <input type="text" class="form-control form-control" data-provider="timepickr"
+                                            data-time-basic="true" value="11:00 AM">
+                                        <span class="input-icon-addon">
+                                            <i class="ti ti-clock-hour-10 text-dark"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Reason</label>
+                                    <input class="form-control border-0 h-100" type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Quick Notes</label>
+                                    <textarea class="form-control"
+                                        rows="4">Provide detailed instructions on how to use prescribed medications. Include dosage, frequency, and any specific application guidelines.</textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-0">
+                                    <label class="form-label">Mode of Payment</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option>Cash</option>
+                                        <option selected>Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex align-items-center gap-1">
+                        <button type="button" class="btn btn-white" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End edit Modal -->
+
+    <!-- Start Delete Modal  -->
+    <div class="modal fade" id="delete_modal">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center position-relative">
+                    <div class="mb-2 position-relative z-1">
+                        <span class="avatar avatar-md bg-danger rounded-circle"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
+                    <h5 class="mb-1">Delete Confirmation</h5>
+                    <p class="mb-3">Are you sure you want to delete?</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="javascript:void(0);" class="btn btn-white position-relative z-1 w-100"
+                            data-bs-dismiss="modal">Cancel</a>
+                        <a href="javascript:void(0);" class="btn btn-danger position-relative z-1"
+                            data-bs-dismiss="modal">Yes, Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Delete Modal  -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Daterangepikcer JS -->
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Flatpickr JS -->
+    <script src="assets/plugins/flatpickr/flatpickr.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="assets/plugins/apexchart/chart-data.js"></script>
+
+    <!-- Chart JS -->
+    <script src="assets/plugins/chartjs/chart.min.js"></script>
+    <script src="assets/plugins/chartjs/chart-data.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -26,8 +26,8 @@ class SystemUser(Base):
     deleted_by = Column(Integer, ForeignKey('system_users.id'), nullable=True)
     
     # Relationships
-    staff = relationship("Staff")
-    role = relationship("Role")
+    staff = relationship("Staff", foreign_keys=[staff_id])
+    role = relationship("Role", foreign_keys=[role_id])
     creator_rel = relationship("SystemUser", foreign_keys=[created_by], remote_side=[id])
     updater_rel = relationship("SystemUser", foreign_keys=[updated_by], remote_side=[id])
     deleter_rel = relationship("SystemUser", foreign_keys=[deleted_by], remote_side=[id])
